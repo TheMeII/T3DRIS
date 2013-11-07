@@ -9,4 +9,5 @@ public:
 	Shapes();
 	 void Shapes::AddToShape();
 	 Object Shapes::returnShape();
+	 void selectShape(int rand,Shapes* shape);
 };

@@ -467,7 +467,7 @@ static void CreateObject1()
 
 static void createShape(){
 	Shapes shape1;
-	shape1.AddToShape();
+	shape1.selectShape(1,&shape1);
 	boxes.push_back(shape1.returnShape());
 }
 

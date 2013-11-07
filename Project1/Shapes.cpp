@@ -53,11 +53,48 @@ using namespace std;
 
 	indices.assign(Ind, Ind + sizeof(Ind) / sizeof(unsigned int));
 	shape = Object(vertices, indices, "cube_white.png");
-	
+	x_factor=0;
+	y_factor=0;
+	z_factor=0;
 		
 }
 	
 	//vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, 1.0f), Vector2f(0.0f, 0.0f)));
+
+	void Shapes::selectShape(int rand,Shapes* shape){
+		switch (rand) // kokonaisluku tai char
+{
+  case 0:
+	 for(int i=0;i<3;i++){
+	  x_factor=0;y_factor+=1;z_factor=0;
+	  shape->AddToShape();}
+ break;
+
+
+  case 1: 
+		x_factor=0;y_factor-=1;z_factor=0;
+		shape->AddToShape();
+		x_factor=0;y_factor-=1;z_factor=0;
+		shape->AddToShape();
+		x_factor=0;y_factor+=3;z_factor=0;
+		shape->AddToShape();
+ break;
+  case 2:
+    // Arvo on yksi tai kaksi, katkaise ohjelman kulku
+    break;
+  case 3:
+  {
+    // Arvo on kolme
+    // Useampia lauseita
+    break;
+  }
+  default:
+    // Arvo on joku muu
+    break;
+}
+	}
+
+
 
  void Shapes::AddToShape()
 {
@@ -65,36 +102,71 @@ using namespace std;
 	vector<unsigned int> indices;
 	vector<Vertex> vertices;
 
-	//front
-	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, 1.0f), Vector2f(0.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, 1.0f), Vector2f(1.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, 1.0f), Vector2f(1.0f, 1.0f)));//luodaan yhden laatikon ylemmäs
-	vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, 1.0f), Vector2f(0.0f, 1.0f)));
+
+		//front
+	vertices.push_back(Vertex(Vector3f(0.0f+x_factor, 0.0f+y_factor, 1.0f+z_factor), Vector2f(0.0f, 0.0f)));
+	vertices.push_back(Vertex(Vector3f(1.0f+x_factor, 0.0f+y_factor, 1.0f+z_factor), Vector2f(1.0f, 0.0f)));
+	vertices.push_back(Vertex(Vector3f(1.0f+x_factor, 1.0f+y_factor, 1.0f+z_factor), Vector2f(1.0f, 1.0f)));
+	vertices.push_back(Vertex(Vector3f(0.0f+x_factor, 1.0f+y_factor, 1.0f+z_factor), Vector2f(0.0f, 1.0f)));
 	//top
-	vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, 1.0f), Vector2f(0.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, 1.0f), Vector2f(1.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, -1.0f), Vector2f(1.0f, 1.0f)));
-	vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, -1.0f), Vector2f(0.0f, 1.0f)));
+	vertices.push_back(Vertex(Vector3f(0.0f+x_factor, 1.0f+y_factor, 1.0f+z_factor), Vector2f(0.0f, 0.0f)));
+	vertices.push_back(Vertex(Vector3f(1.0f+x_factor, 1.0f+y_factor, 1.0f+z_factor), Vector2f(1.0f, 0.0f)));
+	vertices.push_back(Vertex(Vector3f(1.0f+x_factor, 1.0f+y_factor, 0.0f+z_factor), Vector2f(1.0f, 1.0f)));
+	vertices.push_back(Vertex(Vector3f(0.0f+x_factor, 1.0f+y_factor, 0.0f+z_factor), Vector2f(0.0f, 1.0f)));
 	//back
-	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, -1.0f), Vector2f(0.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, -1.0f), Vector2f(1.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, -1.0f), Vector2f(1.0f, 1.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, -1.0f), Vector2f(0.0f, 1.0f)));
+	vertices.push_back(Vertex(Vector3f(1.0f+x_factor, 0.0f+y_factor, 0.0f+z_factor), Vector2f(0.0f, 0.0f)));
+	vertices.push_back(Vertex(Vector3f(0.0f+x_factor, 0.0f+y_factor, 0.0f+z_factor), Vector2f(1.0f, 0.0f)));
+	vertices.push_back(Vertex(Vector3f(0.0f+x_factor, 1.0f+y_factor, 0.0f+z_factor), Vector2f(1.0f, 1.0f)));
+	vertices.push_back(Vertex(Vector3f(1.0f+x_factor, 1.0f+y_factor, 0.0f+z_factor), Vector2f(0.0f, 1.0f)));
 	//bottom
-	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, -1.0f), Vector2f(0.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, -1.0f), Vector2f(1.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, 1.0f), Vector2f(1.0f, 1.0f)));
-	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, 1.0f), Vector2f(0.0f, 1.0f)));
+	vertices.push_back(Vertex(Vector3f(0.0f+x_factor, 0.0f+y_factor, 0.0f+z_factor), Vector2f(0.0f, 0.0f)));
+	vertices.push_back(Vertex(Vector3f(1.0f+x_factor, 0.0f+y_factor, 0.0f+z_factor), Vector2f(1.0f, 0.0f)));
+	vertices.push_back(Vertex(Vector3f(1.0f+x_factor, 0.0f+y_factor, 1.0f+z_factor), Vector2f(1.0f, 1.0f)));
+	vertices.push_back(Vertex(Vector3f(0.0f+x_factor, 0.0f+y_factor, 1.0f+z_factor), Vector2f(0.0f, 1.0f)));
 	//left
-	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, -1.0f), Vector2f(0.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, 1.0f), Vector2f(1.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, 1.0f), Vector2f(1.0f, 1.0f)));
-	vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, -1.0f), Vector2f(0.0f, 1.0f)));
+	vertices.push_back(Vertex(Vector3f(0.0f+x_factor, 0.0f+y_factor, 0.0f+z_factor), Vector2f(0.0f, 0.0f)));
+	vertices.push_back(Vertex(Vector3f(0.0f+x_factor, 0.0f+y_factor, 1.0f+z_factor), Vector2f(1.0f, 0.0f)));
+	vertices.push_back(Vertex(Vector3f(0.0f+x_factor, 1.0f+y_factor, 1.0f+z_factor), Vector2f(1.0f, 1.0f)));
+	vertices.push_back(Vertex(Vector3f(0.0f+x_factor, 1.0f+y_factor, 0.0f+z_factor), Vector2f(0.0f, 1.0f)));
 	//right
-	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, 1.0f), Vector2f(0.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, -1.0f), Vector2f(1.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, -1.0f), Vector2f(1.0f, 1.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, 1.0f), Vector2f(0.0f, 1.0f)));
+	vertices.push_back(Vertex(Vector3f(1.0f+x_factor, 0.0f+y_factor, 1.0f+z_factor), Vector2f(0.0f, 0.0f)));
+	vertices.push_back(Vertex(Vector3f(1.0f+x_factor, 0.0f+y_factor, 0.0f+z_factor), Vector2f(1.0f, 0.0f)));
+	vertices.push_back(Vertex(Vector3f(1.0f+x_factor, 1.0f+y_factor, 0.0f+z_factor), Vector2f(1.0f, 1.0f)));
+	vertices.push_back(Vertex(Vector3f(1.0f+x_factor, 1.0f+y_factor, 1.0f+z_factor), Vector2f(0.0f, 1.0f)));
+
+
+
+
+	////front
+	//vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, 1.0f), Vector2f(0.0f, 0.0f)));
+	//vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, 1.0f), Vector2f(1.0f, 0.0f)));
+	//vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, 1.0f), Vector2f(1.0f, 1.0f)));//luodaan yhden laatikon ylemmäs
+	//vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, 1.0f), Vector2f(0.0f, 1.0f)));
+	////top
+	//vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, 1.0f), Vector2f(0.0f, 0.0f)));
+	//vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, 1.0f), Vector2f(1.0f, 0.0f)));
+	//vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, -1.0f), Vector2f(1.0f, 1.0f)));
+	//vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, -1.0f), Vector2f(0.0f, 1.0f)));
+	////back
+	//vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, -1.0f), Vector2f(0.0f, 0.0f)));
+	//vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, -1.0f), Vector2f(1.0f, 0.0f)));
+	//vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, -1.0f), Vector2f(1.0f, 1.0f)));
+	//vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, -1.0f), Vector2f(0.0f, 1.0f)));
+	////bottom
+	//vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, -1.0f), Vector2f(0.0f, 0.0f)));
+	//vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, -1.0f), Vector2f(1.0f, 0.0f)));
+	//vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, 1.0f), Vector2f(1.0f, 1.0f)));
+	//vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, 1.0f), Vector2f(0.0f, 1.0f)));
+	////left
+	//vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, -1.0f), Vector2f(0.0f, 0.0f)));
+	//vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, 1.0f), Vector2f(1.0f, 0.0f)));
+	//vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, 1.0f), Vector2f(1.0f, 1.0f)));
+	//vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, -1.0f), Vector2f(0.0f, 1.0f)));
+	////right
+	//vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, 1.0f), Vector2f(0.0f, 0.0f)));
+	//vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, -1.0f), Vector2f(1.0f, 0.0f)));
+	//vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, -1.0f), Vector2f(1.0f, 1.0f)));
+	//vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, 1.0f), Vector2f(0.0f, 1.0f)));
 
 	unsigned int Ind[] = {
 		0, 1, 2,//front-face
