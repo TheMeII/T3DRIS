@@ -14,7 +14,7 @@
 #include "Camera.h"
 #include "Object.h"
 #include "InitResources.h"
-
+#include "Shapes.h"
 using namespace std;
 
 #pragma comment(lib, "glew32.lib") //ensure success of glew
@@ -78,11 +78,9 @@ static void RenderSceneCB()
 	//WITH THESE COMMANDS OBJECTS ARE MODIFIED SEPARETLY
 	boxes[0].Translate(Vector3f(0.0f, 0.0f, 0.0f)); //all these take vector parameters (for now), and values specify the modification to each axis (  Vector3f(x, y, z)  )
 	boxes[1].Translate(Vector3f(-1.0f, 1.0f, -9.0f));
-	boxes[2].Translate(Vector3f(0.0f, 16.0f, 0.0f));
 	boxes[0].Scale(Vector3f(100.0f, 100.0f, 100.0f)); //Huge box that is around
 	boxes[1].Scale(Vector3f(1.0f, 1.0f, 1.0f));
-	boxes[2].Scale(Vector3f(16.0f, 16.0f, 16.0f));
-	boxes[3].Scale(Vector3f(16.0f, 16.0f, 16.0f));
+	boxes[2].Scale(Vector3f(16.0f, 0.0f, 16.0f));
 	boxes[1].Rotate(Vector3f(sinf(scale)*90.0f, sinf(scale) * 90.0f, 1.0f));
 	
 
@@ -231,241 +229,248 @@ static void CreateObject1()
 	boxes.push_back(oo);
 	
 }
+//
+//static void CreateObject2()
+//{
+//	//PRODUCES TWO TRIGLES THAT FORM RECTANGLE
+// //make Vector3f array
+//	vector<unsigned int> indices;
+//	vector<Vertex> vertices;
+//	/*vertices.push_back(Vertex(Vector3f(-1.0f, -1.0f, 1.0f), Vector2f(0.25f, 0.6666f))); //front-bot-left
+//	vertices.push_back(Vertex(Vector3f(1.0f, -1.0f, 1.0f), Vector2f(0.50f, 0.6666f))); //front-bot-right
+//	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, 1.0f), Vector2f(0.50f, 0.3333f))); //front-top-right
+//	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, 1.0f), Vector2f(0.25f, 0.3333f))); //front-top-left
+//	vertices.push_back(Vertex(Vector3f(-1.0f, -1.0f, -1.0f), Vector2f(1.0f, 0.6666f))); //rear-bot-left
+//	vertices.push_back(Vertex(Vector3f(1.0f, -1.0f, -1.0f), Vector2f(0.75f, 0.6666f))); //rear-bot-right
+//	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, -1.0f), Vector2f(0.75f, 0.3333f))); //rear-top-right
+//	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, -1.0f), Vector2f(1.0f, 0.3333f))); //rear-top-left*/
+//
+//	//front
+//	vertices.push_back(Vertex(Vector3f(-1.0f, -1.0f, 1.0f), Vector2f(0.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(1.0f, -1.0f, 1.0f), Vector2f(1.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, 1.0f), Vector2f(1.0f, 1.0f)));
+//	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, 1.0f), Vector2f(0.0f, 1.0f)));
+//	//top
+//	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, 1.0f), Vector2f(0.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, 1.0f), Vector2f(1.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, -1.0f), Vector2f(1.0f, 1.0f)));
+//	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, -1.0f), Vector2f(0.0f, 1.0f)));
+//	//back
+//	vertices.push_back(Vertex(Vector3f(1.0f, -1.0f, -1.0f), Vector2f(0.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(-1.0f, -1.0f, -1.0f), Vector2f(1.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, -1.0f), Vector2f(1.0f, 1.0f)));
+//	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, -1.0f), Vector2f(0.0f, 1.0f)));
+//	//bottom
+//	vertices.push_back(Vertex(Vector3f(-1.0f, -1.0f, -1.0f), Vector2f(0.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(1.0f, -1.0f, -1.0f), Vector2f(1.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(1.0f, -1.0f, 1.0f), Vector2f(1.0f, 1.0f)));
+//	vertices.push_back(Vertex(Vector3f(-1.0f, -1.0f, 1.0f), Vector2f(0.0f, 1.0f)));
+//	//left
+//	vertices.push_back(Vertex(Vector3f(-1.0f, -1.0f, -1.0f), Vector2f(0.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(-1.0f, -1.0f, 1.0f), Vector2f(1.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, 1.0f), Vector2f(1.0f, 1.0f)));
+//	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, -1.0f), Vector2f(0.0f, 1.0f)));
+//	//right
+//	vertices.push_back(Vertex(Vector3f(1.0f, -1.0f, 1.0f), Vector2f(0.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(1.0f, -1.0f, -1.0f), Vector2f(1.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, -1.0f), Vector2f(1.0f, 1.0f)));
+//	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, 1.0f), Vector2f(0.0f, 1.0f)));
+//
+//	unsigned int Ind[] = {
+//		0, 1, 2,//front-face
+//		2, 3, 0,
+//		4, 5, 6,//top-face
+//		6, 7, 4,
+//		8, 9, 10,//back
+//		10, 11, 8,
+//		12, 13, 14,//bottom
+//		14, 15, 12,
+//		16, 17, 18, //left
+//		18, 19, 16,
+//		20, 21, 22, //right
+//		22, 23, 20 };
+//
+//	indices.assign(Ind, Ind + sizeof(Ind) / sizeof(unsigned int));
+//	Object oo = Object(vertices, indices, "cube_white.png");
+//	
+//	boxes.push_back(oo);
+//	
+////}
+//
+//static void AddToObject2()
+//{
+//	vector<unsigned int> indices;
+//	vector<Vertex> vertices;
+//
+//	//front
+//	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, 1.0f), Vector2f(0.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, 1.0f), Vector2f(1.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, 1.0f), Vector2f(1.0f, 1.0f)));
+//	vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, 1.0f), Vector2f(0.0f, 1.0f)));
+//	//top
+//	vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, 1.0f), Vector2f(0.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, 1.0f), Vector2f(1.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, -1.0f), Vector2f(1.0f, 1.0f)));
+//	vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, -1.0f), Vector2f(0.0f, 1.0f)));
+//	//back
+//	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, -1.0f), Vector2f(0.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, -1.0f), Vector2f(1.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, -1.0f), Vector2f(1.0f, 1.0f)));
+//	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, -1.0f), Vector2f(0.0f, 1.0f)));
+//	//bottom
+//	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, -1.0f), Vector2f(0.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, -1.0f), Vector2f(1.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, 1.0f), Vector2f(1.0f, 1.0f)));
+//	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, 1.0f), Vector2f(0.0f, 1.0f)));
+//	//left
+//	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, -1.0f), Vector2f(0.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, 1.0f), Vector2f(1.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, 1.0f), Vector2f(1.0f, 1.0f)));
+//	vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, -1.0f), Vector2f(0.0f, 1.0f)));
+//	//right
+//	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, 1.0f), Vector2f(0.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, -1.0f), Vector2f(1.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, -1.0f), Vector2f(1.0f, 1.0f)));
+//	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, 1.0f), Vector2f(0.0f, 1.0f)));
+//
+//	unsigned int Ind[] = {
+//		0, 1, 2,//front-face
+//		2, 3, 0,
+//		4, 5, 6,//top-face
+//		6, 7, 4,
+//		8, 9, 10,//back
+//		10, 11, 8,
+//		12, 13, 14,//bottom
+//		14, 15, 12,
+//		16, 17, 18, //left
+//		18, 19, 16,
+//		20, 21, 22, //right
+//		22, 23, 20 };
+//
+//	indices.assign(Ind, Ind + sizeof(Ind) / sizeof(unsigned int));
+//	
+//	boxes[1].addEntry(vertices, indices, "cube_white.png");
+//	
+//}
+//
+//static void AddAgainToObject2()
+//{
+//	vector<unsigned int> indices;
+//	vector<Vertex> vertices;
+//
+//	//front
+//	vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, 1.0f), Vector2f(0.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, 1.0f), Vector2f(1.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(1.0f, 5.0f, 1.0f), Vector2f(1.0f, 1.0f)));
+//	vertices.push_back(Vertex(Vector3f(-1.0f, 5.0f, 1.0f), Vector2f(0.0f, 1.0f)));
+//	//top
+//	vertices.push_back(Vertex(Vector3f(-1.0f, 5.0f, 1.0f), Vector2f(0.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(1.0f, 5.0f, 1.0f), Vector2f(1.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(1.0f, 5.0f, -1.0f), Vector2f(1.0f, 1.0f)));
+//	vertices.push_back(Vertex(Vector3f(-1.0f, 5.0f, -1.0f), Vector2f(0.0f, 1.0f)));
+//	//back
+//	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, -1.0f), Vector2f(0.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, -1.0f), Vector2f(1.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(-1.0f, 5.0f, -1.0f), Vector2f(1.0f, 1.0f)));
+//	vertices.push_back(Vertex(Vector3f(1.0f, 5.0f, -1.0f), Vector2f(0.0f, 1.0f)));
+//	//bottom
+//	vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, -1.0f), Vector2f(0.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, -1.0f), Vector2f(1.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, 1.0f), Vector2f(1.0f, 1.0f)));
+//	vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, 1.0f), Vector2f(0.0f, 1.0f)));
+//	//left
+//	vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, -1.0f), Vector2f(0.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, 1.0f), Vector2f(1.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(-1.0f, 5.0f, 1.0f), Vector2f(1.0f, 1.0f)));
+//	vertices.push_back(Vertex(Vector3f(-1.0f, 5.0f, -1.0f), Vector2f(0.0f, 1.0f)));
+//	//right
+//	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, 1.0f), Vector2f(0.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, -1.0f), Vector2f(1.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(1.0f, 5.0f, -1.0f), Vector2f(1.0f, 1.0f)));
+//	vertices.push_back(Vertex(Vector3f(1.0f, 5.0f, 1.0f), Vector2f(0.0f, 1.0f)));
+//
+//	unsigned int Ind[] = {
+//		0, 1, 2,//front-face
+//		2, 3, 0,
+//		4, 5, 6,//top-face
+//		6, 7, 4,
+//		8, 9, 10,//back
+//		10, 11, 8,
+//		12, 13, 14,//bottom
+//		14, 15, 12,
+//		16, 17, 18, //left
+//		18, 19, 16,
+//		20, 21, 22, //right
+//		22, 23, 20 };
+//
+//	indices.assign(Ind, Ind + sizeof(Ind) / sizeof(unsigned int));
+//	
+//	boxes[1].addEntry(vertices, indices, "cube_white.png");
+//	
+//}
+//
+//static void AddLastToObject2()
+//{
+//	vector<unsigned int> indices;
+//	vector<Vertex> vertices;
+//
+//	//front
+//	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, 1.0f), Vector2f(0.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(3.0f, 3.0f, 1.0f), Vector2f(1.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(3.0f, 5.0f, 1.0f), Vector2f(1.0f, 1.0f)));
+//	vertices.push_back(Vertex(Vector3f(1.0f, 5.0f, 1.0f), Vector2f(0.0f, 1.0f)));
+//	//top
+//	vertices.push_back(Vertex(Vector3f(1.0f, 5.0f, 1.0f), Vector2f(0.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(3.0f, 5.0f, 1.0f), Vector2f(1.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(3.0f, 5.0f, -1.0f), Vector2f(1.0f, 1.0f)));
+//	vertices.push_back(Vertex(Vector3f(1.0f, 5.0f, -1.0f), Vector2f(0.0f, 1.0f)));
+//	//back
+//	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, -1.0f), Vector2f(0.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(3.0f, 3.0f, -1.0f), Vector2f(1.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(3.0f, 5.0f, -1.0f), Vector2f(1.0f, 1.0f)));
+//	vertices.push_back(Vertex(Vector3f(1.0f, 5.0f, -1.0f), Vector2f(0.0f, 1.0f)));
+//	//bottom
+//	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, -1.0f), Vector2f(0.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(3.0f, 3.0f, -1.0f), Vector2f(1.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(3.0f, 3.0f, 1.0f), Vector2f(1.0f, 1.0f)));
+//	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, 1.0f), Vector2f(0.0f, 1.0f)));
+//	//left
+//	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, -1.0f), Vector2f(0.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, 1.0f), Vector2f(1.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(1.0f, 5.0f, 1.0f), Vector2f(1.0f, 1.0f)));
+//	vertices.push_back(Vertex(Vector3f(1.0f, 5.0f, -1.0f), Vector2f(0.0f, 1.0f)));
+//	//right
+//	vertices.push_back(Vertex(Vector3f(3.0f, 3.0f, 1.0f), Vector2f(0.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(3.0f, 3.0f, -1.0f), Vector2f(1.0f, 0.0f)));
+//	vertices.push_back(Vertex(Vector3f(3.0f, 5.0f, -1.0f), Vector2f(1.0f, 1.0f)));
+//	vertices.push_back(Vertex(Vector3f(3.0f, 5.0f, 1.0f), Vector2f(0.0f, 1.0f)));
+//
+//	unsigned int Ind[] = {
+//		0, 1, 2,//front-face
+//		2, 3, 0,
+//		4, 5, 6,//top-face
+//		6, 7, 4,
+//		8, 9, 10,//back
+//		10, 11, 8,
+//		12, 13, 14,//bottom
+//		14, 15, 12,
+//		16, 17, 18, //left
+//		18, 19, 16,
+//		20, 21, 22, //right
+//		22, 23, 20 };
+//
+//	indices.assign(Ind, Ind + sizeof(Ind) / sizeof(unsigned int));
+//	
+//	boxes[1].addEntry(vertices, indices, "cube_white.png");
+//	
+//}
 
-static void CreateObject2()
-{
-	//PRODUCES TWO TRIGLES THAT FORM RECTANGLE
- //make Vector3f array
-	vector<unsigned int> indices;
-	vector<Vertex> vertices;
-	/*vertices.push_back(Vertex(Vector3f(-1.0f, -1.0f, 1.0f), Vector2f(0.25f, 0.6666f))); //front-bot-left
-	vertices.push_back(Vertex(Vector3f(1.0f, -1.0f, 1.0f), Vector2f(0.50f, 0.6666f))); //front-bot-right
-	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, 1.0f), Vector2f(0.50f, 0.3333f))); //front-top-right
-	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, 1.0f), Vector2f(0.25f, 0.3333f))); //front-top-left
-	vertices.push_back(Vertex(Vector3f(-1.0f, -1.0f, -1.0f), Vector2f(1.0f, 0.6666f))); //rear-bot-left
-	vertices.push_back(Vertex(Vector3f(1.0f, -1.0f, -1.0f), Vector2f(0.75f, 0.6666f))); //rear-bot-right
-	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, -1.0f), Vector2f(0.75f, 0.3333f))); //rear-top-right
-	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, -1.0f), Vector2f(1.0f, 0.3333f))); //rear-top-left*/
-
-	//front
-	vertices.push_back(Vertex(Vector3f(-1.0f, -1.0f, 1.0f), Vector2f(0.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, -1.0f, 1.0f), Vector2f(1.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, 1.0f), Vector2f(1.0f, 1.0f)));
-	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, 1.0f), Vector2f(0.0f, 1.0f)));
-	//top
-	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, 1.0f), Vector2f(0.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, 1.0f), Vector2f(1.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, -1.0f), Vector2f(1.0f, 1.0f)));
-	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, -1.0f), Vector2f(0.0f, 1.0f)));
-	//back
-	vertices.push_back(Vertex(Vector3f(1.0f, -1.0f, -1.0f), Vector2f(0.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(-1.0f, -1.0f, -1.0f), Vector2f(1.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, -1.0f), Vector2f(1.0f, 1.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, -1.0f), Vector2f(0.0f, 1.0f)));
-	//bottom
-	vertices.push_back(Vertex(Vector3f(-1.0f, -1.0f, -1.0f), Vector2f(0.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, -1.0f, -1.0f), Vector2f(1.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, -1.0f, 1.0f), Vector2f(1.0f, 1.0f)));
-	vertices.push_back(Vertex(Vector3f(-1.0f, -1.0f, 1.0f), Vector2f(0.0f, 1.0f)));
-	//left
-	vertices.push_back(Vertex(Vector3f(-1.0f, -1.0f, -1.0f), Vector2f(0.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(-1.0f, -1.0f, 1.0f), Vector2f(1.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, 1.0f), Vector2f(1.0f, 1.0f)));
-	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, -1.0f), Vector2f(0.0f, 1.0f)));
-	//right
-	vertices.push_back(Vertex(Vector3f(1.0f, -1.0f, 1.0f), Vector2f(0.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, -1.0f, -1.0f), Vector2f(1.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, -1.0f), Vector2f(1.0f, 1.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, 1.0f), Vector2f(0.0f, 1.0f)));
-
-	unsigned int Ind[] = {
-		0, 1, 2,//front-face
-		2, 3, 0,
-		4, 5, 6,//top-face
-		6, 7, 4,
-		8, 9, 10,//back
-		10, 11, 8,
-		12, 13, 14,//bottom
-		14, 15, 12,
-		16, 17, 18, //left
-		18, 19, 16,
-		20, 21, 22, //right
-		22, 23, 20 };
-
-	indices.assign(Ind, Ind + sizeof(Ind) / sizeof(unsigned int));
-	Object oo = Object(vertices, indices, "cube_white.png");
-	
-	boxes.push_back(oo);
-	
+static void createShape(){
+	Shapes shape1;
+	shape1.AddToShape();
+	boxes.push_back(shape1.returnShape());
 }
 
-static void AddToObject2()
-{
-	vector<unsigned int> indices;
-	vector<Vertex> vertices;
-
-	//front
-	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, 1.0f), Vector2f(0.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, 1.0f), Vector2f(1.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, 1.0f), Vector2f(1.0f, 1.0f)));
-	vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, 1.0f), Vector2f(0.0f, 1.0f)));
-	//top
-	vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, 1.0f), Vector2f(0.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, 1.0f), Vector2f(1.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, -1.0f), Vector2f(1.0f, 1.0f)));
-	vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, -1.0f), Vector2f(0.0f, 1.0f)));
-	//back
-	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, -1.0f), Vector2f(0.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, -1.0f), Vector2f(1.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, -1.0f), Vector2f(1.0f, 1.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, -1.0f), Vector2f(0.0f, 1.0f)));
-	//bottom
-	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, -1.0f), Vector2f(0.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, -1.0f), Vector2f(1.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, 1.0f), Vector2f(1.0f, 1.0f)));
-	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, 1.0f), Vector2f(0.0f, 1.0f)));
-	//left
-	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, -1.0f), Vector2f(0.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, 1.0f), Vector2f(1.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, 1.0f), Vector2f(1.0f, 1.0f)));
-	vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, -1.0f), Vector2f(0.0f, 1.0f)));
-	//right
-	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, 1.0f), Vector2f(0.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, -1.0f), Vector2f(1.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, -1.0f), Vector2f(1.0f, 1.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, 1.0f), Vector2f(0.0f, 1.0f)));
-
-	unsigned int Ind[] = {
-		0, 1, 2,//front-face
-		2, 3, 0,
-		4, 5, 6,//top-face
-		6, 7, 4,
-		8, 9, 10,//back
-		10, 11, 8,
-		12, 13, 14,//bottom
-		14, 15, 12,
-		16, 17, 18, //left
-		18, 19, 16,
-		20, 21, 22, //right
-		22, 23, 20 };
-
-	indices.assign(Ind, Ind + sizeof(Ind) / sizeof(unsigned int));
-	
-	boxes[1].addEntry(vertices, indices, "cube_white.png");
-	
-}
-
-static void AddAgainToObject2()
-{
-	vector<unsigned int> indices;
-	vector<Vertex> vertices;
-
-	//front
-	vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, 1.0f), Vector2f(0.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, 1.0f), Vector2f(1.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 5.0f, 1.0f), Vector2f(1.0f, 1.0f)));
-	vertices.push_back(Vertex(Vector3f(-1.0f, 5.0f, 1.0f), Vector2f(0.0f, 1.0f)));
-	//top
-	vertices.push_back(Vertex(Vector3f(-1.0f, 5.0f, 1.0f), Vector2f(0.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 5.0f, 1.0f), Vector2f(1.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 5.0f, -1.0f), Vector2f(1.0f, 1.0f)));
-	vertices.push_back(Vertex(Vector3f(-1.0f, 5.0f, -1.0f), Vector2f(0.0f, 1.0f)));
-	//back
-	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, -1.0f), Vector2f(0.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, -1.0f), Vector2f(1.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(-1.0f, 5.0f, -1.0f), Vector2f(1.0f, 1.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 5.0f, -1.0f), Vector2f(0.0f, 1.0f)));
-	//bottom
-	vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, -1.0f), Vector2f(0.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, -1.0f), Vector2f(1.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, 1.0f), Vector2f(1.0f, 1.0f)));
-	vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, 1.0f), Vector2f(0.0f, 1.0f)));
-	//left
-	vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, -1.0f), Vector2f(0.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, 1.0f), Vector2f(1.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(-1.0f, 5.0f, 1.0f), Vector2f(1.0f, 1.0f)));
-	vertices.push_back(Vertex(Vector3f(-1.0f, 5.0f, -1.0f), Vector2f(0.0f, 1.0f)));
-	//right
-	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, 1.0f), Vector2f(0.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, -1.0f), Vector2f(1.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 5.0f, -1.0f), Vector2f(1.0f, 1.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 5.0f, 1.0f), Vector2f(0.0f, 1.0f)));
-
-	unsigned int Ind[] = {
-		0, 1, 2,//front-face
-		2, 3, 0,
-		4, 5, 6,//top-face
-		6, 7, 4,
-		8, 9, 10,//back
-		10, 11, 8,
-		12, 13, 14,//bottom
-		14, 15, 12,
-		16, 17, 18, //left
-		18, 19, 16,
-		20, 21, 22, //right
-		22, 23, 20 };
-
-	indices.assign(Ind, Ind + sizeof(Ind) / sizeof(unsigned int));
-	
-	boxes[1].addEntry(vertices, indices, "cube_white.png");
-	
-}
-
-static void AddLastToObject2()
-{
-	vector<unsigned int> indices;
-	vector<Vertex> vertices;
-
-	//front
-	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, 1.0f), Vector2f(0.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(3.0f, 3.0f, 1.0f), Vector2f(1.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(3.0f, 5.0f, 1.0f), Vector2f(1.0f, 1.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 5.0f, 1.0f), Vector2f(0.0f, 1.0f)));
-	//top
-	vertices.push_back(Vertex(Vector3f(1.0f, 5.0f, 1.0f), Vector2f(0.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(3.0f, 5.0f, 1.0f), Vector2f(1.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(3.0f, 5.0f, -1.0f), Vector2f(1.0f, 1.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 5.0f, -1.0f), Vector2f(0.0f, 1.0f)));
-	//back
-	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, -1.0f), Vector2f(0.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(3.0f, 3.0f, -1.0f), Vector2f(1.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(3.0f, 5.0f, -1.0f), Vector2f(1.0f, 1.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 5.0f, -1.0f), Vector2f(0.0f, 1.0f)));
-	//bottom
-	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, -1.0f), Vector2f(0.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(3.0f, 3.0f, -1.0f), Vector2f(1.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(3.0f, 3.0f, 1.0f), Vector2f(1.0f, 1.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, 1.0f), Vector2f(0.0f, 1.0f)));
-	//left
-	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, -1.0f), Vector2f(0.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, 1.0f), Vector2f(1.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 5.0f, 1.0f), Vector2f(1.0f, 1.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 5.0f, -1.0f), Vector2f(0.0f, 1.0f)));
-	//right
-	vertices.push_back(Vertex(Vector3f(3.0f, 3.0f, 1.0f), Vector2f(0.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(3.0f, 3.0f, -1.0f), Vector2f(1.0f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(3.0f, 5.0f, -1.0f), Vector2f(1.0f, 1.0f)));
-	vertices.push_back(Vertex(Vector3f(3.0f, 5.0f, 1.0f), Vector2f(0.0f, 1.0f)));
-
-	unsigned int Ind[] = {
-		0, 1, 2,//front-face
-		2, 3, 0,
-		4, 5, 6,//top-face
-		6, 7, 4,
-		8, 9, 10,//back
-		10, 11, 8,
-		12, 13, 14,//bottom
-		14, 15, 12,
-		16, 17, 18, //left
-		18, 19, 16,
-		20, 21, 22, //right
-		22, 23, 20 };
-
-	indices.assign(Ind, Ind + sizeof(Ind) / sizeof(unsigned int));
-	
-	boxes[1].addEntry(vertices, indices, "cube_white.png");
-	
-}
 
 static void CreateObject3()
 {
@@ -610,11 +615,13 @@ int main(int argc, char* argv[])
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
 	CreateObject1(); //Create indices
-	CreateObject2();
+	//CreateObject2();
+	createShape();
 	CreateObject3();
-	AddToObject2();
-	AddAgainToObject2();
-	AddLastToObject2();
+
+	//AddToObject2();
+	//AddAgainToObject2();
+	//AddLastToObject2();
 
 	CompileShaders(); //create shaders
 
