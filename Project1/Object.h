@@ -13,17 +13,22 @@
 
 class Object{
 private:
+
+struct objectEntry{ 
 GLuint vbo;
 GLuint ibo;
 unsigned int NumIndices;
-Pipeline objectTransforms;
 std::string textureFile;
 Texture* pObjTexture;
+};
 
+Pipeline objectTransforms;
+std::vector<objectEntry> entries;
 
 public:
 Object();
 Object(std::vector<Vertex> vertices, std::vector<unsigned int> indices, std::string texture);
+void addEntry(std::vector<Vertex> vertices, std::vector<unsigned int> indices, std::string texture);
 virtual ~Object();
 void Render();
 void Translate(Vector3f trans);

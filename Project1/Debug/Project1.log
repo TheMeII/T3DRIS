@@ -1,4 +1,4 @@
-﻿Build started 4.11.2013 15:37:08.
+﻿Build started 7.11.2013 12:07:53.
      1>Project "G:\Projekti_T3DRIS\Projekti\Project1\Project1.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"G:\ImageMagick\ImageMagick-6.8.7-Q16\include" /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /showIncludes /analyze- /errorReport:prompt EngineFile.cpp
@@ -822,7 +822,7 @@
                  ]
          Note: including file:  g:\projekti_t3dris\projekti\project1\InitResources.h
        Link:
-         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"G:\Projekti_T3DRIS\Projekti\Debug\TETEngine.exe" /INCREMENTAL /NOLOGO CORE_RL_magick_.lib CORE_RL_Magick++_.lib X11.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"G:\Projekti_T3DRIS\Projekti\Debug\TETEngine.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"G:\Projekti_T3DRIS\Projekti\Debug\TETEngine.lib" /MACHINE:X86 Debug\Camera.obj
+         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"G:\Projekti_T3DRIS\Projekti\Debug\TETEngine.exe" /INCREMENTAL /NOLOGO /LIBPATH:"G:\ImageMagick\ImageMagick-6.8.7-Q16\lib" CORE_RL_magick_.lib CORE_RL_Magick++_.lib X11.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"G:\Projekti_T3DRIS\Projekti\Debug\TETEngine.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"G:\Projekti_T3DRIS\Projekti\Debug\TETEngine.lib" /MACHINE:X86 Debug\Camera.obj
          Debug\EngineFile.obj
          Debug\math3d.obj
          Debug\Object.obj
@@ -833,4 +833,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:17.41
+Time Elapsed 00:00:29.49
