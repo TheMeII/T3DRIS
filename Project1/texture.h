@@ -8,7 +8,7 @@
 #endif
 
 #include <GL\glew.h>
-#include <magick\Magick++.h>
+#include <Magick++.h>
 
 class Texture
 {
