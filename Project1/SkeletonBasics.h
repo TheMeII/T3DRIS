@@ -6,6 +6,7 @@
 
 #pragma once
 #include <windows.h>
+#include <string>
 #include "NuiApi.h"
 
 class CSkeletonBasics
@@ -15,7 +16,7 @@ public:
     /// <summary>
     /// Constructor
     /// </summary>
-    CSkeletonBasics();
+    CSkeletonBasics(std::string *t);
 
     /// <summary>
     /// Destructor
@@ -24,7 +25,7 @@ public:
 
 
 	//TODO: poista ikkunanluonti mutta jätä skeletonin lueskelu
-    int                     Run(HINSTANCE hInstance, int nCmdShow);
+    int                     Run();
 
 private:
     HWND                    m_hWnd;

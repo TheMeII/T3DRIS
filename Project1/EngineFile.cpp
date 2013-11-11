@@ -1,3 +1,4 @@
+#include <windows.h>
 #include <iostream>
 #include <vector>
 #include <string>
@@ -15,12 +16,16 @@
 #include "Object.h"
 #include "InitResources.h"
 #include "Shapes.h"
+#include "KinectControl.h"
 using namespace std;
 
 #pragma comment(lib, "glew32.lib") //ensure success of glew
 
 
 //GLOBALS
+//Teemu testaa
+string kinecttext;
+
 GLuint gWVPLocation; //Global uniform variable
 GLuint gSampler;
 vector<Object> boxes;
@@ -579,6 +584,9 @@ static void CompileShaders()
 
 int main(int argc, char* argv[])
 {
+
+	KinectControl(&kinecttext);
+
 	Magick::InitializeMagick(*argv);
 	//init GLUT
 	glutInit(&argc, argv);

@@ -1,8 +1,12 @@
 #pragma once
+#include <windows.h>
+#include "SkeletonBasics.h"
+#include <iostream>
 class KinectControl
 {
 public:
-	KinectControl(void);
+	KinectControl();
+	KinectControl(std::string *text);
 	~KinectControl(void);
 };
 

@@ -6,11 +6,14 @@
 
 #include <strsafe.h>
 #include <iostream>
+#include <string>
 #include "SkeletonBasics.h"
 
 static const float g_JointThickness = 3.0f;
 static const float g_TrackedBoneThickness = 6.0f;
 static const float g_InferredBoneThickness = 1.0f;
+
+std::string *text;
 
 /// <summary>
 /// Entry point for the application
@@ -20,16 +23,16 @@ static const float g_InferredBoneThickness = 1.0f;
 /// <param name="lpCmdLine">command line arguments</param>
 /// <param name="nCmdShow">whether to display minimized, maximized, or normally</param>
 /// <returns>status</returns>
-int APIENTRY wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLine, int nCmdShow)
-{
-    CSkeletonBasics application;
-    application.Run(hInstance, nCmdShow);
-}
+//int APIENTRY wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLine, int nCmdShow)
+//{
+//    CSkeletonBasics application;
+//    application.Run(hInstance, nCmdShow);
+//}
 
 /// <summary>
 /// Constructor
 /// </summary>
-CSkeletonBasics::CSkeletonBasics() :
+CSkeletonBasics::CSkeletonBasics(std::string *t) :
     m_hNextSkeletonEvent(INVALID_HANDLE_VALUE),
     m_pSkeletonStreamHandle(INVALID_HANDLE_VALUE),
     m_bSeatedMode(false),
@@ -67,7 +70,7 @@ CSkeletonBasics::~CSkeletonBasics()
 /// </summary>
 /// <param name="hInstance">handle to the application instance</param>
 /// <param name="nCmdShow">whether to display minimized, maximized, or normally</param>
-int CSkeletonBasics::Run(HINSTANCE hInstance, int nCmdShow)
+int CSkeletonBasics::Run()
 {
     MSG       msg = {0};
     WNDCLASS  wc  = {0};
@@ -81,7 +84,7 @@ int CSkeletonBasics::Run(HINSTANCE hInstance, int nCmdShow)
     while (WM_QUIT != msg.message)
     {
         hEvents[0] = m_hNextSkeletonEvent;
-
+		std::cerr << "update?";
         // Check to see if we have either a message (by passing in QS_ALLEVENTS)
         // Or a Kinect event (hEvents)
         // Update() will check for Kinect events individually, in case more than one are signalled
@@ -191,7 +194,6 @@ void CSkeletonBasics::ProcessSkeleton()
     // smooth out the skeleton data
     m_pNuiSensor->NuiTransformSmooth(&skeletonFrame, NULL);
 
-
     for (int i = 0 ; i < NUI_SKELETON_COUNT; ++i)
     {
         NUI_SKELETON_TRACKING_STATE trackingState = skeletonFrame.SkeletonData[i].eTrackingState;
@@ -199,7 +201,8 @@ void CSkeletonBasics::ProcessSkeleton()
         if (NUI_SKELETON_TRACKED == trackingState)
         {
             // We're tracking the skeleton, draw it
-            
+			//TODO: Do something here!!
+			// Look at drawskeleton.  
         }
         else if (NUI_SKELETON_POSITION_ONLY == trackingState)
         {
