@@ -65,13 +65,27 @@ using namespace std;
 		switch (rand) // kokonaisluku tai char
 {
   case 0:
-	 for(int i=0;i<3;i++){
-	  x_factor=0;y_factor+=1;z_factor=0;
-	  shape->AddToShape();}
+	//kuutio
+		  x_factor=0;y_factor+=1;z_factor=0;
+		   shape->AddToShape();	 
+	  x_factor=0;y_factor=0;z_factor=1;
+	  shape->AddToShape();
+	   x_factor=0;y_factor+=1;z_factor+=0;
+		shape->AddToShape();
+		 x_factor=1;y_factor+=0;z_factor=0;
+		   shape->AddToShape();
+		 x_factor+=0;y_factor+=0;z_factor+=1;
+		   shape->AddToShape();
+		    x_factor-=0;y_factor-=1;z_factor-=0;
+		   shape->AddToShape();
+		    x_factor-=0;y_factor-=0;z_factor-=1;
+		   shape->AddToShape();
+	 
  break;
 
 
   case 1: 
+	  //pitkä palikka
 		x_factor=0;y_factor-=1;z_factor=0;
 		shape->AddToShape();
 		x_factor=0;y_factor-=1;z_factor=0;
@@ -80,14 +94,61 @@ using namespace std;
 		shape->AddToShape();
  break;
   case 2:
-    // Arvo on yksi tai kaksi, katkaise ohjelman kulku
+	  //L palikka
+    x_factor=0;y_factor-=1;z_factor=0;
+		shape->AddToShape();
+		x_factor=0;y_factor-=1;z_factor=0;
+		shape->AddToShape();
+		x_factor=1;y_factor+=0;z_factor=0;
+		shape->AddToShape();
     break;
   case 3:
-  {
-    // Arvo on kolme
-    // Useampia lauseita
+  
+	  //risti
+    x_factor=0;y_factor=1;z_factor=0;
+		   shape->AddToShape();	 
+	  x_factor=0;y_factor=0;z_factor=1;
+	  shape->AddToShape();
+	   x_factor=0;y_factor=-1;z_factor=0;
+		shape->AddToShape();
+		 x_factor=0;y_factor=0;z_factor=-1;
+		shape->AddToShape();
+		 x_factor=1;y_factor=0;z_factor=0;
+		shape->AddToShape();
+		 x_factor=-1;y_factor=0;z_factor=0;
+		shape->AddToShape();
     break;
-  }
+  
+  case 4:
+	  //z palikka
+	  x_factor=-1;y_factor=0;z_factor=0;
+		   shape->AddToShape();	 
+	  x_factor=0;y_factor=1;z_factor=0;
+	  shape->AddToShape();
+	   x_factor=1;y_factor+=0;z_factor=0;
+		shape->AddToShape();	 
+		 		 
+		 
+		 break;
+  case 5:
+	  //toinen L palikka
+		  x_factor=0;y_factor-=1;z_factor=0;
+		shape->AddToShape();
+		x_factor=0;y_factor-=1;z_factor=0;
+		shape->AddToShape();
+		x_factor=-1;y_factor+=0;z_factor=0;
+		shape->AddToShape();
+		 break;
+		 
+  case 6:
+		   //toinen z palikka
+	  x_factor=1;y_factor=0;z_factor=0;
+		   shape->AddToShape();	 
+	  x_factor=0;y_factor=1;z_factor=0;
+	  shape->AddToShape();
+	   x_factor=-1;y_factor+=0;z_factor=0;
+		shape->AddToShape();	 
+		 break;
   default:
     // Arvo on joku muu
     break;
@@ -137,36 +198,6 @@ using namespace std;
 
 
 
-	////front
-	//vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, 1.0f), Vector2f(0.0f, 0.0f)));
-	//vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, 1.0f), Vector2f(1.0f, 0.0f)));
-	//vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, 1.0f), Vector2f(1.0f, 1.0f)));//luodaan yhden laatikon ylemmäs
-	//vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, 1.0f), Vector2f(0.0f, 1.0f)));
-	////top
-	//vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, 1.0f), Vector2f(0.0f, 0.0f)));
-	//vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, 1.0f), Vector2f(1.0f, 0.0f)));
-	//vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, -1.0f), Vector2f(1.0f, 1.0f)));
-	//vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, -1.0f), Vector2f(0.0f, 1.0f)));
-	////back
-	//vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, -1.0f), Vector2f(0.0f, 0.0f)));
-	//vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, -1.0f), Vector2f(1.0f, 0.0f)));
-	//vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, -1.0f), Vector2f(1.0f, 1.0f)));
-	//vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, -1.0f), Vector2f(0.0f, 1.0f)));
-	////bottom
-	//vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, -1.0f), Vector2f(0.0f, 0.0f)));
-	//vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, -1.0f), Vector2f(1.0f, 0.0f)));
-	//vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, 1.0f), Vector2f(1.0f, 1.0f)));
-	//vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, 1.0f), Vector2f(0.0f, 1.0f)));
-	////left
-	//vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, -1.0f), Vector2f(0.0f, 0.0f)));
-	//vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, 1.0f), Vector2f(1.0f, 0.0f)));
-	//vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, 1.0f), Vector2f(1.0f, 1.0f)));
-	//vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, -1.0f), Vector2f(0.0f, 1.0f)));
-	////right
-	//vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, 1.0f), Vector2f(0.0f, 0.0f)));
-	//vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, -1.0f), Vector2f(1.0f, 0.0f)));
-	//vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, -1.0f), Vector2f(1.0f, 1.0f)));
-	//vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, 1.0f), Vector2f(0.0f, 1.0f)));
 
 	unsigned int Ind[] = {
 		0, 1, 2,//front-face
