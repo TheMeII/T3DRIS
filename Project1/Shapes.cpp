@@ -6,6 +6,7 @@ using namespace std;
 	Shapes::Shapes(){
 	vector<unsigned int> indices;
 	vector<Vertex> vertices;
+
 	//front
 	vertices.push_back(Vertex(Vector3f(0.0f, 0.0f, 1.0f), Vector2f(0.0f, 0.0f)));
 	vertices.push_back(Vertex(Vector3f(1.0f, 0.0f, 1.0f), Vector2f(1.0f, 0.0f)));
