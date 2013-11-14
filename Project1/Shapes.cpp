@@ -149,6 +149,14 @@ using namespace std;
 	   x_factor=-1;y_factor+=0;z_factor=0;
 		shape->AddToShape();	 
 		 break;
+  case 7:
+	    x_factor=1;y_factor=0;z_factor=0;
+		   shape->AddToShape();	 
+	  x_factor=-1;y_factor=0;z_factor=0;
+	  shape->AddToShape();
+	   x_factor=0;y_factor+=1;z_factor=0;
+		shape->AddToShape();	
+		break;
   default:
     // Arvo on joku muu
     break;

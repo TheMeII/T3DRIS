@@ -3,11 +3,9 @@
 #include <string>
 #include <math.h>
 #include <assert.h>
-
 //OPENGL HELPER LIB INCLUDES
 #include <GL/glew.h> //handels management of OpenGL's extensions in system
 #include <GL\freeglut.h> //Windowing for multiple platforms
-
 //OWN INCLUDES
 #include "math3d.h"
 #include "pipeline.h"
@@ -19,12 +17,33 @@ using namespace std;
 
 #pragma comment(lib, "glew32.lib") //ensure success of glew
 
-
 //GLOBALS
 GLuint gWVPLocation; //Global uniform variable
 GLuint gSampler;
 vector<Object> boxes;
 Camera* pGameCamera;
+ float x_scale = 0.0f, y_scale= 0.0f,z_scale= 0.0f; //set static, so its value is recerved
+ bool n=true,s=false,w=false,e=false;
+//
+//
+// 
+//var rotWorldMatrix;
+//// Rotate an object around an arbitrary axis in world space       
+//function rotateAroundWorldAxis(object, axis, radians) {
+ //   rotWorldMatrix = new THREE.Matrix4();
+//    rotWorldMatrix.makeRotationAxis(axis.normalize(), radians);
+//    rotWorldMatrix.multiplySelf(object.matrix);        // pre-multiply
+//    object.matrix = rotWorldMatrix;
+//    object.rotation.getRotationFromMatrix(object.matrix, object.scale);
+//}
+//Then
+//
+////rotate 30 degrees on world X
+//rotateAroundWorldAxis(cube, new THREE.Vector3(1,0,0), 30 * Math.PI/180);
+//
+//
+
+
 
 //Shader codes
 //VERTEX SHADER
@@ -71,17 +90,8 @@ static void RenderSceneCB()
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	glEnable(GL_DEPTH_TEST);
 
-	static float scale = 0.0f; //set static, so its value is recerved
+	
 
-	scale += 0.01f;
-
-	//WITH THESE COMMANDS OBJECTS ARE MODIFIED SEPARETLY
-	boxes[0].Translate(Vector3f(0.0f, 0.0f, 0.0f)); //all these take vector parameters (for now), and values specify the modification to each axis (  Vector3f(x, y, z)  )
-	boxes[1].Translate(Vector3f(-1.0f, 1.0f, -9.0f));
-	boxes[0].Scale(Vector3f(100.0f, 100.0f, 100.0f)); //Huge box that is around
-	boxes[1].Scale(Vector3f(1.0f, 1.0f, 1.0f));
-	boxes[2].Scale(Vector3f(16.0f, 0.0f, 16.0f));
-	boxes[1].Rotate(Vector3f(sinf(scale)*90.0f, sinf(scale) * 90.0f, 1.0f));
 	
 
 	//glUniform1f(gScaleLocation, sinf(scale)); //Pass uniform value to shader using glUniform* functions.
@@ -103,6 +113,24 @@ static void RenderSceneCB()
 						//Params: 4:Starting adress of the matrix in memory (Rest are located after this address).
 		render.Render();
 	}
+
+
+
+	
+	
+
+	//WITH THESE COMMANDS OBJECTS ARE MODIFIED SEPARETLY
+	boxes[0].Translate(Vector3f(0.0f, 0.0f, 0.0f)); //all these take vector parameters (for now), and values specify the modification to each axis (  Vector3f(x, y, z)  )
+	boxes[1].Translate(Vector3f(-1.0f, 1.0f, -9.0f));
+	boxes[0].Scale(Vector3f(100.0f, 100.0f, 100.0f)); //Huge box that is around
+	boxes[1].Scale(Vector3f(1.0f, 1.0f, 1.0f));
+	boxes[2].Scale(Vector3f(16.0f, 0.0f, 16.0f));
+
+	//boxes[1].Rotate(p.getWorldPos);
+	
+	boxes[1].Rotate(Vector3f((x_scale)*90.0f, (y_scale) * 90.0f, (z_scale)*90.0f));
+	
+
 
 	glutSwapBuffers();
 }
@@ -139,10 +167,33 @@ static void SpecialKeyboardCB(int Key, int x, int y)
 
 static void KeyboardCB(unsigned char Key, int x, int y)
 {
+	
 	switch(Key)
 	{
 	case'q':
 		exit(0);
+		break;
+	case's':
+		if(n==true)
+			x_scale+=45.0f;
+		else /*if(w==true)*/
+			z_scale+=45.0f;
+		
+		break;
+	case'w':
+	
+		x_scale-=45.0f;
+		break;
+	case'a':
+		
+		y_scale-=45.0f;
+		n=false;
+		w=true;
+		break;
+	case'd':
+		
+		y_scale+=45.0f;
+		break;
 	}
 
 }
@@ -467,7 +518,7 @@ static void CreateObject1()
 
 static void createShape(){
 	Shapes shape1;
-	shape1.selectShape(4,&shape1);
+	shape1.selectShape(7,&shape1);
 	boxes.push_back(shape1.returnShape());
 }
 

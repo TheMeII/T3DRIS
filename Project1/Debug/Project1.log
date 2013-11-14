@@ -1,4 +1,4 @@
-﻿Build started 11.11.2013 11:19:31.
+﻿Build started 14.11.2013 14:05:54.
      1>Project "D:\Users\edu100\Documents\GitHub\T3DRIS\Project1\Project1.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"F:\ImageMagick\ImageMagick-6.8.7-Q16\include" /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /showIncludes /analyze- /errorReport:prompt EngineFile.cpp
@@ -835,4 +835,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.58
+Time Elapsed 00:00:02.51
