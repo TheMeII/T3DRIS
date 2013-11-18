@@ -31,6 +31,8 @@ GLuint gWVPLocation; //Global uniform variable
 GLuint gSampler;
 vector<Object> boxes;
 Camera* pGameCamera;
+KinectControl* kinect;
+int movement=0;
 
 //Shader codes
 //VERTEX SHADER
@@ -79,7 +81,11 @@ static void RenderSceneCB()
 
 	static float scale = 0.0f; //set static, so its value is recerved
 
-	scale += 0.01f;
+	//scale += 0.01f;
+
+	if (movement >0)
+		scale += 0.05f;
+	boxes[1].Rotate(Vector3f(sinf(scale)*90.0f, sinf(scale) * 90.0f, 1.0f));
 
 	//WITH THESE COMMANDS OBJECTS ARE MODIFIED SEPARETLY
 	boxes[0].Translate(Vector3f(0.0f, 0.0f, 0.0f)); //all these take vector parameters (for now), and values specify the modification to each axis (  Vector3f(x, y, z)  )
@@ -87,7 +93,7 @@ static void RenderSceneCB()
 	boxes[0].Scale(Vector3f(100.0f, 100.0f, 100.0f)); //Huge box that is around
 	boxes[1].Scale(Vector3f(1.0f, 1.0f, 1.0f));
 	boxes[2].Scale(Vector3f(16.0f, 0.0f, 16.0f));
-	boxes[1].Rotate(Vector3f(sinf(scale)*90.0f, sinf(scale) * 90.0f, 1.0f));
+	//boxes[1].Rotate(Vector3f(sinf(scale)*90.0f, sinf(scale) * 90.0f, 1.0f));
 	
 
 	//glUniform1f(gScaleLocation, sinf(scale)); //Pass uniform value to shader using glUniform* functions.
@@ -145,11 +151,14 @@ static void SpecialKeyboardCB(int Key, int x, int y)
 
 static void KeyboardCB(unsigned char Key, int x, int y)
 {
+	
 	switch(Key)
 	{
 	case'q':
 		exit(0);
 	}
+
+	
 
 }
 
@@ -586,12 +595,9 @@ static void CompileShaders()
 int main(int argc, char* argv[])
 {
 	//Teemu:kinectpalaset
-	thread *kinectThread;
-
-	KinectControl *kc;
-	kc = new KinectControl();
-	kinectThread = thread(kc->run);
-	kinectThread->join();
+	
+	kinect = new KinectControl(&movement);
+	kinect->StartThread();
 
 
 	Magick::InitializeMagick(*argv);
@@ -601,7 +607,7 @@ int main(int argc, char* argv[])
 	glutInitWindowSize(WINDOW_WIDTH, WINDOW_HEIGHT);
 	glutInitWindowPosition(100, 100);
 	glutCreateWindow("T3DRIS");
-	glutGameModeString("1920x1080:32@75");
+	glutGameModeString("1920x1060:32@75");
 	glutEnterGameMode();
 
 	//GLEW check

@@ -31,13 +31,14 @@ static const float g_InferredBoneThickness = 1.0f;
 /// <summary>
 /// Constructor
 /// </summary>
-CSkeletonBasics::CSkeletonBasics() :
+CSkeletonBasics::CSkeletonBasics(int *move) :
     m_hNextSkeletonEvent(INVALID_HANDLE_VALUE),
     m_pSkeletonStreamHandle(INVALID_HANDLE_VALUE),
     m_bSeatedMode(false),
     m_pNuiSensor(NULL)
 {
-    
+	movement = move;
+	
 }
 
 /// <summary>
@@ -78,12 +79,12 @@ int CSkeletonBasics::Run()
 
     const int eventCount = 1;
     HANDLE hEvents[eventCount];
-
+	    while(CreateFirstConnected()<0);
     // TODO: ulkopuolinen käsky kuolemiselle, kun ei luoda tälle omaa ikkunaa
     while (WM_QUIT != msg.message)
     {
         hEvents[0] = m_hNextSkeletonEvent;
-		std::cerr << "update?";
+		//std::cerr << "update?";
         // Check to see if we have either a message (by passing in QS_ALLEVENTS)
         // Or a Kinect event (hEvents)
         // Update() will check for Kinect events individually, in case more than one are signalled
@@ -105,12 +106,14 @@ void CSkeletonBasics::Update()
 {
     if (NULL == m_pNuiSensor)
     {
+		std::cout << "0";
         return;
     }
 
     // Wait for 0ms, just quickly test if it is time to process a skeleton
     if ( WAIT_OBJECT_0 == WaitForSingleObject(m_hNextSkeletonEvent, 0) )
     {
+		std::cout << "1";
         ProcessSkeleton();
     }
 }
@@ -123,7 +126,7 @@ void CSkeletonBasics::Update()
 HRESULT CSkeletonBasics::CreateFirstConnected()
 {
     INuiSensor * pNuiSensor;
-
+	std::cout << "Create first." << std::endl;
     int iSensorCount = 0;
     HRESULT hr = NuiGetSensorCount(&iSensorCount);
     if (FAILED(hr))
@@ -183,7 +186,7 @@ HRESULT CSkeletonBasics::CreateFirstConnected()
 void CSkeletonBasics::ProcessSkeleton()
 {
     NUI_SKELETON_FRAME skeletonFrame = {0};
-
+	
     HRESULT hr = m_pNuiSensor->NuiSkeletonGetNextFrame(0, &skeletonFrame);
     if ( FAILED(hr) )
     {
@@ -192,16 +195,52 @@ void CSkeletonBasics::ProcessSkeleton()
 
     // smooth out the skeleton data
     m_pNuiSensor->NuiTransformSmooth(&skeletonFrame, NULL);
+	if (skelNmbr >=5) {
+		for (int i=0;i<5;i++)
+			skeletons[i]= skeletons[i+1];
+	}
+	skeletons[skelNmbr] = skeletonFrame; // 5 if not one of first 4 times
+	
 
     for (int i = 0 ; i < NUI_SKELETON_COUNT; ++i)
     {
+		for (int j = 0; j < NUI_SKELETON_POSITION_COUNT; ++j)
+		{
+			m_Points[j] = SkeletonToScreen(skeletonFrame.SkeletonData[i].SkeletonPositions[j], 640, 480);
+		}
         NUI_SKELETON_TRACKING_STATE trackingState = skeletonFrame.SkeletonData[i].eTrackingState;
 
         if (NUI_SKELETON_TRACKED == trackingState)
         {
             // We're tracking the skeleton, draw it
 			//TODO: Do something here!!
-			// Look at drawskeleton.  
+			// Look at drawskeleton.
+			//m_Points[0].x;
+			*movement = 0;
+			std::cout << "Head:"<< m_Points[NUI_SKELETON_POSITION_HEAD].x << " Shoulder:"<< m_Points[NUI_SKELETON_POSITION_SHOULDER_CENTER].x << std::endl;
+			if (m_Points[NUI_SKELETON_POSITION_SHOULDER_CENTER].x - m_Points[NUI_SKELETON_POSITION_HEAD].x <12 && m_Points[NUI_SKELETON_POSITION_SHOULDER_CENTER].x-m_Points[NUI_SKELETON_POSITION_HEAD].x >-12) 
+			{
+					std::cout << "                                                         Center" << std::endl;
+			} else
+			{ 
+				if (m_Points[NUI_SKELETON_POSITION_SHOULDER_CENTER].x > m_Points[NUI_SKELETON_POSITION_HEAD].x) 
+				{
+					std::cout << "                                                         Left" << std::endl;
+					*movement = 1;
+				} else
+				{
+					std::cout << "                                                         Right" << std::endl;
+					*movement = 2;
+				}
+			}
+			/*
+			if (skeletonFrame.SkeletonData->SkeletonPositions[NUI_SKELETON_POSITION_HEAD].x < skeletonFrame.SkeletonData->SkeletonPositions[NUI_SKELETON_POSITION_SHOULDER_CENTER].x)
+				std::cout << "Left" << std::endl;
+			if (skeletonFrame.SkeletonData->SkeletonPositions[NUI_SKELETON_POSITION_HEAD].x > skeletonFrame.SkeletonData->SkeletonPositions[NUI_SKELETON_POSITION_SHOULDER_CENTER].x)
+				std::cout << "Right" << std::endl;
+			else
+				std::cout << "Center" << std::endl;
+			*/
         }
         else if (NUI_SKELETON_POSITION_ONLY == trackingState)
         {
@@ -289,19 +328,19 @@ void CSkeletonBasics::DrawSkeleton(const NUI_SKELETON_DATA & skel, int windowWid
 ///// <param name="width">width (in pixels) of output buffer</param>
 ///// <param name="height">height (in pixels) of output buffer</param>
 ///// <returns>point in screen-space</returns>
-//D2D1_POINT_2F CSkeletonBasics::SkeletonToScreen(Vector4 skeletonPoint, int width, int height)
-//{
-//    LONG x, y;
-//    USHORT depth;
-//
-//    // Calculate the skeleton's position on the screen
-//    // NuiTransformSkeletonToDepthImage returns coordinates in NUI_IMAGE_RESOLUTION_320x240 space
-//    NuiTransformSkeletonToDepthImage(skeletonPoint, &x, &y, &depth);
-//
-//    float screenPointX = static_cast<float>(x * width) / cScreenWidth;
-//    float screenPointY = static_cast<float>(y * height) / cScreenHeight;
-//
-//    return D2D1::Point2F(screenPointX, screenPointY);
-//}
+CSkeletonBasics::Point CSkeletonBasics::SkeletonToScreen(Vector4 skeletonPoint, int width, int height)
+{
+    LONG x, y;
+    USHORT depth;
+	Point pp;
+    // Calculate the skeleton's position on the screen
+    // NuiTransformSkeletonToDepthImage returns coordinates in NUI_IMAGE_RESOLUTION_320x240 space
+    NuiTransformSkeletonToDepthImage(skeletonPoint, &x, &y, &depth);
+
+    pp.x = static_cast<float>((x * width) / 320);
+    pp.y = static_cast<float>((y * height) / 240);
+	
+	return pp;
+}
 
 

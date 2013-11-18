@@ -13,10 +13,15 @@ class CSkeletonBasics
 {
 
 public:
+	typedef struct Point {
+		float x;
+		float y;
+	}Point;
+
     /// <summary>
     /// Constructor
     /// </summary>
-    CSkeletonBasics();
+    CSkeletonBasics(int *move);
 
     /// <summary>
     /// Destructor
@@ -28,6 +33,11 @@ public:
     int                     Run();
 
 private:
+	int						*movement;
+	Point					m_Points[NUI_SKELETON_POSITION_COUNT];
+	NUI_SKELETON_FRAME		skeletons[5];
+	int						skelNmbr;
+
     HWND                    m_hWnd;
 
     bool                    m_bSeatedMode;
@@ -55,6 +65,10 @@ private:
     /// Handle new skeleton data
     /// </summary>
     void                    ProcessSkeleton();
+
+	CSkeletonBasics::Point CSkeletonBasics::SkeletonToScreen(Vector4 skeletonPoint, int width, int height);
+
+
 };
 
 // Safe release for interfaces
@@ -67,3 +81,5 @@ inline void SafeRelease( Interface *& pInterfaceToRelease )
         pInterfaceToRelease = NULL;
     }
 }
+
+

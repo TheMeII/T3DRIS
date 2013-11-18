@@ -1,4 +1,4 @@
-﻿Build started 14.11.2013 14:45:50.
+﻿Build started 18.11.2013 16:08:58.
      1>Project "D:\Users\edu100\Documents\GitHub\T3DRIS\Project1\Project1.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"D:\Program Files (x86)\ImageMagick-6.8.7-Q16\include" /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /showIncludes /analyze- /errorReport:prompt EngineFile.cpp
@@ -963,9 +963,21 @@
          Note: including file:    D:\Program Files\Microsoft SDKs\Kinect\v1.8\inc\NuiImageCamera.h
          Note: including file:    D:\Program Files\Microsoft SDKs\Kinect\v1.8\inc\NuiSkeleton.h
          Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
-     1>d:\users\edu100\documents\github\t3dris\project1\enginefile.cpp(593): error C3867: 'KinectControl::run': function call missing argument list; use '&KinectControl::run' to create a pointer to member
-     1>Done Building Project "D:\Users\edu100\Documents\GitHub\T3DRIS\Project1\Project1.vcxproj" (Build target(s)) -- FAILED.
+         Note: including file:  D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\queue
+         Note: including file:   D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\deque
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Users\edu100\Documents\GitHub\T3DRIS\Debug\TETEngine.exe" /INCREMENTAL /NOLOGO /LIBPATH:"D:\Program Files (x86)\ImageMagick-6.8.7-Q16\lib" CORE_RL_magick_.lib CORE_RL_Magick++_.lib X11.lib Kinect10.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Users\edu100\Documents\GitHub\T3DRIS\Debug\TETEngine.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Users\edu100\Documents\GitHub\T3DRIS\Debug\TETEngine.lib" /MACHINE:X86 Debug\Camera.obj
+         Debug\EngineFile.obj
+         Debug\KinectControl.obj
+         Debug\math3d.obj
+         Debug\Object.obj
+         Debug\pipeline.obj
+         Debug\Shapes.obj
+         Debug\SkeletonBasics.obj
+         Debug\texture.obj
+         Project1.vcxproj -> D:\Users\edu100\Documents\GitHub\T3DRIS\Debug\TETEngine.exe
+     1>Done Building Project "D:\Users\edu100\Documents\GitHub\T3DRIS\Project1\Project1.vcxproj" (Build target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:01.85
+Time Elapsed 00:00:02.70
