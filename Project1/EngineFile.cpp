@@ -4,6 +4,7 @@
 #include <string>
 #include <math.h>
 #include <assert.h>
+#include <thread>
 
 //OPENGL HELPER LIB INCLUDES
 #include <GL/glew.h> //handels management of OpenGL's extensions in system
@@ -24,7 +25,7 @@ using namespace std;
 
 //GLOBALS
 //Teemu testaa
-string kinecttext;
+
 
 GLuint gWVPLocation; //Global uniform variable
 GLuint gSampler;
@@ -584,8 +585,14 @@ static void CompileShaders()
 
 int main(int argc, char* argv[])
 {
+	//Teemu:kinectpalaset
+	thread *kinectThread;
 
-	KinectControl(&kinecttext);
+	KinectControl *kc;
+	kc = new KinectControl();
+	kinectThread = thread(kc->run);
+	kinectThread->join();
+
 
 	Magick::InitializeMagick(*argv);
 	//init GLUT

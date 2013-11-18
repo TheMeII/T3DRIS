@@ -13,7 +13,6 @@ static const float g_JointThickness = 3.0f;
 static const float g_TrackedBoneThickness = 6.0f;
 static const float g_InferredBoneThickness = 1.0f;
 
-std::string *text;
 
 /// <summary>
 /// Entry point for the application
@@ -32,7 +31,7 @@ std::string *text;
 /// <summary>
 /// Constructor
 /// </summary>
-CSkeletonBasics::CSkeletonBasics(std::string *t) :
+CSkeletonBasics::CSkeletonBasics() :
     m_hNextSkeletonEvent(INVALID_HANDLE_VALUE),
     m_pSkeletonStreamHandle(INVALID_HANDLE_VALUE),
     m_bSeatedMode(false),
@@ -212,6 +211,7 @@ void CSkeletonBasics::ProcessSkeleton()
             //    g_JointThickness,
             //    g_JointThickness
             //    );
+
 
            
         }

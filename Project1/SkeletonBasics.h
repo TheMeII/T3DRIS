@@ -16,7 +16,7 @@ public:
     /// <summary>
     /// Constructor
     /// </summary>
-    CSkeletonBasics(std::string *t);
+    CSkeletonBasics();
 
     /// <summary>
     /// Destructor

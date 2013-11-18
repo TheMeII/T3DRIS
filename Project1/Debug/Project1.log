@@ -1,383 +1,401 @@
-﻿Build started 11.11.2013 15:42:29.
+﻿Build started 14.11.2013 14:45:50.
      1>Project "D:\Users\edu100\Documents\GitHub\T3DRIS\Project1\Project1.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"D:\Program Files (x86)\ImageMagick-6.8.7-Q16\include" /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /showIncludes /analyze- /errorReport:prompt KinectControl.cpp
-         KinectControl.cpp
-         Note: including file: d:\users\edu100\documents\github\t3dris\project1\KinectControl.h
-         Note: including file:  D:\Program Files (x86)\Windows Kits\8.0\Include\um\windows.h
-         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\winapifamily.h
-         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\sdkddkver.h
-         Note: including file:   D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\excpt.h
-         Note: including file:    D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
-         Note: including file:     D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\sal.h
-         Note: including file:      D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\ConcurrencySal.h
-         Note: including file:     D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\vadefs.h
-         Note: including file:   D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdarg.h
-         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\windef.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\minwindef.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\specstrings.h
-         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\specstrings_strict.h
-         Note: including file:       D:\Program Files (x86)\Windows Kits\8.0\Include\shared\specstrings_undef.h
-         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\driverspecs.h
-         Note: including file:       d:\program files (x86)\windows kits\8.0\include\shared\sdv_driverspecs.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\winnt.h
-         Note: including file:      D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\ctype.h
-         Note: including file:       D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
-         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\kernelspecs.h
-         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\basetsd.h
-         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\guiddef.h
-         Note: including file:       D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h
-         Note: including file:        D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
-         Note: including file:      d:\program files (x86)\windows kits\8.0\include\shared\pshpack4.h
-         Note: including file:      d:\program files (x86)\windows kits\8.0\include\shared\poppack.h
-         Note: including file:      d:\program files (x86)\windows kits\8.0\include\shared\pshpack4.h
-         Note: including file:      d:\program files (x86)\windows kits\8.0\include\shared\poppack.h
-         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack4.h
-         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
-         Note: including file:      d:\program files (x86)\windows kits\8.0\include\shared\pshpack4.h
-         Note: including file:      d:\program files (x86)\windows kits\8.0\include\shared\pshpack2.h
-         Note: including file:      d:\program files (x86)\windows kits\8.0\include\shared\poppack.h
-         Note: including file:      d:\program files (x86)\windows kits\8.0\include\shared\pshpack2.h
-         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack2.h
-         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
-         Note: including file:      d:\program files (x86)\windows kits\8.0\include\shared\poppack.h
-         Note: including file:      d:\program files (x86)\windows kits\8.0\include\shared\pshpack8.h
-         Note: including file:      d:\program files (x86)\windows kits\8.0\include\shared\poppack.h
-         Note: including file:      d:\program files (x86)\windows kits\8.0\include\shared\poppack.h
-         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
-         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\ktmtypes.h
+         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"D:\Program Files (x86)\ImageMagick-6.8.7-Q16\include" /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /showIncludes /analyze- /errorReport:prompt EngineFile.cpp
+         EngineFile.cpp
+         Note: including file: D:\Program Files (x86)\Windows Kits\8.0\Include\um\windows.h
+         Note: including file:  D:\Program Files (x86)\Windows Kits\8.0\Include\shared\winapifamily.h
+         Note: including file:  D:\Program Files (x86)\Windows Kits\8.0\Include\shared\sdkddkver.h
+         Note: including file:  D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\excpt.h
+         Note: including file:   D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
+         Note: including file:    D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\sal.h
+         Note: including file:     D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\ConcurrencySal.h
+         Note: including file:    D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\vadefs.h
+         Note: including file:  D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdarg.h
+         Note: including file:  D:\Program Files (x86)\Windows Kits\8.0\Include\shared\windef.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\minwindef.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\specstrings.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\specstrings_strict.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\specstrings_undef.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\driverspecs.h
+         Note: including file:      d:\program files (x86)\windows kits\8.0\include\shared\sdv_driverspecs.h
          Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\winnt.h
-         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\winbase.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\minwinbase.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\processenv.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\fileapi.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\debugapi.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\utilapiset.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\handleapi.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\errhandlingapi.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\fibersapi.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\namedpipeapi.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\profileapi.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\heapapi.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\ioapiset.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\synchapi.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\interlockedapi.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\processthreadsapi.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\sysinfoapi.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\memoryapi.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\threadpoollegacyapiset.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\threadpoolapiset.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\bemapiset.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\jobapi.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\wow64apiset.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\libloaderapi.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\securitybaseapi.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\namespaceapi.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\systemtopologyapi.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\processtopologyapi.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\securityappcontainer.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\realtimeapiset.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\winerror.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\timezoneapi.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
-         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\wingdi.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack1.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack2.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack2.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack4.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack4.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
-         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\winuser.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack2.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\tvout.h
-         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\winnls.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\datetimeapi.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\stringapiset.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\winnls.h
-         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\wincon.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\consoleapi.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
-         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\winver.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\verrsrc.h
-         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\winreg.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\reason.h
-         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\winnetwk.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\wnnc.h
-         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\cderr.h
-         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\dde.h
-         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\ddeml.h
-         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\dlgs.h
-         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\lzexpand.h
-         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\mmsystem.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\mmsyscom.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack1.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack1.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\mciapi.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\mmsyscom.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\mmiscapi.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\mmsyscom.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\mmiscapi2.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\mmsyscom.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\playsoundapi.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\mmsyscom.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\mmeapi.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\mmsyscom.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\timeapi.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\mmsyscom.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\joystickapi.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\mmsyscom.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
-         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\nb30.h
-         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\rpc.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\rpcdce.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\rpcdcep.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\rpcnsi.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\rpcnterr.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\rpcasync.h
-         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\shellapi.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack1.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
-         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\winperf.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack8.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
-         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\winsock.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\inaddr.h
-         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\wincrypt.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\bcrypt.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\ncrypt.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\bcrypt.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\dpapi.h
-         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\winefs.h
-         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\winscard.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\wtypes.h
-         Note: including file:     d:\program files (x86)\windows kits\8.0\include\shared\rpcndr.h
-         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack8.h
-         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\um\rpcnsip.h
-         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\rpcsal.h
-         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
-         Note: including file:     d:\program files (x86)\windows kits\8.0\include\shared\wtypesbase.h
-         Note: including file:      d:\program files (x86)\windows kits\8.0\include\shared\guiddef.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\winioctl.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack1.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack1.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack1.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack1.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack1.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack1.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack1.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\winsmcrd.h
-         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\winspool.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\prsht.h
+         Note: including file:     D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\ctype.h
+         Note: including file:      D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\kernelspecs.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\basetsd.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\guiddef.h
+         Note: including file:      D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h
+         Note: including file:       D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
+         Note: including file:     d:\program files (x86)\windows kits\8.0\include\shared\pshpack4.h
+         Note: including file:     d:\program files (x86)\windows kits\8.0\include\shared\poppack.h
+         Note: including file:     d:\program files (x86)\windows kits\8.0\include\shared\pshpack4.h
+         Note: including file:     d:\program files (x86)\windows kits\8.0\include\shared\poppack.h
          Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack4.h
          Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
-         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\ole2.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack8.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\objbase.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack8.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\combaseapi.h
-         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
-         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
-         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack8.h
-         Note: including file:      D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdlib.h
-         Note: including file:       D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
-         Note: including file:       D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\limits.h
-         Note: including file:        D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
-         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\um\unknwnbase.h
-         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\um\objidlbase.h
-         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\guiddef.h
-         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\um\cguid.h
-         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\objidl.h
-         Note: including file:      d:\program files (x86)\windows kits\8.0\include\um\unknwn.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\urlmon.h
-         Note: including file:      d:\program files (x86)\windows kits\8.0\include\um\oleidl.h
-         Note: including file:      d:\program files (x86)\windows kits\8.0\include\um\servprov.h
-         Note: including file:      d:\program files (x86)\windows kits\8.0\include\um\msxml.h
-         Note: including file:       d:\program files (x86)\windows kits\8.0\include\um\oaidl.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\propidl.h
+         Note: including file:     d:\program files (x86)\windows kits\8.0\include\shared\pshpack4.h
+         Note: including file:     d:\program files (x86)\windows kits\8.0\include\shared\pshpack2.h
+         Note: including file:     d:\program files (x86)\windows kits\8.0\include\shared\poppack.h
+         Note: including file:     d:\program files (x86)\windows kits\8.0\include\shared\pshpack2.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack2.h
          Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\oleauto.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack8.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
-         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\commdlg.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\prsht.h
+         Note: including file:     d:\program files (x86)\windows kits\8.0\include\shared\poppack.h
+         Note: including file:     d:\program files (x86)\windows kits\8.0\include\shared\pshpack8.h
+         Note: including file:     d:\program files (x86)\windows kits\8.0\include\shared\poppack.h
+         Note: including file:     d:\program files (x86)\windows kits\8.0\include\shared\poppack.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\ktmtypes.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\winnt.h
+         Note: including file:  D:\Program Files (x86)\Windows Kits\8.0\Include\um\winbase.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\minwinbase.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\processenv.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\fileapi.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\debugapi.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\utilapiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\handleapi.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\errhandlingapi.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\fibersapi.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\namedpipeapi.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\profileapi.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\heapapi.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\ioapiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\synchapi.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\interlockedapi.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\processthreadsapi.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\sysinfoapi.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\memoryapi.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\threadpoollegacyapiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\threadpoolapiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\bemapiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\jobapi.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\wow64apiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\libloaderapi.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\securitybaseapi.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\namespaceapi.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\systemtopologyapi.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\processtopologyapi.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\securityappcontainer.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\realtimeapiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\winerror.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\timezoneapi.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:  D:\Program Files (x86)\Windows Kits\8.0\Include\um\wingdi.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack1.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack2.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack2.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack4.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack4.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:  D:\Program Files (x86)\Windows Kits\8.0\Include\um\winuser.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack2.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\tvout.h
+         Note: including file:  D:\Program Files (x86)\Windows Kits\8.0\Include\um\winnls.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\datetimeapi.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\stringapiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\winnls.h
+         Note: including file:  D:\Program Files (x86)\Windows Kits\8.0\Include\um\wincon.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\consoleapi.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:  D:\Program Files (x86)\Windows Kits\8.0\Include\um\winver.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\verrsrc.h
+         Note: including file:  D:\Program Files (x86)\Windows Kits\8.0\Include\um\winreg.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\reason.h
+         Note: including file:  D:\Program Files (x86)\Windows Kits\8.0\Include\um\winnetwk.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\wnnc.h
+         Note: including file:  D:\Program Files (x86)\Windows Kits\8.0\Include\shared\cderr.h
+         Note: including file:  D:\Program Files (x86)\Windows Kits\8.0\Include\um\dde.h
+         Note: including file:  D:\Program Files (x86)\Windows Kits\8.0\Include\um\ddeml.h
+         Note: including file:  D:\Program Files (x86)\Windows Kits\8.0\Include\um\dlgs.h
+         Note: including file:  D:\Program Files (x86)\Windows Kits\8.0\Include\um\lzexpand.h
+         Note: including file:  D:\Program Files (x86)\Windows Kits\8.0\Include\um\mmsystem.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\mmsyscom.h
          Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack1.h
          Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
-         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\stralign.h
-         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\winsvc.h
-         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\mcx.h
-         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\imm.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\ime_cmodes.h
-         Note: including file:  d:\users\edu100\documents\github\t3dris\project1\SkeletonBasics.h
-         Note: including file:   D:\Program Files\Microsoft SDKs\Kinect\v1.8\inc\NuiApi.h
-         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack8.h
-         Note: including file:    D:\Program Files\Microsoft SDKs\Kinect\v1.8\inc\NuiSensor.h
-         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\ocidl.h
-         Note: including file:    D:\Program Files\Microsoft SDKs\Kinect\v1.8\inc\NuiImageCamera.h
-         Note: including file:    D:\Program Files\Microsoft SDKs\Kinect\v1.8\inc\NuiSkeleton.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack1.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\mciapi.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\mmsyscom.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\mmiscapi.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\mmsyscom.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\mmiscapi2.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\mmsyscom.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\playsoundapi.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\mmsyscom.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\mmeapi.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\mmsyscom.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\timeapi.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\mmsyscom.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\joystickapi.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\mmsyscom.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:  D:\Program Files (x86)\Windows Kits\8.0\Include\um\nb30.h
+         Note: including file:  D:\Program Files (x86)\Windows Kits\8.0\Include\shared\rpc.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\rpcdce.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\rpcdcep.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\rpcnsi.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\rpcnterr.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\rpcasync.h
+         Note: including file:  D:\Program Files (x86)\Windows Kits\8.0\Include\um\shellapi.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack1.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:  D:\Program Files (x86)\Windows Kits\8.0\Include\um\winperf.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack8.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:  D:\Program Files (x86)\Windows Kits\8.0\Include\um\winsock.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\inaddr.h
+         Note: including file:  D:\Program Files (x86)\Windows Kits\8.0\Include\um\wincrypt.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\bcrypt.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\ncrypt.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\bcrypt.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\dpapi.h
+         Note: including file:  D:\Program Files (x86)\Windows Kits\8.0\Include\um\winefs.h
+         Note: including file:  D:\Program Files (x86)\Windows Kits\8.0\Include\um\winscard.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\wtypes.h
+         Note: including file:    d:\program files (x86)\windows kits\8.0\include\shared\rpcndr.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack8.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\rpcnsip.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\rpcsal.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:    d:\program files (x86)\windows kits\8.0\include\shared\wtypesbase.h
+         Note: including file:     d:\program files (x86)\windows kits\8.0\include\shared\guiddef.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\winioctl.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack1.h
          Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
-         Note: including file: D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\thread
-         Note: including file:  D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\exception
-         Note: including file:   D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xstddef
-         Note: including file:    D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\yvals.h
-         Note: including file:     D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xkeycheck.h
-         Note: including file:     D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
-         Note: including file:     D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\use_ansi.h
-         Note: including file:    D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xtr1common
-         Note: including file:    D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\cstddef
-         Note: including file:     D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stddef.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack1.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack1.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack1.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack1.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack1.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack1.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\winsmcrd.h
+         Note: including file:  D:\Program Files (x86)\Windows Kits\8.0\Include\um\winspool.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\prsht.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack4.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:  D:\Program Files (x86)\Windows Kits\8.0\Include\um\ole2.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack8.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\objbase.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack8.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\combaseapi.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack8.h
+         Note: including file:     D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdlib.h
          Note: including file:      D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
-         Note: including file:   D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\eh.h
-         Note: including file:    D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
-         Note: including file:   D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\malloc.h
-         Note: including file:    D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
-         Note: including file:  D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\iosfwd
-         Note: including file:   D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\cstdio
-         Note: including file:    D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h
-         Note: including file:     D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
-         Note: including file:     D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\swprintf.inl
-         Note: including file:   D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\cstring
-         Note: including file:   D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\cwchar
-         Note: including file:    D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\wchar.h
-         Note: including file:     D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
-         Note: including file:     D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\wtime.inl
-         Note: including file:   D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdbg.h
-         Note: including file:    D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
+         Note: including file:      D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\limits.h
+         Note: including file:       D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\unknwnbase.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\objidlbase.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\guiddef.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\cguid.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\objidl.h
+         Note: including file:     d:\program files (x86)\windows kits\8.0\include\um\unknwn.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\urlmon.h
+         Note: including file:     d:\program files (x86)\windows kits\8.0\include\um\oleidl.h
+         Note: including file:     d:\program files (x86)\windows kits\8.0\include\um\servprov.h
+         Note: including file:     d:\program files (x86)\windows kits\8.0\include\um\msxml.h
+         Note: including file:      d:\program files (x86)\windows kits\8.0\include\um\oaidl.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\propidl.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\oleauto.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack8.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:  D:\Program Files (x86)\Windows Kits\8.0\Include\um\commdlg.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\prsht.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack1.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:  D:\Program Files (x86)\Windows Kits\8.0\Include\shared\stralign.h
+         Note: including file:  D:\Program Files (x86)\Windows Kits\8.0\Include\um\winsvc.h
+         Note: including file:  D:\Program Files (x86)\Windows Kits\8.0\Include\um\mcx.h
+         Note: including file:  D:\Program Files (x86)\Windows Kits\8.0\Include\um\imm.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\ime_cmodes.h
+         Note: including file: D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\iostream
+         Note: including file:  D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\istream
+         Note: including file:   D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\ostream
+         Note: including file:    D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\ios
+         Note: including file:     D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xlocnum
+         Note: including file:      D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\climits
+         Note: including file:       D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\yvals.h
+         Note: including file:        D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xkeycheck.h
+         Note: including file:        D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
+         Note: including file:        D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\use_ansi.h
+         Note: including file:      D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\cmath
+         Note: including file:       D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\math.h
+         Note: including file:        D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
+         Note: including file:       D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xtgmath.h
+         Note: including file:        D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xtr1common
+         Note: including file:      D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\cstdio
+         Note: including file:       D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h
+         Note: including file:        D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
+         Note: including file:        D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\swprintf.inl
+         Note: including file:      D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\cstdlib
+         Note: including file:      D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\streambuf
+         Note: including file:       D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xiosbase
+         Note: including file:        D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xlocale
+         Note: including file:         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\cstring
+         Note: including file:         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdexcept
+         Note: including file:          D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\exception
+         Note: including file:           D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xstddef
+         Note: including file:            D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\cstddef
+         Note: including file:             D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stddef.h
+         Note: including file:              D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
+         Note: including file:           D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\eh.h
+         Note: including file:            D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
+         Note: including file:           D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\malloc.h
+         Note: including file:            D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
+         Note: including file:          D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xstring
+         Note: including file:           D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xmemory0
+         Note: including file:            D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\limits
+         Note: including file:             D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\ymath.h
+         Note: including file:             D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\cfloat
+         Note: including file:              D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\float.h
+         Note: including file:               D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
+         Note: including file:               D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtwrn.h
+         Note: including file:                D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
+         Note: including file:             D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\cwchar
+         Note: including file:              D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\wchar.h
+         Note: including file:               D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
+         Note: including file:               D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\wtime.inl
+         Note: including file:            D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\new
+         Note: including file:            D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xutility
+         Note: including file:             D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\utility
+         Note: including file:              D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\iosfwd
+         Note: including file:               D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdbg.h
+         Note: including file:                D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
+         Note: including file:              D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\type_traits
+         Note: including file:               D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xrefwrap
+         Note: including file:            D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xatomic0.h
+         Note: including file:            D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\intrin.h
+         Note: including file:             D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
+         Note: including file:             D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\setjmp.h
+         Note: including file:              D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
+         Note: including file:             D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\immintrin.h
+         Note: including file:              D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\wmmintrin.h
+         Note: including file:               D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\nmmintrin.h
+         Note: including file:                D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\smmintrin.h
+         Note: including file:                 D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\tmmintrin.h
+         Note: including file:                  D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\pmmintrin.h
+         Note: including file:                   D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\emmintrin.h
+         Note: including file:                    D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xmmintrin.h
+         Note: including file:                     D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\mmintrin.h
+         Note: including file:                      D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
+         Note: including file:             D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\ammintrin.h
+         Note: including file:             D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\mm3dnow.h
+         Note: including file:              D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
+         Note: including file:              D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\mmintrin.h
+         Note: including file:         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\typeinfo
+         Note: including file:         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xlocinfo
+         Note: including file:          D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xlocinfo.h
+         Note: including file:           D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\locale.h
+         Note: including file:            D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
+         Note: including file:         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xdebug
+         Note: including file:         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xfacet
+         Note: including file:        D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\system_error
+         Note: including file:         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\cerrno
+         Note: including file:          D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\errno.h
+         Note: including file:           D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
+         Note: including file:        D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\share.h
+         Note: including file: D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\vector
+         Note: including file:  D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xmemory
+         Note: including file: D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string
+         Note: including file:  D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\iterator
+         Note: including file: D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\math.h
+         Note: including file: D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\assert.h
+         Note: including file:  D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
+         Note: including file: D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\thread
          Note: including file:  D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\functional
          Note: including file:   D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xfunctional
-         Note: including file:    D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\cstdlib
-         Note: including file:    D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xstring
-         Note: including file:     D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xmemory0
-         Note: including file:      D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\limits
-         Note: including file:       D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\ymath.h
-         Note: including file:       D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\cfloat
-         Note: including file:        D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\float.h
-         Note: including file:         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
-         Note: including file:         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtwrn.h
-         Note: including file:          D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
-         Note: including file:       D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\climits
-         Note: including file:       D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\cmath
-         Note: including file:        D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\math.h
-         Note: including file:         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
-         Note: including file:        D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xtgmath.h
-         Note: including file:      D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\new
-         Note: including file:      D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xutility
-         Note: including file:       D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\utility
-         Note: including file:        D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\type_traits
-         Note: including file:         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xrefwrap
-         Note: including file:      D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xatomic0.h
-         Note: including file:      D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\intrin.h
-         Note: including file:       D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
-         Note: including file:       D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\setjmp.h
-         Note: including file:        D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
-         Note: including file:       D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\immintrin.h
-         Note: including file:        D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\wmmintrin.h
-         Note: including file:         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\nmmintrin.h
-         Note: including file:          D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\smmintrin.h
-         Note: including file:           D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\tmmintrin.h
-         Note: including file:            D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\pmmintrin.h
-         Note: including file:             D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\emmintrin.h
-         Note: including file:              D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xmmintrin.h
-         Note: including file:               D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\mmintrin.h
-         Note: including file:                D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
-         Note: including file:       D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\ammintrin.h
-         Note: including file:       D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\mm3dnow.h
-         Note: including file:        D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
-         Note: including file:        D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\mmintrin.h
-         Note: including file:   D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\typeinfo
          Note: including file:   D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\tuple
          Note: including file:  D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\chrono
          Note: including file:   D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\ratio
@@ -394,63 +412,560 @@
          Note: including file:  D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\thr/xthread
          Note: including file:   D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\thr/xtime
          Note: including file:   D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\thr/xthreads.h
-     1>d:\program files (x86)\microsoft visual studio 11.0\vc\include\functional(1152): error C2064: term does not evaluate to a function taking 1 arguments
-                 d:\program files (x86)\microsoft visual studio 11.0\vc\include\functional(1152) : while compiling class template member function 'std::_Do_call_ret<_Forced,_Ret,_Funx,_Btuple,_Ftuple>::type std::_Bind<false,_Ret,_Fun,_V0_t,_V1_t,_V2_t,_V3_t,_V4_t,_V5_t,<unnamed-symbol>>::operator ()(void)'
+         Note: including file: D:\Users\edu100\Documents\GitHub\T3DRIS\include\GL/glew.h
+         Note: including file:  D:\Program Files (x86)\Windows Kits\8.0\Include\um\GL/glu.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\GL/gl.h
+         Note: including file: D:\Users\edu100\Documents\GitHub\T3DRIS\include\GL\freeglut.h
+         Note: including file:  d:\users\edu100\documents\github\t3dris\include\gl\freeglut_std.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\GL/gl.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\GL/glu.h
+         Note: including file:  d:\users\edu100\documents\github\t3dris\include\gl\freeglut_ext.h
+         Note: including file: d:\users\edu100\documents\github\t3dris\project1\math3d.h
+         Note: including file:  D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\math.h
+         Note: including file: d:\users\edu100\documents\github\t3dris\project1\pipeline.h
+         Note: including file: d:\users\edu100\documents\github\t3dris\project1\Camera.h
+         Note: including file: d:\users\edu100\documents\github\t3dris\project1\Object.h
+         Note: including file:  D:\Users\edu100\Documents\GitHub\T3DRIS\include\GL\glew.h
+         Note: including file:  D:\Users\edu100\Documents\GitHub\T3DRIS\include\GL\freeglut.h
+         Note: including file:  d:\users\edu100\documents\github\t3dris\project1\texture.h
+         Note: including file:   D:\Users\edu100\Documents\GitHub\T3DRIS\include\GL\glew.h
+         Note: including file:   D:\Program Files (x86)\ImageMagick-6.8.7-Q16\include\Magick++.h
+         Note: including file:    D:\Program Files (x86)\ImageMagick-6.8.7-Q16\include\Magick++/Include.h
+         Note: including file:     d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/magick-config.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/magick-baseconfig.h
+         Note: including file:     D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\math.h
+         Note: including file:     D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\sys/types.h
+         Note: including file:     D:\Program Files (x86)\ImageMagick-6.8.7-Q16\include\magick/MagickCore.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/magick-config.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/method-attribute.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/magick-type.h
+         Note: including file:       d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/magick-config.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/accelerate.h
+         Note: including file:       d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/morphology.h
+         Note: including file:        d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/geometry.h
+         Note: including file:       d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/resample.h
+         Note: including file:        d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/cache-view.h
+         Note: including file:         d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/pixel.h
+         Note: including file:          d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/colorspace.h
+         Note: including file:          d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/constitute.h
+         Note: including file:       d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/resize.h
+         Note: including file:       d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/statistic.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/animate.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/annotate.h
+         Note: including file:       d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/draw.h
+         Note: including file:        d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/geometry.h
+         Note: including file:        d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/image.h
+         Note: including file:         d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/color.h
+         Note: including file:          d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/pixel.h
+         Note: including file:          d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/exception.h
+         Note: including file:           d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/semaphore.h
+         Note: including file:         d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/blob.h
+         Note: including file:          d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/image.h
+         Note: including file:          d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/stream.h
+         Note: including file:         d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/colorspace.h
+         Note: including file:         d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/cache-view.h
+         Note: including file:         d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/color.h
+         Note: including file:         d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/composite.h
+         Note: including file:         d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/compress.h
+         Note: including file:         d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/effect.h
+         Note: including file:          d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/morphology.h
+         Note: including file:         d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/geometry.h
+         Note: including file:         d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/layer.h
+         Note: including file:         d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/locale_.h
+         Note: including file:          d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/hashmap.h
+         Note: including file:         d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/monitor.h
+         Note: including file:         d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/pixel.h
+         Note: including file:         d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/profile.h
+         Note: including file:          d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/string_.h
+         Note: including file:           d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/exception.h
+         Note: including file:         d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/quantum.h
+         Note: including file:          d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/image.h
+         Note: including file:          d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/semaphore.h
+         Note: including file:         d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/resample.h
+         Note: including file:         d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/resize.h
+         Note: including file:         d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/semaphore.h
+         Note: including file:         d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/stream.h
+         Note: including file:         d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/timer.h
+         Note: including file:        d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/pixel.h
+         Note: including file:        d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/type.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/artifact.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/attribute.h
+         Note: including file:       d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/image.h
+         Note: including file:       d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/exception.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/blob.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/cache.h
+         Note: including file:       d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/blob.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/cache-view.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/channel.h
+         Note: including file:       d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/image.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/cipher.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/client.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/coder.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/color.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/colorspace.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/colormap.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/compare.h
+         Note: including file:       d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/image.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/composite.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/compress.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/configure.h
+         Note: including file:       d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/hashmap.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/constitute.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/decorate.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/delegate.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/deprecate.h
+         Note: including file:       d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/blob.h
+         Note: including file:       d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/cache-view.h
+         Note: including file:       d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/draw.h
+         Note: including file:       d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/constitute.h
+         Note: including file:       d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/magick-config.h
+         Note: including file:       d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/pixel.h
+         Note: including file:       d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/quantize.h
+         Note: including file:        d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/colorspace.h
+         Note: including file:       d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/quantum.h
+         Note: including file:       d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/registry.h
+         Note: including file:       d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/semaphore.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/display.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/distort.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/distribute-cache.h
+         Note: including file:       d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/exception.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/draw.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/effect.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/enhance.h
+         Note: including file:       d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/pixel.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/exception.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/feature.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/fourier.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/fx.h
+         Note: including file:       d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/draw.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/gem.h
+         Note: including file:       d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/fx.h
+         Note: including file:       d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/random_.h
+         Note: including file:        d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/string_.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/geometry.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/hashmap.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/histogram.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/identify.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/image.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/image-view.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/layer.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/list.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/locale_.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/log.h
+         Note: including file:       d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/exception.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/magic.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/magick.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/matrix.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/memory_.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/module.h
+         Note: including file:       d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/version.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/mime.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/monitor.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/montage.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/morphology.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/option.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/paint.h
+         Note: including file:       d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/color.h
+         Note: including file:       d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/draw.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/pixel.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/pixel-accessor.h
+         Note: including file:       D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\math.h
+         Note: including file:       d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/gem.h
+         Note: including file:       d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/pixel.h
+     1>d:\program files (x86)\imagemagick-6.8.7-q16\include\magick\pixel-accessor.h(176): warning C4244: '=' : conversion from 'double' to 'MagickCore::MagickRealType', possible loss of data
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/policy.h
+         Note: including file:       d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/pixel.h
+         Note: including file:       d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/exception.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/prepress.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/profile.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/property.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/quantize.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/quantum.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/registry.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/random_.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/resample.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/resize.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/resource_.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/segment.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/shear.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/signature.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/splay-tree.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/stream.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/statistic.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/string_.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/timer.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/token.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/transform.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/threshold.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/type.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/utility.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/version.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/xml-tree.h
+         Note: including file:       d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/exception.h
+         Note: including file:       d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/splay-tree.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/xwindow.h
+         Note: including file:     D:\Program Files (x86)\ImageMagick-6.8.7-Q16\include\wand/MagickWand.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/magick-config.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\wand/method-attribute.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\magick/MagickCore.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\wand/animate.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\wand/compare.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\wand/composite.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\wand/conjure.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\wand/convert.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\wand/deprecate.h
+         Note: including file:       d:\program files (x86)\imagemagick-6.8.7-q16\include\wand/drawing-wand.h
+         Note: including file:        d:\program files (x86)\imagemagick-6.8.7-q16\include\wand/pixel-wand.h
+         Note: including file:       d:\program files (x86)\imagemagick-6.8.7-q16\include\wand/magick-wand.h
+         Note: including file:        d:\program files (x86)\imagemagick-6.8.7-q16\include\wand/MagickWand.h
+         Note: including file:       d:\program files (x86)\imagemagick-6.8.7-q16\include\wand/pixel-iterator.h
+         Note: including file:        d:\program files (x86)\imagemagick-6.8.7-q16\include\wand/magick-wand.h
+         Note: including file:        d:\program files (x86)\imagemagick-6.8.7-q16\include\wand/pixel-wand.h
+         Note: including file:       d:\program files (x86)\imagemagick-6.8.7-q16\include\wand/pixel-wand.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\wand/display.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\wand/drawing-wand.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\wand/identify.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\wand/import.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\wand/magick-property.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\wand/magick-image.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\wand/mogrify.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\wand/montage.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\wand/pixel-iterator.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\wand/pixel-wand.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\wand/stream.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\wand/wand-view.h
+         Note: including file:    D:\Program Files (x86)\ImageMagick-6.8.7-Q16\include\Magick++/Image.h
+         Note: including file:     d:\program files (x86)\imagemagick-6.8.7-q16\include\Magick++/Include.h
+         Note: including file:     D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\list
+         Note: including file:     d:\program files (x86)\imagemagick-6.8.7-q16\include\Magick++/Blob.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\Magick++/Include.h
+         Note: including file:     d:\program files (x86)\imagemagick-6.8.7-q16\include\Magick++/Color.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\Magick++/Include.h
+         Note: including file:     d:\program files (x86)\imagemagick-6.8.7-q16\include\Magick++/Drawable.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\Magick++/Include.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\Magick++/Color.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\Magick++/Geometry.h
+         Note: including file:       d:\program files (x86)\imagemagick-6.8.7-q16\include\Magick++/Include.h
+     1>d:\program files (x86)\imagemagick-6.8.7-q16\include\magick++\drawable.h(456): warning C4251: 'Magick::DrawableBezier::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::DrawableBezier'
                  with
                  [
-                     _Forced=false,
-                     _Ret=void,
-                     _Funx=int,
-                     _Btuple=std::tuple<KinectControl *>,
-                     _Ftuple=std::tuple<>,
-                     _Fun=int,
-                     _V0_t=KinectControl *const ,
-                     _V1_t=std::_Nil,
-                     _V2_t=std::_Nil,
-                     _V3_t=std::_Nil,
-                     _V4_t=std::_Nil,
-                     _V5_t=std::_Nil,
-                     <unnamed-symbol>=std::_Nil
+                     _Ty=Magick::Coordinate
                  ]
-                 d:\program files (x86)\microsoft visual studio 11.0\vc\include\thr\xthread(195) : see reference to function template instantiation 'std::_Do_call_ret<_Forced,_Ret,_Funx,_Btuple,_Ftuple>::type std::_Bind<false,_Ret,_Fun,_V0_t,_V1_t,_V2_t,_V3_t,_V4_t,_V5_t,<unnamed-symbol>>::operator ()(void)' being compiled
+     1>d:\program files (x86)\imagemagick-6.8.7-q16\include\magick++\drawable.h(498): warning C4251: 'Magick::DrawablePushClipPath::_id' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::DrawablePushClipPath'
                  with
                  [
-                     _Forced=false,
-                     _Ret=void,
-                     _Funx=int,
-                     _Btuple=std::tuple<KinectControl *>,
-                     _Ftuple=std::tuple<>,
-                     _Fun=int,
-                     _V0_t=KinectControl *const ,
-                     _V1_t=std::_Nil,
-                     _V2_t=std::_Nil,
-                     _V3_t=std::_Nil,
-                     _V4_t=std::_Nil,
-                     _V5_t=std::_Nil,
-                     <unnamed-symbol>=std::_Nil
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
                  ]
-                 d:\program files (x86)\microsoft visual studio 11.0\vc\include\thread(52) : see reference to class template instantiation 'std::_Bind<_Forced,_Ret,_Fun,_V0_t,_V1_t,_V2_t,_V3_t,_V4_t,_V5_t,<unnamed-symbol>>' being compiled
+     1>d:\program files (x86)\imagemagick-6.8.7-q16\include\magick++\drawable.h(526): warning C4251: 'Magick::DrawableClipPath::_id' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::DrawableClipPath'
                  with
                  [
-                     _Forced=false,
-                     _Ret=void,
-                     _Fun=int,
-                     _V0_t=KinectControl *const ,
-                     _V1_t=std::_Nil,
-                     _V2_t=std::_Nil,
-                     _V3_t=std::_Nil,
-                     _V4_t=std::_Nil,
-                     _V5_t=std::_Nil,
-                     <unnamed-symbol>=std::_Nil
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
                  ]
-                 d:\users\edu100\documents\github\t3dris\project1\kinectcontrol.cpp(11) : see reference to function template instantiation 'std::thread::thread<int,KinectControl*const >(_Fn,_V0_t &&)' being compiled
+     1>d:\program files (x86)\imagemagick-6.8.7-q16\include\magick++\drawable.h(959): warning C4251: 'Magick::DrawableFont::_font' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::DrawableFont'
                  with
                  [
-                     _Fn=int,
-                     _V0_t=KinectControl *const 
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
                  ]
+     1>d:\program files (x86)\imagemagick-6.8.7-q16\include\magick++\drawable.h(960): warning C4251: 'Magick::DrawableFont::_family' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::DrawableFont'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+     1>d:\program files (x86)\imagemagick-6.8.7-q16\include\magick++\drawable.h(1128): warning C4251: 'Magick::DrawablePath::_path' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::DrawablePath'
+                 with
+                 [
+                     _Ty=Magick::VPath
+                 ]
+     1>d:\program files (x86)\imagemagick-6.8.7-q16\include\magick++\drawable.h(1217): warning C4251: 'Magick::DrawablePolygon::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::DrawablePolygon'
+                 with
+                 [
+                     _Ty=Magick::Coordinate
+                 ]
+     1>d:\program files (x86)\imagemagick-6.8.7-q16\include\magick++\drawable.h(1237): warning C4251: 'Magick::DrawablePolyline::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::DrawablePolyline'
+                 with
+                 [
+                     _Ty=Magick::Coordinate
+                 ]
+     1>d:\program files (x86)\imagemagick-6.8.7-q16\include\magick++\drawable.h(1321): warning C4251: 'Magick::DrawablePushPattern::_id' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::DrawablePushPattern'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+     1>d:\program files (x86)\imagemagick-6.8.7-q16\include\magick++\drawable.h(1923): warning C4251: 'Magick::DrawableText::_text' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::DrawableText'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+     1>d:\program files (x86)\imagemagick-6.8.7-q16\include\magick++\drawable.h(1924): warning C4251: 'Magick::DrawableText::_encoding' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::DrawableText'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+     1>d:\program files (x86)\imagemagick-6.8.7-q16\include\magick++\drawable.h(2255): warning C4251: 'Magick::PathArcAbs::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathArcAbs'
+                 with
+                 [
+                     _Ty=Magick::PathArcArgs
+                 ]
+     1>d:\program files (x86)\imagemagick-6.8.7-q16\include\magick++\drawable.h(2277): warning C4251: 'Magick::PathArcRel::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathArcRel'
+                 with
+                 [
+                     _Ty=Magick::PathArcArgs
+                 ]
+     1>d:\program files (x86)\imagemagick-6.8.7-q16\include\magick++\drawable.h(2428): warning C4251: 'Magick::PathCurvetoAbs::_args' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathCurvetoAbs'
+                 with
+                 [
+                     _Ty=Magick::PathCurvetoArgs
+                 ]
+     1>d:\program files (x86)\imagemagick-6.8.7-q16\include\magick++\drawable.h(2451): warning C4251: 'Magick::PathCurvetoRel::_args' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathCurvetoRel'
+                 with
+                 [
+                     _Ty=Magick::PathCurvetoArgs
+                 ]
+     1>d:\program files (x86)\imagemagick-6.8.7-q16\include\magick++\drawable.h(2475): warning C4251: 'Magick::PathSmoothCurvetoAbs::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathSmoothCurvetoAbs'
+                 with
+                 [
+                     _Ty=Magick::Coordinate
+                 ]
+     1>d:\program files (x86)\imagemagick-6.8.7-q16\include\magick++\drawable.h(2500): warning C4251: 'Magick::PathSmoothCurvetoRel::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathSmoothCurvetoRel'
+                 with
+                 [
+                     _Ty=Magick::Coordinate
+                 ]
+     1>d:\program files (x86)\imagemagick-6.8.7-q16\include\magick++\drawable.h(2609): warning C4251: 'Magick::PathQuadraticCurvetoAbs::_args' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathQuadraticCurvetoAbs'
+                 with
+                 [
+                     _Ty=Magick::PathQuadraticCurvetoArgs
+                 ]
+     1>d:\program files (x86)\imagemagick-6.8.7-q16\include\magick++\drawable.h(2633): warning C4251: 'Magick::PathQuadraticCurvetoRel::_args' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathQuadraticCurvetoRel'
+                 with
+                 [
+                     _Ty=Magick::PathQuadraticCurvetoArgs
+                 ]
+     1>d:\program files (x86)\imagemagick-6.8.7-q16\include\magick++\drawable.h(2657): warning C4251: 'Magick::PathSmoothQuadraticCurvetoAbs::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathSmoothQuadraticCurvetoAbs'
+                 with
+                 [
+                     _Ty=Magick::Coordinate
+                 ]
+     1>d:\program files (x86)\imagemagick-6.8.7-q16\include\magick++\drawable.h(2681): warning C4251: 'Magick::PathSmoothQuadraticCurvetoRel::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathSmoothQuadraticCurvetoRel'
+                 with
+                 [
+                     _Ty=Magick::Coordinate
+                 ]
+     1>d:\program files (x86)\imagemagick-6.8.7-q16\include\magick++\drawable.h(2709): warning C4251: 'Magick::PathLinetoAbs::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathLinetoAbs'
+                 with
+                 [
+                     _Ty=Magick::Coordinate
+                 ]
+     1>d:\program files (x86)\imagemagick-6.8.7-q16\include\magick++\drawable.h(2733): warning C4251: 'Magick::PathLinetoRel::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathLinetoRel'
+                 with
+                 [
+                     _Ty=Magick::Coordinate
+                 ]
+     1>d:\program files (x86)\imagemagick-6.8.7-q16\include\magick++\drawable.h(2875): warning C4251: 'Magick::PathMovetoAbs::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathMovetoAbs'
+                 with
+                 [
+                     _Ty=Magick::Coordinate
+                 ]
+     1>d:\program files (x86)\imagemagick-6.8.7-q16\include\magick++\drawable.h(2899): warning C4251: 'Magick::PathMovetoRel::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathMovetoRel'
+                 with
+                 [
+                     _Ty=Magick::Coordinate
+                 ]
+         Note: including file:     d:\program files (x86)\imagemagick-6.8.7-q16\include\Magick++/Exception.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\Magick++/Include.h
+     1>d:\program files (x86)\imagemagick-6.8.7-q16\include\magick++\exception.h(31): warning C4251: 'Magick::Exception::_what' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::Exception'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+         Note: including file:     d:\program files (x86)\imagemagick-6.8.7-q16\include\Magick++/Geometry.h
+         Note: including file:     d:\program files (x86)\imagemagick-6.8.7-q16\include\Magick++/TypeMetric.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\Magick++/Include.h
+         Note: including file:    D:\Program Files (x86)\ImageMagick-6.8.7-Q16\include\Magick++/Pixels.h
+         Note: including file:     d:\program files (x86)\imagemagick-6.8.7-q16\include\Magick++/Include.h
+         Note: including file:     d:\program files (x86)\imagemagick-6.8.7-q16\include\Magick++/Color.h
+         Note: including file:     d:\program files (x86)\imagemagick-6.8.7-q16\include\Magick++/Image.h
+         Note: including file:    D:\Program Files (x86)\ImageMagick-6.8.7-Q16\include\Magick++/STL.h
+         Note: including file:     d:\program files (x86)\imagemagick-6.8.7-q16\include\Magick++/Include.h
+         Note: including file:     D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\algorithm
+         Note: including file:     D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\map
+         Note: including file:      D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xtree
+         Note: including file:     d:\program files (x86)\imagemagick-6.8.7-q16\include\Magick++/CoderInfo.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\Magick++/Include.h
+     1>d:\program files (x86)\imagemagick-6.8.7-q16\include\magick++\coderinfo.h(68): warning C4251: 'Magick::CoderInfo::_name' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::CoderInfo'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+     1>d:\program files (x86)\imagemagick-6.8.7-q16\include\magick++\coderinfo.h(69): warning C4251: 'Magick::CoderInfo::_description' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::CoderInfo'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+     1>d:\program files (x86)\imagemagick-6.8.7-q16\include\magick++\coderinfo.h(70): warning C4251: 'Magick::CoderInfo::_mimeType' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::CoderInfo'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+         Note: including file:     d:\program files (x86)\imagemagick-6.8.7-q16\include\Magick++/Drawable.h
+         Note: including file:     d:\program files (x86)\imagemagick-6.8.7-q16\include\Magick++/Exception.h
+         Note: including file:     d:\program files (x86)\imagemagick-6.8.7-q16\include\Magick++/Montage.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\Magick++/Include.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\Magick++/Color.h
+         Note: including file:      d:\program files (x86)\imagemagick-6.8.7-q16\include\Magick++/Geometry.h
+     1>d:\program files (x86)\imagemagick-6.8.7-q16\include\magick++\montage.h(90): warning C4251: 'Magick::Montage::_fileName' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::Montage'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+     1>d:\program files (x86)\imagemagick-6.8.7-q16\include\magick++\montage.h(92): warning C4251: 'Magick::Montage::_font' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::Montage'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+     1>d:\program files (x86)\imagemagick-6.8.7-q16\include\magick++\montage.h(95): warning C4251: 'Magick::Montage::_label' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::Montage'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+     1>d:\program files (x86)\imagemagick-6.8.7-q16\include\magick++\montage.h(99): warning C4251: 'Magick::Montage::_texture' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::Montage'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+     1>d:\program files (x86)\imagemagick-6.8.7-q16\include\magick++\montage.h(101): warning C4251: 'Magick::Montage::_title' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::Montage'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+     1>d:\program files (x86)\imagemagick-6.8.7-q16\include\magick++\stl.h(134): warning C4251: 'Magick::annotateImage::_text' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::annotateImage'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+     1>d:\program files (x86)\imagemagick-6.8.7-q16\include\magick++\stl.h(213): warning C4251: 'Magick::cdlImage::_cdl' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::cdlImage'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+     1>d:\program files (x86)\imagemagick-6.8.7-q16\include\magick++\stl.h(273): warning C4251: 'Magick::commentImage::_comment' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::commentImage'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+     1>d:\program files (x86)\imagemagick-6.8.7-q16\include\magick++\stl.h(385): warning C4251: 'Magick::drawImage::_drawableList' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::drawImage'
+                 with
+                 [
+                     _Ty=Magick::Drawable
+                 ]
+     1>d:\program files (x86)\imagemagick-6.8.7-q16\include\magick++\stl.h(651): warning C4251: 'Magick::labelImage::_label' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::labelImage'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+     1>d:\program files (x86)\imagemagick-6.8.7-q16\include\magick++\stl.h(1299): warning C4251: 'Magick::backgroundTextureImage::_backgroundTexture' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::backgroundTextureImage'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+     1>d:\program files (x86)\imagemagick-6.8.7-q16\include\magick++\stl.h(1474): warning C4251: 'Magick::fileNameImage::_fileName' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::fileNameImage'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+     1>d:\program files (x86)\imagemagick-6.8.7-q16\include\magick++\stl.h(1498): warning C4251: 'Magick::fontImage::_font' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::fontImage'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+     1>d:\program files (x86)\imagemagick-6.8.7-q16\include\magick++\stl.h(1558): warning C4251: 'Magick::magickImage::_magick' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::magickImage'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+     1>d:\program files (x86)\imagemagick-6.8.7-q16\include\magick++\stl.h(1817): warning C4251: 'Magick::tileNameImage::_tileName' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::tileNameImage'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+     1>d:\program files (x86)\imagemagick-6.8.7-q16\include\magick++\stl.h(1854): warning C4251: 'Magick::viewImage::_view' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::viewImage'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+     1>d:\program files (x86)\imagemagick-6.8.7-q16\include\magick++\stl.h(1867): warning C4251: 'Magick::x11DisplayImage::_display' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::x11DisplayImage'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+         Note: including file:  d:\users\edu100\documents\github\t3dris\project1\InitResources.h
+         Note: including file: d:\users\edu100\documents\github\t3dris\project1\Shapes.h
+         Note: including file: d:\users\edu100\documents\github\t3dris\project1\KinectControl.h
+         Note: including file:  d:\users\edu100\documents\github\t3dris\project1\SkeletonBasics.h
+         Note: including file:   D:\Program Files\Microsoft SDKs\Kinect\v1.8\inc\NuiApi.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack8.h
+         Note: including file:    D:\Program Files\Microsoft SDKs\Kinect\v1.8\inc\NuiSensor.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\ocidl.h
+         Note: including file:    D:\Program Files\Microsoft SDKs\Kinect\v1.8\inc\NuiImageCamera.h
+         Note: including file:    D:\Program Files\Microsoft SDKs\Kinect\v1.8\inc\NuiSkeleton.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+     1>d:\users\edu100\documents\github\t3dris\project1\enginefile.cpp(593): error C3867: 'KinectControl::run': function call missing argument list; use '&KinectControl::run' to create a pointer to member
      1>Done Building Project "D:\Users\edu100\Documents\GitHub\T3DRIS\Project1\Project1.vcxproj" (Build target(s)) -- FAILED.
 
 Build FAILED.
 
-Time Elapsed 00:00:01.19
+Time Elapsed 00:00:01.85
