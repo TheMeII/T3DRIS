@@ -46,4 +46,6 @@ void Translate(Vector3f trans);
 void Scale(Vector3f scale);
 void Rotate(Vector3f rot);
 void getTransforms(std::vector<Vector3f> &reference);
+
+
 };

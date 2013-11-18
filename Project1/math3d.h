@@ -156,6 +156,7 @@ struct Quaternion
 
 	Quaternion Conjugate();
 };
-
+Vector3f& getUnitVector3D( Vector3f &vector);
+Vector3f& rotateAroundVector(Vector3f &vect1, Vector3f &vect2, double theta);
 Quaternion operator*(const Quaternion& l, const Quaternion& r);
 Quaternion operator*(const Quaternion& q, const Vector3f& v);

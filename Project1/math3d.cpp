@@ -166,4 +166,29 @@ Quaternion operator*(const Quaternion& q, const Vector3f& v)
 	return ret;
 }
 
+Vector3f& getUnitVector3D( Vector3f &vector) {
+    Vector3f newv;
+    double d = sqrt(vector.x * vector.x + vector.y * vector.y +  vector.z * vector.z);
+    newv.x = vector.x / d;
+    newv.y = vector.y / d;
+    newv.z = vector.z / d;
+    return newv;
+}
+
+
+Vector3f& rotateAroundVector(Vector3f &vect1, Vector3f &vect2, double theta) {
+    Vector3f newv;
+    Vector3f unit = getUnitVector3D(vect2);	
+    //theta = Math.toRadians(theta);
+    double q0 = cos(theta/2);
+    double q1 = sin(theta/2)*unit.x;
+    double q2 = sin(theta/2)*unit.y;
+    double q3 = sin(theta/2)*unit.z;
+
+    // column vect
+    newv.x = (q0*q0 + q1*q1 - q2*q2 - q3*q3)* +    2*(q2*q1 + q0*q3) * vect1.y +                       2*(q3*q1 - q0*q2) * vect1.z;
+    newv.y = 2*(q1*q2 - q0*q3)*vect1.x +             (q0*q0 - q1*q1 + q2*q2 - q3*q3) * vect1.y +       2*(q3*q2 + q0*q1) * vect1.z;
+    newv.z = 2*(q1*q3 + q0*q2)*vect1.x +             2*(q2*q3 - q0*q1) * vect1.y +                     (q0*q0 - q1*q1 - q2*q2 + q3*q3) * vect1.z;
+    return newv;
+}
 

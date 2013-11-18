@@ -155,6 +155,7 @@ static void KeyboardCB(unsigned char Key, int x, int y)
 		break;
 
 	case'w':
+		
 		rotX += 45.0f;
 		break;
 
@@ -272,6 +273,9 @@ static void createShape(){
 	Shapes shape1;
 	shape1.selectShape(4,&shape1);
 	boxes.push_back(shape1.returnShape());
+	
+
+
 }
 
 
@@ -436,6 +440,8 @@ static void CompileShaders()
 	gWVPLocation = glGetUniformLocation(ShaderProgram, "gWVP"); //query program object for location of the uniform variable
 	assert(gWVPLocation != 0xFFFFFFFF); //catch error if statement false
 }
+
+
 
 
 int main(int argc, char* argv[])
