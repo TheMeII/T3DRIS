@@ -84,6 +84,7 @@
     <ClCompile Include="math3d.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="pipeline.cpp" />
+    <ClCompile Include="RenderObject.cpp" />
     <ClCompile Include="Shapes.cpp" />
     <ClCompile Include="texture.cpp" />
   </ItemGroup>
@@ -94,6 +95,7 @@
     <ClInclude Include="math3d.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="pipeline.h" />
+    <ClInclude Include="RenderObject.h" />
     <ClInclude Include="Shapes.h" />
     <ClInclude Include="texture.h" />
   </ItemGroup>
