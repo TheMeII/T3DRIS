@@ -196,10 +196,12 @@ void CSkeletonBasics::ProcessSkeleton()
     // smooth out the skeleton data
     m_pNuiSensor->NuiTransformSmooth(&skeletonFrame, NULL);
 	if (skelNmbr >=5) {
-		for (int i=0;i<5;i++)
+		for (int i=0;i<4;i++)
 			skeletons[i]= skeletons[i+1];
+		skelNmbr=4;
 	}
-	skeletons[skelNmbr] = skeletonFrame; // 5 if not one of first 4 times
+	skeletons[skelNmbr] = skeletonFrame; // 4 if not one of first 4 times
+	skelNmbr++;
 	
 
     for (int i = 0 ; i < NUI_SKELETON_COUNT; ++i)
@@ -208,39 +210,96 @@ void CSkeletonBasics::ProcessSkeleton()
 		{
 			m_Points[j] = SkeletonToScreen(skeletonFrame.SkeletonData[i].SkeletonPositions[j], 640, 480);
 		}
-        NUI_SKELETON_TRACKING_STATE trackingState = skeletonFrame.SkeletonData[i].eTrackingState;
 
-        if (NUI_SKELETON_TRACKED == trackingState)
+		if (skelNmbr >=5) {
+		for (int i=0;i<4;i++)
+			m_PointArray[i]= m_PointArray[i+1];
+			skelNmbr=4;
+		}
+		m_PointArray[skelNmbr] = m_Points;
+		skelNmbr++;
+
+		NUI_SKELETON_TRACKING_STATE trackingState = skeletonFrame.SkeletonData[i].eTrackingState;
+
+        if (NUI_SKELETON_TRACKED == trackingState && skelNmbr>=5)
         {
             // We're tracking the skeleton, draw it
 			//TODO: Do something here!!
 			// Look at drawskeleton.
 			//m_Points[0].x;
 			*movement = 0;
+			
+			/*	Head left right movement
+			 *	Compare head.x to shoulderCenter.x
+			 *	
+			 */
 			std::cout << "Head:"<< m_Points[NUI_SKELETON_POSITION_HEAD].x << " Shoulder:"<< m_Points[NUI_SKELETON_POSITION_SHOULDER_CENTER].x << std::endl;
-			if (m_Points[NUI_SKELETON_POSITION_SHOULDER_CENTER].x - m_Points[NUI_SKELETON_POSITION_HEAD].x <12 && m_Points[NUI_SKELETON_POSITION_SHOULDER_CENTER].x-m_Points[NUI_SKELETON_POSITION_HEAD].x >-12) 
-			{
-					std::cout << "                                                         Center" << std::endl;
-			} else
+			if (!(m_Points[NUI_SKELETON_POSITION_SHOULDER_CENTER].x - m_Points[NUI_SKELETON_POSITION_HEAD].x <12 && m_Points[NUI_SKELETON_POSITION_SHOULDER_CENTER].x-m_Points[NUI_SKELETON_POSITION_HEAD].x >-12)) 
 			{ 
 				if (m_Points[NUI_SKELETON_POSITION_SHOULDER_CENTER].x > m_Points[NUI_SKELETON_POSITION_HEAD].x) 
 				{
-					std::cout << "                                                         Left" << std::endl;
-					*movement = 1;
+					*movement |= 1;
 				} else
 				{
-					std::cout << "                                                         Right" << std::endl;
-					*movement = 2;
+					*movement |= 2;
 				}
 			}
-			/*
-			if (skeletonFrame.SkeletonData->SkeletonPositions[NUI_SKELETON_POSITION_HEAD].x < skeletonFrame.SkeletonData->SkeletonPositions[NUI_SKELETON_POSITION_SHOULDER_CENTER].x)
-				std::cout << "Left" << std::endl;
-			if (skeletonFrame.SkeletonData->SkeletonPositions[NUI_SKELETON_POSITION_HEAD].x > skeletonFrame.SkeletonData->SkeletonPositions[NUI_SKELETON_POSITION_SHOULDER_CENTER].x)
-				std::cout << "Right" << std::endl;
-			else
-				std::cout << "Center" << std::endl;
+			/*	Right hand movement
+			*	wrist position tracking
+			*	
 			*/
+			float rWristy	= m_Points[NUI_SKELETON_POSITION_WRIST_RIGHT].y-m_Points[NUI_SKELETON_POSITION_SHOULDER_RIGHT].y;
+			float rWristx	= m_Points[NUI_SKELETON_POSITION_WRIST_RIGHT].x-m_Points[NUI_SKELETON_POSITION_SHOULDER_RIGHT].x;
+			float rShoulderx = m_Points[NUI_SKELETON_POSITION_SHOULDER_RIGHT].x-m_Points[NUI_SKELETON_POSITION_SHOULDER_CENTER].x;
+			
+			//Movement Up
+			if (rWristy<-30)
+//			if (m_Points[NUI_SKELETON_POSITION_WRIST_RIGHT].y<220)
+			{
+				*movement |=4;
+			}
+			//Movement Down
+			if (rWristy>10)
+//			if (m_Points[NUI_SKELETON_POSITION_WRIST_RIGHT].y>260)
+			{
+				*movement |=8;
+				std::cout << *movement << std::endl;
+			}
+			//Movement Left
+			if (rWristx - rShoulderx < 0)
+				*movement |=32;
+			//Movement Right
+			if (rWristx - rShoulderx > 20)
+				*movement |=16;
+			
+			/*	Left hand movement
+			*	wrist position tracking
+			*	
+			*/
+			float lWristy	= m_Points[NUI_SKELETON_POSITION_WRIST_LEFT].y-m_Points[NUI_SKELETON_POSITION_SHOULDER_LEFT].y;
+			float lWristx	= m_Points[NUI_SKELETON_POSITION_WRIST_LEFT].x-m_Points[NUI_SKELETON_POSITION_SHOULDER_LEFT].x;
+			float lShoulderx = m_Points[NUI_SKELETON_POSITION_SHOULDER_LEFT].x-m_Points[NUI_SKELETON_POSITION_SHOULDER_CENTER].x;
+			
+			//Movement Up
+			if (lWristy<-30)
+			{
+				*movement |=64;
+			}
+			//Movement Down
+			if (lWristy>10)
+			{
+				*movement |=128;
+				std::cout << *movement << std::endl;
+			}
+			//Movement Left
+			if (lWristx - lShoulderx < 0)
+				*movement |=256;
+			//Movement LEFT
+			if (lWristx - lShoulderx > 20)
+				*movement |=512;
+			
+			
+			std::cout << *movement << std::endl;
         }
         else if (NUI_SKELETON_POSITION_ONLY == trackingState)
         {
@@ -250,7 +309,7 @@ void CSkeletonBasics::ProcessSkeleton()
             //    g_JointThickness,
             //    g_JointThickness
             //    );
-
+			*movement = -1;
 
            
         }

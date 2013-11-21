@@ -24,13 +24,13 @@ using namespace std;
 
 
 //GLOBALS
-//Teemu testaa
-
 
 GLuint gWVPLocation; //Global uniform variable
 GLuint gSampler;
 vector<Object> boxes;
 Camera* pGameCamera;
+
+//Teemu:Kinectpalaset 1
 KinectControl* kinect;
 int movement=0;
 
@@ -78,18 +78,40 @@ static void RenderSceneCB()
 	pGameCamera->OnRender();
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	glEnable(GL_DEPTH_TEST);
-
-	static float scale = 0.0f; //set static, so its value is recerved
+	//Teemu: Kinect testaukset
+	static float scale = 0.01f; //set static, so its value is recerved
 
 	//scale += 0.01f;
+	static float mx=-1.0f,my=1.0f;
+	static float rx=180.0f,ry=180.0f;
+	if (movement >0){
+		cout << "               MPOOOOOOOOOVE " << movement << endl;
+		//scale += 0.01f;
+		(movement&32?mx+=scale:NULL);
+		(movement&16?mx-=scale:NULL);
+		(movement&4?my+=scale:NULL);
+		(movement&8?my-=scale:NULL);
 
-	if (movement >0)
-		scale += 0.05f;
-	boxes[1].Rotate(Vector3f(sinf(scale)*90.0f, sinf(scale) * 90.0f, 1.0f));
+		(movement&64 ?rx+=1:NULL);
+		(movement&128?rx-=1:NULL);
+		(movement&256?ry-=1:NULL);
+		(movement&512?ry+=1:NULL);
 
+
+		(rx<0?rx=360:rx=rx);
+		(ry<0?ry=360:ry=ry);
+
+		(rx>360?rx=0:rx=rx);
+		(ry>360?ry=0:ry=ry);
+
+		
+		boxes[1].Rotate(Vector3f(rx, ry, 1.0f));
+		
+		boxes[1].Translate(Vector3f(mx,my,-9.0f));
+	}
 	//WITH THESE COMMANDS OBJECTS ARE MODIFIED SEPARETLY
 	boxes[0].Translate(Vector3f(0.0f, 0.0f, 0.0f)); //all these take vector parameters (for now), and values specify the modification to each axis (  Vector3f(x, y, z)  )
-	boxes[1].Translate(Vector3f(-1.0f, 1.0f, -9.0f));
+	//boxes[1].Translate(Vector3f(-1.0f, 1.0f, -9.0f));
 	boxes[0].Scale(Vector3f(100.0f, 100.0f, 100.0f)); //Huge box that is around
 	boxes[1].Scale(Vector3f(1.0f, 1.0f, 1.0f));
 	boxes[2].Scale(Vector3f(16.0f, 0.0f, 16.0f));
@@ -594,7 +616,7 @@ static void CompileShaders()
 
 int main(int argc, char* argv[])
 {
-	//Teemu:kinectpalaset
+	//Teemu:kinectpalaset 2
 	
 	kinect = new KinectControl(&movement);
 	kinect->StartThread();

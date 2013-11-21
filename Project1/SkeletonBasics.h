@@ -36,6 +36,7 @@ private:
 	int						*movement;
 	Point					m_Points[NUI_SKELETON_POSITION_COUNT];
 	NUI_SKELETON_FRAME		skeletons[5];
+	Point*					m_PointArray[5];
 	int						skelNmbr;
 
     HWND                    m_hWnd;
