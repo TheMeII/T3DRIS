@@ -20,6 +20,7 @@
 #include "RenderObject.h"
 using namespace std;
 
+#define PI 3.14159265358979323846264338327950288
 #pragma comment(lib, "glew32.lib") //ensure success of glew
 
 //GLOBALS
@@ -28,7 +29,7 @@ GLuint gSampler;
 Camera* pGameCamera;
 Game* game;
 RenderObject *renderObject;
-float rotX = 0.0f, rotY = 0.0f;
+float rotX = 0.0f, rotY = 0.0f,rotZ=0.0f;
 float posX = 1.0f, posY = 1.0f, posZ = 1.0f;
 
 bool created = false;
@@ -83,7 +84,8 @@ static void RenderSceneCB()
 	glEnable(GL_DEPTH_TEST);
 
 	static float scale = 0.0f; //set static, so its value is recerved
-
+	renderObject->renderObjects[2].Rotate(Vector3f(rotX,rotY,0.0f));
+	renderObject->renderObjects[2].Translate(Vector3f(posX,posY,posZ));
 //	scale += 45.0f;
 
 	//WITH THESE COMMANDS OBJECTS ARE MODIFIED SEPARETLY
@@ -117,7 +119,7 @@ static void RenderSceneCB()
 		Object render = renderObject->getObject(i);
 		vector<Vector3f> objTrans;
 		render.getTransforms(objTrans);
-		p.WorldPos(objTrans[0].x, objTrans[0].y, objTrans[0].z);
+		p.WorldPos(objTrans[0].x, objTrans[0].y, objTrans[0].z);		
 		p.Rotate(objTrans[1].x, objTrans[1].y, objTrans[1].z);
 		p.Scale(objTrans[2].x, objTrans[2].y, objTrans[2].z);
 		p.SetCamera(pGameCamera->GetPos(), pGameCamera->GetTarget(), pGameCamera->GetUp());
@@ -169,25 +171,43 @@ static void KeyboardCB(unsigned char Key, int x, int y)
 	case'q':
 		exit(0);
 		break;
+	case's':
+		rotX += 90.0f;
+		break;
 
+	case'a':
+		rotY -= 90.0f;
+		break;
 	case'w':
-		rotX += 45.0f;
+		rotX -= 90.0f;
 		break;
 
 	case'd':
-		rotY += 45.0f;
+		rotY += 90.0f;
 		break;
+
 
 	case'i':
-		posX = 0.0f;
-		posY = 0.0f;
-		posZ = 0.0f;
+		//posX = 0.0f;
+		//posY = 0.0f;
+		posZ -= 1.0f;
 		break;
 
-	case'o':
-		posX = 3.0f;
-		posY = 3.0f;
-		posZ = 3.0f;
+	case'k':
+		//posX = 3.0f;
+		//posY = 3.0f;
+		posZ += 1.0f;
+		break;
+	case'j':
+		posX += 1.0f;
+		//posY = 0.0f;
+		//posZ -= 1.0f;
+		break;
+
+	case'l':
+		posX -= 1.0f;
+		//posY = 3.0f;
+		//posZ += 1.0f;
 		break;
 
 	case'c':
@@ -367,17 +387,75 @@ int main(int argc, char* argv[])
 
 	//CreateObject3();
 
+		
 	CompileShaders(); //create shaders
 
 	glUniform1i(gSampler, 0); //set texture unit uniform that is going to be used in shader
 	glutMainLoop(); //enter OpenGL's main loop, that is runned 3d program
 	
+
+
+
+
 	return 0; //exit program
 
 }
 
 
 
+/**
+  * returns a unit vector
+  */
+Vector3f& getUnitVector3D(struct Vector3f &vector) {
+    Vector3f newv;
+    double d = sqrt(vector.x * vector.x + vector.y * vector.y +  vector.z * vector.z);
+    newv.x = vector.x / d;
+    newv.y = vector.y / d;
+    newv.z = vector.z / d;
+    return newv;
+}
+
+
+/**
+  * using quaternions to rotate around an arbirtuary axis
+  * Given angle theta in radians and unit vector u = ai + bj + ck or (a,b,c)
+  *
+  * q0 = cos(r/2),  q1 = sin(r/2) a,  q2 = sin(r/2) b,  q3 = sin(r/2) c
+  *
+  * Q =
+  * [
+  *   (q0^2 + q1^2 - q2^2 - q3^2)        2(q1q2 - q0q3)     2(q1q3 + q0q2)
+  *   2(q2q1 + q0q3)           (q0^2 - q1^2 + q2^2 - q3^2)  2(q2q3 - q0q1)
+  *   2(q3q1 - q0q2)             2(q3q2 + q0q1)     (q0^2 - q1^2 - q2^2 + q3^2)
+  * ]
+  *
+  * Q u = u
+  *
+  * @param Vector3D 1
+  * @param Vector3D 2
+  * @param theta
+  * @return Vector
+  */
+Vector3f& rotateAroundVector(Vector3f &vect1, Vector3f &vect2, double theta) {
+    Vector3f newv;
+    Vector3f unit = getUnitVector3D(vect2);
+    //theta = Math.toRadians(theta);
+    double q0 = cos(theta/2);
+    double q1 = sin(theta/2)*unit.x;
+    double q2 = sin(theta/2)*unit.y;
+    double q3 = sin(theta/2)*unit.z;
+
+    // column vect
+    newv.x = (q0*q0 + q1*q1 - q2*q2 - q3*q3)* +    2*(q2*q1 + q0*q3) * vect1.y +                       2*(q3*q1 - q0*q2) * vect1.z;
+    newv.y = 2*(q1*q2 - q0*q3)*vect1.x +             (q0*q0 - q1*q1 + q2*q2 - q3*q3) * vect1.y +       2*(q3*q2 + q0*q1) * vect1.z;
+    newv.z = 2*(q1*q3 + q0*q2)*vect1.x +             2*(q2*q3 - q0*q1) * vect1.y +                     (q0*q0 - q1*q1 - q2*q2 + q3*q3) * vect1.z;
+    return newv;
+}
+
+
+double degToRad(double deg) {
+    return deg * PI / 180;
+}
 
 //ABOUT SHADERS
 

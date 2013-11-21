@@ -28,7 +28,7 @@ int Game::run()
 	{
 		if(activeBlock != true)
 		{
-			createBlock();
+		//	createBlock();
 			activeBlock = true;
 		}
 
@@ -46,7 +46,7 @@ void Game::startThread()
 
 void Game::createBlock()
 {
-	currentShape.selectShape(4,&currentShape);
+	currentShape.selectShape(1,&currentShape);
 	gameObjects->pushObject(currentShape.returnShape());
 	numberOfObjects++;
 }
@@ -55,6 +55,7 @@ void Game::setupGame()
 {
 	createSkybox();
 	createFloor();
+	createBlock();
 	
 	//SKYBOX TRANSFORMATIONS
 	gameObjects->renderObjects[0].Translate(Vector3f(0.0f, 0.0f, 0.0f));

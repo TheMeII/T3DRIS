@@ -21,6 +21,7 @@ public:
 	//public for now to be accesed from engine to render
 	RenderObject *gameObjects; //pointer to EngineFiles objects
 	//TODO: OWN VECTOR FOR STATIC CONTENT/FLOOR/SKYBOX?
+	
 private:
 	std::thread* gameThread;
 	double t;
