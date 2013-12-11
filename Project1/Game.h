@@ -18,7 +18,6 @@ public:
 	Object getObject(int index);
 	int isSetup();
 	void setSetup(bool set);
-<<<<<<< HEAD
 	int getNumberOfObjects();
 	void incNumberOfObjects();
 	bool getCreateNew();
@@ -28,12 +27,6 @@ public:
 	//TODO: OWN VECTOR FOR STATIC CONTENT/FLOOR/SKYBOX?
 	float posX, posZ;
 	float rotX, rotY;
-=======
-	//public for now to be accesed from engine to render
-	RenderObject *gameObjects; //pointer to EngineFiles objects
-	//TODO: OWN VECTOR FOR STATIC CONTENT/FLOOR/SKYBOX?
-	
->>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
 private:
 	std::thread* gameThread;
 	double t;
@@ -51,7 +44,6 @@ private:
 	Object skybox; //skybox that is around gamespace
 	*/
 	Shapes currentShape;
-<<<<<<< HEAD
 	int numberOfObjects;
 	//GAME LOGIC VARIABLES
 	bool activeBlock; //USED TO DETERMINE IF NEW BLOCK IS NEEDED TO BE CREATED // IS THERE A ACTIVE BLOCK
@@ -64,12 +56,4 @@ public:
 	void setPosZ(float pZ);
 	void setRotX(float rX);
 	void setRotY(float rY);
-=======
-
-	int numberOfObjects;
-
-	//GAME LOGIC VARIABLES
-	bool activeBlock; //USED TO DETERMINE IF NEW BLOCK IS NEEDED TO BE CREATED // IS THERE A ACTIVE BLOCK
-	std::vector<Shapes> clippedShapes;
->>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
 };

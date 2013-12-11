@@ -67,14 +67,11 @@
       <ProjName>TETEngine</ProjName>
     </ProjBinary>
   </Binaries>
-<<<<<<< HEAD
   <Reports>
     <Report>
       <Path>TETEngine131128.vspx</Path>
     </Report>
   </Reports>
-=======
->>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
   <Launches>
     <ProjBinary>
       <Path>:PB:{A5B9C8AA-9008-48D5-962C-E0F3E3497B5A}|Project1\Project1.vcxproj</Path>

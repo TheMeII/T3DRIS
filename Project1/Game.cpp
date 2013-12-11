@@ -13,7 +13,6 @@ Game::Game(RenderObject *reference)
 	dt = 1000.0 / 60.0; //DELTA-time ms/frames(every 1/60 second)
 	numberOfObjects = 0;
 	activeBlock = false;
-<<<<<<< HEAD
 	createNew = false;
 	posX = 0.0f;
 	posZ = 0.0f;
@@ -21,8 +20,6 @@ Game::Game(RenderObject *reference)
 	rotY = 0.0f;
 	blockReady=false;
 	movementTimer = 0;
-=======
->>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
 }
 
 Game::~Game()
@@ -34,17 +31,13 @@ Game::~Game()
 int Game::run()
 {
 	int i = 0;
-<<<<<<< HEAD
 	static float falling = 40.0;
 	float fallSpeed = 0.05;
 	int current;
-=======
->>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
 	while(true)
 	{
 		if(activeBlock != true)
 		{
-<<<<<<< HEAD
 			blockReady=false;
 			createBlock();
 			activeBlock = true;
@@ -68,12 +61,6 @@ int Game::run()
 		}
 
 		movementTimer++;
-=======
-		//	createBlock();
-			activeBlock = true;
-		}
-
->>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
 		std::this_thread::sleep_for(std::chrono::milliseconds((int)dt));
 	}
 	return 0;
@@ -88,7 +75,6 @@ void Game::startThread()
 
 void Game::createBlock()
 {
-<<<<<<< HEAD
 	/*currentShape = Shapes();
 	currentShape.selectShape(4,&currentShape);
 	gameObjects->pushObject(currentShape.returnShape());*/
@@ -97,30 +83,19 @@ void Game::createBlock()
 	posZ = 0.0f;
 	rotX = 0.0f;
 	rotY = 0.0f;
-=======
-	currentShape.selectShape(1,&currentShape);
-	gameObjects->pushObject(currentShape.returnShape());
-	numberOfObjects++;
->>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
 }
 
 void Game::setupGame()
 {
 	createSkybox();
-<<<<<<< HEAD
 	numberOfObjects++;
 	createFloor();
 	numberOfObjects++;
 	
-=======
-	createFloor();
-	createBlock();
->>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
 	
 	//SKYBOX TRANSFORMATIONS
 	gameObjects->renderObjects[0].Translate(Vector3f(0.0f, 0.0f, 0.0f));
 	gameObjects->renderObjects[0].Scale(Vector3f(100.0f, 100.0f, 100.0f));
-<<<<<<< HEAD
 	gameObjects->sendTransforms(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 100.0f, 100.0f, 100.0f);
 
 	//FLOOR TRANSFORMATIONS
@@ -128,12 +103,6 @@ void Game::setupGame()
 	gameObjects->renderObjects[1].Scale(Vector3f(8.0f, 1.0f, 8.0f));;
 	gameObjects->sendTransforms(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 8.0f, 1.0f, 8.0f);
 
-=======
-
-	//FLOOR TRANSFORMATIONS
-	gameObjects->renderObjects[1].Translate(Vector3f(0.0f, 0.0f, 0.0f));
-	gameObjects->renderObjects[1].Scale(Vector3f(16.0f, 1.0f, 16.0f));;
->>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
 
 	setup = 1;
 }
@@ -141,10 +110,6 @@ void Game::setupGame()
 
 int Game::isSetup()
 {
-<<<<<<< HEAD
-=======
-	int i = 0;
->>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
 	return setup;
 }
 
@@ -210,10 +175,7 @@ void Game::createSkybox()
 
 void Game::createFloor()
 {
-<<<<<<< HEAD
 
-=======
->>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
 	
 	//PRODUCES TWO TRIGLES THAT FORM RECTANGLE
  //make Vector3f array
@@ -242,7 +204,6 @@ void Game::executeStaticTrasformations()
 
 }
 
-<<<<<<< HEAD
 int Game::getNumberOfObjects()
 {
 	return numberOfObjects;
@@ -264,8 +225,6 @@ bool Game::getCreateNew()
 	return createNew;
 }
 
-=======
->>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
 
 
 void Game::setSetup(bool set)
@@ -282,7 +241,6 @@ void Game::setSetup(bool set)
 
 }
 
-<<<<<<< HEAD
 void Game::setPosX(float pX)
 {
 	if (posX + pX<=4.0f && posX + pX>=-4.0f) 
@@ -307,15 +265,3 @@ void Game::setRotY(float rY)
 	rotY+= rY;
 	movementTimer =0;
 }
-=======
-
-
-
-
-
-
-
-
-
-
->>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
