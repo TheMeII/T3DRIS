@@ -29,6 +29,8 @@ public:
 	Camera(int WindowWidht, int WindowHeight, const Vector3f& Pos, const Vector3f& Target, const Vector3f& Up);
 	bool OnKeyboard(int key);
 	void OnMouse(int x, int y);
+	void setAngleH(float angle);
+	void setAngleV(float angle);
 
 	void OnRender();
 

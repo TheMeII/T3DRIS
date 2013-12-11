@@ -1,8 +1,11 @@
+#include <Windows.h>
 #include <iostream>
 #include <vector>
 #include <string>
 #include <math.h>
 #include <assert.h>
+#include <thread>
+#include <ctime>
 
 //OPENGL HELPER LIB INCLUDES
 #include <GL/glew.h> //handels management of OpenGL's extensions in system
@@ -15,16 +18,31 @@
 #include "Object.h"
 #include "InitResources.h"
 #include "Shapes.h"
+#include "Game.h"
+#include "RenderObject.h"
+#include "KinectControl.h"
+
 using namespace std;
 
 #pragma comment(lib, "glew32.lib") //ensure success of glew
 
-
 //GLOBALS
 GLuint gWVPLocation; //Global uniform variable
 GLuint gSampler;
-vector<Object> boxes;
-Camera* pGameCamera;
+Camera* leftCamera;
+Camera* rightCamera;
+int leftActive = 1; //lets start with left camera active
+Game* game;
+RenderObject *renderObject;
+
+//Kinect globals
+KinectControl* kinect;
+int movement=0;
+
+int nextRand = 1;
+
+bool created = false;
+bool stereo = true;
 
 //Shader codes
 //VERTEX SHADER
@@ -65,46 +83,165 @@ void main()							         \n\
 
 }*/
 
-static void RenderSceneCB()
+void kinectMovement()
 {
-	pGameCamera->OnRender();
-	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	glEnable(GL_DEPTH_TEST);
+	if (movement >0){
+		//cout << "               MOOOOOOOOOVE " << movement << endl; //debug
+		
+		(movement&4?	game->setPosZ(-1.0f*0.05f)	:NULL);		//Movement up		(negative Z)
+		(movement&8?	game->setPosZ( 1.0f*0.05f)	:NULL);		//Movement down		(positive Z)
+		(movement&16?	game->setPosX(-1.0f*0.05f)	:NULL);		//Movement right	(negative X)
+		(movement&32?	game->setPosX( 1.0f*0.05f)	:NULL);		//Movement left		(positive X)
 
-	static float scale = 0.0f; //set static, so its value is recerved
+		(movement&64 ?	game->setRotX(-90.0f)	:NULL);			//Rotation up		(negative X-axle)
+		(movement&128?	game->setRotX( 90.0f)	:NULL);			//Rotation down		(positive X-axle)
+		(movement&256?	game->setRotY( 90.0f)	:NULL);			//Rotation right	(positive Y-axle)
+		(movement&512?	game->setRotY(-90.0f)	:NULL);			//Rotation left		(negative Y-axle)
+		
+	}
+}
 
-	scale += 0.01f;
+void createNewDynamic()
+{
+	nextRand++;
+	nextRand%=7;
 
-	//WITH THESE COMMANDS OBJECTS ARE MODIFIED SEPARETLY
-	boxes[0].Translate(Vector3f(0.0f, 0.0f, 0.0f)); //all these take vector parameters (for now), and values specify the modification to each axis (  Vector3f(x, y, z)  )
-	boxes[1].Translate(Vector3f(-1.0f, 1.0f, -9.0f));
-	boxes[0].Scale(Vector3f(100.0f, 100.0f, 100.0f)); //Huge box that is around
-	boxes[1].Scale(Vector3f(1.0f, 1.0f, 1.0f));
-	boxes[2].Scale(Vector3f(16.0f, 0.0f, 16.0f));
-	boxes[1].Rotate(Vector3f(sinf(scale)*90.0f, sinf(scale) * 90.0f, 1.0f));
+	Shapes currentShape = Shapes();
+	currentShape.selectShape(nextRand,&currentShape);
+	renderObject->pushObject(currentShape.returnShape());
+	game->incNumberOfObjects();
+}
+
 	
 
-	//glUniform1f(gScaleLocation, sinf(scale)); //Pass uniform value to shader using glUniform* functions.
-	Pipeline p;
-	for(unsigned int i = 0; i < boxes.size(); i++)
-	{
-		Object render = boxes[i];
-		vector<Vector3f> objTrans;
-		boxes[i].getTransforms(objTrans);
-		render = boxes[i];
-		p.WorldPos(objTrans[0].x, objTrans[0].y, objTrans[0].z);
-		p.Rotate(objTrans[1].x, objTrans[1].y, objTrans[1].z);
-		p.Scale(objTrans[2].x, objTrans[2].y, objTrans[2].z);
-		p.SetCamera(pGameCamera->GetPos(), pGameCamera->GetTarget(), pGameCamera->GetUp());
-		p.SetPerpectiveProj(60.0f, WINDOW_WIDTH, WINDOW_HEIGHT, 1.0f, 250.0f);
 
-		glUniformMatrix4fv(gWVPLocation, 1, GL_TRUE, (const GLfloat*)p.GetTrans()); //Send uniform 4x4 matrix to shader. Can be also used to multiply matrices in one call (translation, rotation, scale, projection)
-						//Params: 1:Location of uniform variable (retrieved after shader compilation using glGetUniformLocation()), 2:number of matrices that are updated, 3:row-major or collum-major order (True is row major)
-						//Params: 4:Starting adress of the matrix in memory (Rest are located after this address).
-		render.Render();
+
+static void RenderSceneCB()
+{
+	static clock_t last; //last time rendered
+	//static clock_t current; //current time
+	static int fps = 0;
+	static int lr=0, rr=0;
+	static clock_t frames_start;
+	static clock_t frames_end;
+
+	if(!created)
+	{
+		last = clock();
+		created = true;
 	}
 
-	glutSwapBuffers();
+	//current = clock();
+
+	if((float)clock()-(float)last>= (1000.0f/60.0f))
+	{
+		Camera* activeCamera;
+	
+		
+		static float scale = 0.00f; //set static, so its value is recerved
+		static float scale2 = 0.00f; //set static, so its value is recerved
+		if(game->getCreateNew())
+		{
+			createNewDynamic();
+			game->setCreateNew(false);
+		}
+
+		
+		scale += 0.01f;
+		scale2 += 0.1f;
+		
+		Pipeline p;
+	
+		//Call Kinect Movement
+		kinectMovement();
+
+		//game->getObjects(renderObjects);
+		//cout << game->gameObjects.size() << endl;
+
+		//renderObject->doTransforms(); //do transforms for all objects
+		int size = game->getNumberOfObjects();
+
+		glDrawBuffer(GL_BACK);
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+		glEnable(GL_DEPTH_TEST);
+		//cout << size << endl;
+		for (int j=0;j<2;j++)
+		{
+			if(stereo){
+				if (j==0)
+				{
+					activeCamera = leftCamera;
+					//cout << "left" << endl;
+					lr++;
+					activeCamera->OnRender();
+					if(stereo)
+						glDrawBuffer(GL_BACK_LEFT);
+						glViewport(0, 0, WINDOW_WIDTH/2, WINDOW_HEIGHT);
+				
+				}
+
+				else
+				{
+					activeCamera = rightCamera;
+					//cout << "right" << endl;
+					rr++;
+					activeCamera->OnRender();
+					glDrawBuffer(GL_BACK_RIGHT);
+					glViewport(WINDOW_WIDTH/2, 0, WINDOW_WIDTH/2, WINDOW_HEIGHT);
+				}
+			}
+
+			else{
+				activeCamera = leftCamera;
+				activeCamera->OnRender();
+				glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+				glEnable(GL_DEPTH_TEST);
+				glViewport(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
+			}
+
+			for(unsigned int i = 0; i < size; i++)
+			{
+				Object render = renderObject->getObject(i);
+				vector<Vector3f> objTrans;
+				render.getTransforms(objTrans);
+				p.WorldPos(objTrans[0].x, objTrans[0].y, objTrans[0].z);
+				p.Rotate(objTrans[1].x, objTrans[1].y, objTrans[1].z);
+				p.Scale(objTrans[2].x, objTrans[2].y, objTrans[2].z);
+				p.SetCamera(activeCamera->GetPos(), activeCamera->GetTarget(), activeCamera->GetUp());
+				p.SetPerpectiveProj(60.0f, WINDOW_WIDTH, WINDOW_HEIGHT, 1.0f, 250.0f);
+
+				glUniformMatrix4fv(gWVPLocation, 1, GL_TRUE, (const GLfloat*)p.GetTrans()); //Send uniform 4x4 matrix to shader. Can be also used to multiply matrices in one call (translation, rotation, scale, projection)
+								//Params: 1:Location of uniform variable (retrieved after shader compilation using glGetUniformLocation()), 2:number of matrices that are updated, 3:row-major or collum-major order (True is row major)
+								//Params: 4:Starting adress of the matrix in memory (Rest are located after this address).
+				render.Render();
+			}
+			if(!stereo) //break if no stero renderng active (second time not needed)
+			{
+				break;
+			}
+		}
+		glutSwapBuffers();
+		last = clock();
+
+		if(fps == 0)
+		{
+			frames_start = clock();
+			fps++;
+			return;
+		}
+		fps++;
+		frames_end = clock();
+		if(1000.0 * (frames_end - frames_start) / CLOCKS_PER_SEC >= 1000.0)
+		{
+			cout << "frames per sec: " << fps << " Left: " << lr <<" Right: " << rr << endl;
+			fps = 0;
+			lr =0;
+			rr=0;
+			
+		}
+
+
+	}
 }
 
 /*static void Idle()
@@ -134,7 +271,8 @@ static void RenderSceneCB()
 
 static void SpecialKeyboardCB(int Key, int x, int y)
 {
-	pGameCamera->OnKeyboard(Key);
+	leftCamera->OnKeyboard(Key);
+	rightCamera->OnKeyboard(Key);
 }
 
 static void KeyboardCB(unsigned char Key, int x, int y)
@@ -143,13 +281,59 @@ static void KeyboardCB(unsigned char Key, int x, int y)
 	{
 	case'q':
 		exit(0);
+		break;
+	case's':
+		game->rotX += 90.0f;
+		break;
+
+	case'a':
+		game->rotY -= 90.0f;
+		break;
+	case'w':
+		game->rotX -= 90.0f;
+		break;
+
+	case'd':
+		game->rotY += 90.0f;
+		break;
+
+
+	case'i':
+		//posX = 0.0f;
+		//posY = 0.0f;
+		game->posZ -= 1.0f;
+		break;
+
+	case'k':
+		//posX = 3.0f;
+		//posY = 3.0f;
+		game->posZ += 1.0f;
+		break;
+	case'j':
+		game->posX += 1.0f;
+		//posY = 0.0f;
+		//posZ -= 1.0f;
+		break;
+
+	case'l':
+		game->posX -= 1.0f;
+		//posY = 3.0f;
+		//posZ += 1.0f;
+		break;
+
+	case'c':
+		stereo = false;
+		break;
+
 	}
+
 
 }
 
 static void PassiveMouseCB(int x, int y)
 {
-	pGameCamera->OnMouse(x, y);
+	leftCamera->OnMouse(x, y);
+	rightCamera->OnMouse(x, y);
 }
 
 static void TimerFunc(int value)
@@ -166,335 +350,21 @@ static void initializeGlutCallbacks()
 	glutPassiveMotionFunc(PassiveMouseCB);
 	glutSpecialFunc(SpecialKeyboardCB);
 	glutKeyboardFunc(KeyboardCB);
+	
 
 	
 }
 
-static void CreateObject1()
-{
-	//PRODUCES TWO TRIGLES THAT FORM RECTANGLE
- //make Vector3f array
-	vector<unsigned int> indices;
-	vector<Vertex> vertices;
 
-	//front
-	vertices.push_back(Vertex(Vector3f(-1.0f, -1.0f, 1.0f), Vector2f(0.0f, 0.6666f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, -1.0f, 1.0f), Vector2f(0.25f, 0.6666f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, 1.0f), Vector2f(0.25f, 0.3333f)));
-	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, 1.0f), Vector2f(0.0f, 0.3333f)));
-	//top
-	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, 1.0f), Vector2f(0.0f, 0.3333f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, 1.0f), Vector2f(0.25f, 0.3333f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, -1.0f), Vector2f(0.25f, 0.0f)));
-	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, -1.0f), Vector2f(0.0f, 0.0f)));
-	//back
-	vertices.push_back(Vertex(Vector3f(1.0f, -1.0f, -1.0f), Vector2f(0.50f, 0.6666f)));
-	vertices.push_back(Vertex(Vector3f(-1.0f, -1.0f, -1.0f), Vector2f(0.75f, 0.6666f)));
-	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, -1.0f), Vector2f(0.75f, 0.3333f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, -1.0f), Vector2f(0.50f, 0.3333f)));
-	//bottom
-	vertices.push_back(Vertex(Vector3f(-1.0f, -1.0f, -1.0f), Vector2f(0.0f, 1.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, -1.0f, -1.0f), Vector2f(0.25f, 1.0f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, -1.0f, 1.0f), Vector2f(0.25f, 0.6666f)));
-	vertices.push_back(Vertex(Vector3f(-1.0f, -1.0f, 1.0f), Vector2f(0.0f, 0.6666f)));
-	//left
-	vertices.push_back(Vertex(Vector3f(-1.0f, -1.0f, -1.0f), Vector2f(0.75f, 0.6666f)));
-	vertices.push_back(Vertex(Vector3f(-1.0f, -1.0f, 1.0f), Vector2f(1.0f, 0.6666f)));
-	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, 1.0f), Vector2f(1.0f, 0.3333f)));
-	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, -1.0f), Vector2f(0.75f, 0.3333f)));
-	//right
-	vertices.push_back(Vertex(Vector3f(1.0f, -1.0f, 1.0f), Vector2f(0.25f, 0.6666f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, -1.0f, -1.0f), Vector2f(0.50f, 0.6666f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, -1.0f), Vector2f(0.50f, 0.3333f)));
-	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, 1.0f), Vector2f(0.25f, 0.3333f)));
-
-	unsigned int Ind[] = {
-		0, 1, 2,//front-face
-		2, 3, 0,
-		4, 5, 6,//top-face
-		6, 7, 4,
-		8, 9, 10,//back
-		10, 11, 8,
-		12, 13, 14,//bottom
-		14, 15, 12,
-		16, 17, 18, //left
-		18, 19, 16,
-		20, 21, 22, //right
-		22, 23, 20 };
-
-
-	indices.assign(Ind, Ind + sizeof(Ind) / sizeof(unsigned int));
-	Object oo = Object(vertices, indices, "space.png");
-	
-	boxes.push_back(oo);
-	
-}
 //
-//static void CreateObject2()
-//{
-//	//PRODUCES TWO TRIGLES THAT FORM RECTANGLE
-// //make Vector3f array
-//	vector<unsigned int> indices;
-//	vector<Vertex> vertices;
-//	/*vertices.push_back(Vertex(Vector3f(-1.0f, -1.0f, 1.0f), Vector2f(0.25f, 0.6666f))); //front-bot-left
-//	vertices.push_back(Vertex(Vector3f(1.0f, -1.0f, 1.0f), Vector2f(0.50f, 0.6666f))); //front-bot-right
-//	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, 1.0f), Vector2f(0.50f, 0.3333f))); //front-top-right
-//	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, 1.0f), Vector2f(0.25f, 0.3333f))); //front-top-left
-//	vertices.push_back(Vertex(Vector3f(-1.0f, -1.0f, -1.0f), Vector2f(1.0f, 0.6666f))); //rear-bot-left
-//	vertices.push_back(Vertex(Vector3f(1.0f, -1.0f, -1.0f), Vector2f(0.75f, 0.6666f))); //rear-bot-right
-//	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, -1.0f), Vector2f(0.75f, 0.3333f))); //rear-top-right
-//	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, -1.0f), Vector2f(1.0f, 0.3333f))); //rear-top-left*/
 //
-//	//front
-//	vertices.push_back(Vertex(Vector3f(-1.0f, -1.0f, 1.0f), Vector2f(0.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(1.0f, -1.0f, 1.0f), Vector2f(1.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, 1.0f), Vector2f(1.0f, 1.0f)));
-//	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, 1.0f), Vector2f(0.0f, 1.0f)));
-//	//top
-//	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, 1.0f), Vector2f(0.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, 1.0f), Vector2f(1.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, -1.0f), Vector2f(1.0f, 1.0f)));
-//	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, -1.0f), Vector2f(0.0f, 1.0f)));
-//	//back
-//	vertices.push_back(Vertex(Vector3f(1.0f, -1.0f, -1.0f), Vector2f(0.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(-1.0f, -1.0f, -1.0f), Vector2f(1.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, -1.0f), Vector2f(1.0f, 1.0f)));
-//	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, -1.0f), Vector2f(0.0f, 1.0f)));
-//	//bottom
-//	vertices.push_back(Vertex(Vector3f(-1.0f, -1.0f, -1.0f), Vector2f(0.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(1.0f, -1.0f, -1.0f), Vector2f(1.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(1.0f, -1.0f, 1.0f), Vector2f(1.0f, 1.0f)));
-//	vertices.push_back(Vertex(Vector3f(-1.0f, -1.0f, 1.0f), Vector2f(0.0f, 1.0f)));
-//	//left
-//	vertices.push_back(Vertex(Vector3f(-1.0f, -1.0f, -1.0f), Vector2f(0.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(-1.0f, -1.0f, 1.0f), Vector2f(1.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, 1.0f), Vector2f(1.0f, 1.0f)));
-//	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, -1.0f), Vector2f(0.0f, 1.0f)));
-//	//right
-//	vertices.push_back(Vertex(Vector3f(1.0f, -1.0f, 1.0f), Vector2f(0.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(1.0f, -1.0f, -1.0f), Vector2f(1.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, -1.0f), Vector2f(1.0f, 1.0f)));
-//	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, 1.0f), Vector2f(0.0f, 1.0f)));
-//
-//	unsigned int Ind[] = {
-//		0, 1, 2,//front-face
-//		2, 3, 0,
-//		4, 5, 6,//top-face
-//		6, 7, 4,
-//		8, 9, 10,//back
-//		10, 11, 8,
-//		12, 13, 14,//bottom
-//		14, 15, 12,
-//		16, 17, 18, //left
-//		18, 19, 16,
-//		20, 21, 22, //right
-//		22, 23, 20 };
-//
-//	indices.assign(Ind, Ind + sizeof(Ind) / sizeof(unsigned int));
-//	Object oo = Object(vertices, indices, "cube_white.png");
-//	
-//	boxes.push_back(oo);
-//	
-////}
-//
-//static void AddToObject2()
-//{
-//	vector<unsigned int> indices;
-//	vector<Vertex> vertices;
-//
-//	//front
-//	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, 1.0f), Vector2f(0.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, 1.0f), Vector2f(1.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, 1.0f), Vector2f(1.0f, 1.0f)));
-//	vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, 1.0f), Vector2f(0.0f, 1.0f)));
-//	//top
-//	vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, 1.0f), Vector2f(0.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, 1.0f), Vector2f(1.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, -1.0f), Vector2f(1.0f, 1.0f)));
-//	vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, -1.0f), Vector2f(0.0f, 1.0f)));
-//	//back
-//	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, -1.0f), Vector2f(0.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, -1.0f), Vector2f(1.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, -1.0f), Vector2f(1.0f, 1.0f)));
-//	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, -1.0f), Vector2f(0.0f, 1.0f)));
-//	//bottom
-//	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, -1.0f), Vector2f(0.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, -1.0f), Vector2f(1.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, 1.0f), Vector2f(1.0f, 1.0f)));
-//	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, 1.0f), Vector2f(0.0f, 1.0f)));
-//	//left
-//	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, -1.0f), Vector2f(0.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, 1.0f), Vector2f(1.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, 1.0f), Vector2f(1.0f, 1.0f)));
-//	vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, -1.0f), Vector2f(0.0f, 1.0f)));
-//	//right
-//	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, 1.0f), Vector2f(0.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(1.0f, 1.0f, -1.0f), Vector2f(1.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, -1.0f), Vector2f(1.0f, 1.0f)));
-//	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, 1.0f), Vector2f(0.0f, 1.0f)));
-//
-//	unsigned int Ind[] = {
-//		0, 1, 2,//front-face
-//		2, 3, 0,
-//		4, 5, 6,//top-face
-//		6, 7, 4,
-//		8, 9, 10,//back
-//		10, 11, 8,
-//		12, 13, 14,//bottom
-//		14, 15, 12,
-//		16, 17, 18, //left
-//		18, 19, 16,
-//		20, 21, 22, //right
-//		22, 23, 20 };
-//
-//	indices.assign(Ind, Ind + sizeof(Ind) / sizeof(unsigned int));
-//	
-//	boxes[1].addEntry(vertices, indices, "cube_white.png");
-//	
+//static void createShape(){
+//	Shapes shape1;
+//	shape1.selectShape(4,&shape1);
+//	boxes.push_back(shape1.returnShape());
 //}
 //
-//static void AddAgainToObject2()
-//{
-//	vector<unsigned int> indices;
-//	vector<Vertex> vertices;
 //
-//	//front
-//	vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, 1.0f), Vector2f(0.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, 1.0f), Vector2f(1.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(1.0f, 5.0f, 1.0f), Vector2f(1.0f, 1.0f)));
-//	vertices.push_back(Vertex(Vector3f(-1.0f, 5.0f, 1.0f), Vector2f(0.0f, 1.0f)));
-//	//top
-//	vertices.push_back(Vertex(Vector3f(-1.0f, 5.0f, 1.0f), Vector2f(0.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(1.0f, 5.0f, 1.0f), Vector2f(1.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(1.0f, 5.0f, -1.0f), Vector2f(1.0f, 1.0f)));
-//	vertices.push_back(Vertex(Vector3f(-1.0f, 5.0f, -1.0f), Vector2f(0.0f, 1.0f)));
-//	//back
-//	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, -1.0f), Vector2f(0.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, -1.0f), Vector2f(1.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(-1.0f, 5.0f, -1.0f), Vector2f(1.0f, 1.0f)));
-//	vertices.push_back(Vertex(Vector3f(1.0f, 5.0f, -1.0f), Vector2f(0.0f, 1.0f)));
-//	//bottom
-//	vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, -1.0f), Vector2f(0.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, -1.0f), Vector2f(1.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, 1.0f), Vector2f(1.0f, 1.0f)));
-//	vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, 1.0f), Vector2f(0.0f, 1.0f)));
-//	//left
-//	vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, -1.0f), Vector2f(0.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(-1.0f, 3.0f, 1.0f), Vector2f(1.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(-1.0f, 5.0f, 1.0f), Vector2f(1.0f, 1.0f)));
-//	vertices.push_back(Vertex(Vector3f(-1.0f, 5.0f, -1.0f), Vector2f(0.0f, 1.0f)));
-//	//right
-//	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, 1.0f), Vector2f(0.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, -1.0f), Vector2f(1.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(1.0f, 5.0f, -1.0f), Vector2f(1.0f, 1.0f)));
-//	vertices.push_back(Vertex(Vector3f(1.0f, 5.0f, 1.0f), Vector2f(0.0f, 1.0f)));
-//
-//	unsigned int Ind[] = {
-//		0, 1, 2,//front-face
-//		2, 3, 0,
-//		4, 5, 6,//top-face
-//		6, 7, 4,
-//		8, 9, 10,//back
-//		10, 11, 8,
-//		12, 13, 14,//bottom
-//		14, 15, 12,
-//		16, 17, 18, //left
-//		18, 19, 16,
-//		20, 21, 22, //right
-//		22, 23, 20 };
-//
-//	indices.assign(Ind, Ind + sizeof(Ind) / sizeof(unsigned int));
-//	
-//	boxes[1].addEntry(vertices, indices, "cube_white.png");
-//	
-//}
-//
-//static void AddLastToObject2()
-//{
-//	vector<unsigned int> indices;
-//	vector<Vertex> vertices;
-//
-//	//front
-//	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, 1.0f), Vector2f(0.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(3.0f, 3.0f, 1.0f), Vector2f(1.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(3.0f, 5.0f, 1.0f), Vector2f(1.0f, 1.0f)));
-//	vertices.push_back(Vertex(Vector3f(1.0f, 5.0f, 1.0f), Vector2f(0.0f, 1.0f)));
-//	//top
-//	vertices.push_back(Vertex(Vector3f(1.0f, 5.0f, 1.0f), Vector2f(0.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(3.0f, 5.0f, 1.0f), Vector2f(1.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(3.0f, 5.0f, -1.0f), Vector2f(1.0f, 1.0f)));
-//	vertices.push_back(Vertex(Vector3f(1.0f, 5.0f, -1.0f), Vector2f(0.0f, 1.0f)));
-//	//back
-//	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, -1.0f), Vector2f(0.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(3.0f, 3.0f, -1.0f), Vector2f(1.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(3.0f, 5.0f, -1.0f), Vector2f(1.0f, 1.0f)));
-//	vertices.push_back(Vertex(Vector3f(1.0f, 5.0f, -1.0f), Vector2f(0.0f, 1.0f)));
-//	//bottom
-//	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, -1.0f), Vector2f(0.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(3.0f, 3.0f, -1.0f), Vector2f(1.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(3.0f, 3.0f, 1.0f), Vector2f(1.0f, 1.0f)));
-//	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, 1.0f), Vector2f(0.0f, 1.0f)));
-//	//left
-//	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, -1.0f), Vector2f(0.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(1.0f, 3.0f, 1.0f), Vector2f(1.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(1.0f, 5.0f, 1.0f), Vector2f(1.0f, 1.0f)));
-//	vertices.push_back(Vertex(Vector3f(1.0f, 5.0f, -1.0f), Vector2f(0.0f, 1.0f)));
-//	//right
-//	vertices.push_back(Vertex(Vector3f(3.0f, 3.0f, 1.0f), Vector2f(0.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(3.0f, 3.0f, -1.0f), Vector2f(1.0f, 0.0f)));
-//	vertices.push_back(Vertex(Vector3f(3.0f, 5.0f, -1.0f), Vector2f(1.0f, 1.0f)));
-//	vertices.push_back(Vertex(Vector3f(3.0f, 5.0f, 1.0f), Vector2f(0.0f, 1.0f)));
-//
-//	unsigned int Ind[] = {
-//		0, 1, 2,//front-face
-//		2, 3, 0,
-//		4, 5, 6,//top-face
-//		6, 7, 4,
-//		8, 9, 10,//back
-//		10, 11, 8,
-//		12, 13, 14,//bottom
-//		14, 15, 12,
-//		16, 17, 18, //left
-//		18, 19, 16,
-//		20, 21, 22, //right
-//		22, 23, 20 };
-//
-//	indices.assign(Ind, Ind + sizeof(Ind) / sizeof(unsigned int));
-//	
-//	boxes[1].addEntry(vertices, indices, "cube_white.png");
-//	
-//}
-
-static void createShape(){
-	Shapes shape1;
-	shape1.AddToShape();
-	boxes.push_back(shape1.returnShape());
-}
-
-
-static void CreateObject3()
-{
-	//PRODUCES TWO TRIGLES THAT FORM RECTANGLE
- //make Vector3f array
-	vector<unsigned int> indices;
-	vector<Vertex> vertices;
-	vertices.push_back(Vertex(Vector3f(-1.0f, -1.0f, 1.0f), Vector2f(0.0f, 1.0f))); //floor
-	vertices.push_back(Vertex(Vector3f(1.0f, -1.0f, 1.0f), Vector2f(1.0f, 1.0f))); //floor
-	vertices.push_back(Vertex(Vector3f(1.0f, -1.0f, -1.0f), Vector2f(1.0f, 0.0f))); //floor
-	vertices.push_back(Vertex(Vector3f(-1.0f, -1.0f, -1.0f), Vector2f(0.0f, 0.0f))); //floor
-
-
-	unsigned int Ind[] = {
-		0, 1, 2,//face
-		2, 3, 0,
-		};
-
-	indices.assign(Ind, Ind + sizeof(Ind) / sizeof(unsigned int));
-	Object oo = Object(vertices, indices, "floor_grid.png");
-	
-	boxes.push_back(oo);
-	
-}
 
 
 
@@ -577,16 +447,31 @@ static void CompileShaders()
 }
 
 
+
+
+
 int main(int argc, char* argv[])
 {
+	
+	GLboolean stereo;
+	//Create and start Kinect controller
+	kinect = new KinectControl(&movement);
+	kinect->StartThread();
+
+	glGetBooleanv(GL_STEREO, &stereo);
+	if (stereo)
+		cout << "stereo toimii " << endl;
 	Magick::InitializeMagick(*argv);
 	//init GLUT
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DOUBLE|GLUT_RGBA | GLUT_DEPTH);
-	glutInitWindowSize(WINDOW_WIDTH, WINDOW_HEIGHT);
-	glutInitWindowPosition(100, 100);
+	//glutInitWindowSize(WINDOW_WIDTH, WINDOW_HEIGHT);
+	//glutInitWindowPosition(100, 100);
 	glutCreateWindow("T3DRIS");
-	glutGameModeString("1920x1080:32@75");
+	if (true)
+		glutGameModeString("1920x1080@60");
+	else
+		glutGameModeString("1280x1024@60");
 	glutEnterGameMode();
 
 	//GLEW check
@@ -597,11 +482,16 @@ int main(int argc, char* argv[])
 		return 0;
 	}
 
+
 	//GLUT Callback init
 	initializeGlutCallbacks();
 
-	pGameCamera = new Camera(WINDOW_WIDTH, WINDOW_HEIGHT, Vector3f(0.0f ,5.0f ,0.0f), Vector3f(0.0f ,0.0f ,1.0f), Vector3f(0.0f , 1.0f , 0.0f));
-
+	//SETUP CAMERAS
+	leftCamera = new Camera(WINDOW_WIDTH, WINDOW_HEIGHT, Vector3f(0.125f ,45.0f ,0.0f), Vector3f(0.0f ,0.0f ,1.0f), Vector3f(0.0f , 1.0f , 0.0f));
+	rightCamera = new Camera(WINDOW_WIDTH, WINDOW_HEIGHT, Vector3f(-0.125f ,45.0f ,0.0f), Vector3f(0.0f ,0.0f ,1.0f), Vector3f(0.0f , 1.0f , 0.0f));
+	leftCamera->setAngleV(90.0f);
+	rightCamera->setAngleV(90.0f);
+	
 	//Set Background/clear color of screen
 	glClearColor(0.0f, 0.0f, 0.0f, 0.0f); //Black
 
@@ -614,21 +504,21 @@ int main(int argc, char* argv[])
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
-	CreateObject1(); //Create indices
-	//CreateObject2();
-	createShape();
-	CreateObject3();
+	renderObject = new RenderObject();
+	game = new Game(renderObject);
+	game->startThread();
 
-	//AddToObject2();
-	//AddAgainToObject2();
-	//AddLastToObject2();
+	//CreateObject1(); //Create indices
+
+	//createShape();
+
+	//CreateObject3();
 
 	CompileShaders(); //create shaders
 
 	glUniform1i(gSampler, 0); //set texture unit uniform that is going to be used in shader
-
 	glutMainLoop(); //enter OpenGL's main loop, that is runned 3d program
-
+	
 	return 0; //exit program
 
 }

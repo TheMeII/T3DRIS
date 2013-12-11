@@ -1,8 +1,11 @@
 #pragma once
 #include "math3d.h"
 
-#define WINDOW_WIDTH 1024
-#define WINDOW_HEIGHT 1024
+#define WINDOW_WIDTH 1920
+#define WINDOW_HEIGHT 1080
+
+//#define WINDOW_WIDTH 1280
+//#define WINDOW_HEIGHT 1024
 
 struct Vertex
 {
@@ -19,4 +22,6 @@ struct Vertex
 	}
 
 };
+
+
 

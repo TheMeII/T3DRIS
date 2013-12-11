@@ -40,8 +40,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(SolutionDir)include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>D:\Program Files (x86)\ImageMagick-6.8.7-Q16\include;$(KINECTSDK10_DIR)\inc;$(SolutionDir)include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\Program Files (x86)\ImageMagick-6.8.7-Q16\lib;$(KINECTSDK10_DIR)\lib\x86;$(WindowsSdkDir)lib;$(SolutionDir)lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LibraryPath>$(SolutionDir)lib;$(LibraryPath)</LibraryPath>
@@ -52,13 +52,13 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <ShowIncludes>true</ShowIncludes>
-      <AdditionalIncludeDirectories>F:\ImageMagick\ImageMagick-6.8.7-Q16\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>G:\ImageMagick\ImageMagick-6.8.7-Q16\include</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>CORE_RL_magick_.lib;CORE_RL_Magick++_.lib;X11.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>F:\ImageMagick\ImageMagick-6.8.7-Q16\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>CORE_RL_magick_.lib;CORE_RL_Magick++_.lib;X11.lib;Kinect10.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\Program Files (x86)\ImageMagick-6.8.7-Q16\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -80,19 +80,27 @@
   <ItemGroup>
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="EngineFile.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="KinectControl.cpp" />
     <ClCompile Include="math3d.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="pipeline.cpp" />
+    <ClCompile Include="RenderObject.cpp" />
     <ClCompile Include="Shapes.cpp" />
+    <ClCompile Include="SkeletonBasics.cpp" />
     <ClCompile Include="texture.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h" />
+    <ClInclude Include="Game.h" />
     <ClInclude Include="InitResources.h" />
+    <ClInclude Include="KinectControl.h" />
     <ClInclude Include="math3d.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="pipeline.h" />
+    <ClInclude Include="RenderObject.h" />
     <ClInclude Include="Shapes.h" />
+    <ClInclude Include="SkeletonBasics.h" />
     <ClInclude Include="texture.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

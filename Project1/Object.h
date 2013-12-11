@@ -21,14 +21,25 @@ unsigned int NumIndices;
 std::string textureFile;
 Texture* pObjTexture;
 };
-
-Pipeline objectTransforms;
+Vector3f translation, rotation, scale;
 std::vector<objectEntry> entries;
+
+//these are used to make copy of exsisting objects entries (that contains made transformations, rather than created setups)
+//transformations are keeped uptated to vertices here, and when copy is made, these values are used to create new object.
+struct objectCopy
+{
+std::vector<Vertex> copyVertices;
+std::vector<unsigned int> copyIndices;
+std::string copyTexture;
+};
+std::vector<objectCopy> copyData; //each object has copy data that is updated
 
 public:
 Object();
 Object(std::vector<Vertex> vertices, std::vector<unsigned int> indices, std::string texture);
 void addEntry(std::vector<Vertex> vertices, std::vector<unsigned int> indices, std::string texture);
+void combineObjectEntries(Object combinedObject);
+std::vector<Object::objectEntry> getEntries();
 virtual ~Object();
 void Render();
 void Translate(Vector3f trans);

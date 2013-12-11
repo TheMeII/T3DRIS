@@ -1,3 +1,4 @@
+#pragma once
 #include "Object.h"
 #include <vector>
 #include"math3d.h"
@@ -9,4 +10,5 @@ public:
 	Shapes();
 	 void Shapes::AddToShape();
 	 Object Shapes::returnShape();
+	 void selectShape(int rand,Shapes* shape);
 };

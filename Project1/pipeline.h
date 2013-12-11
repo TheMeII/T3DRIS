@@ -17,7 +17,7 @@ private:
 
 	struct 
 	{
-		float FOV; //filed of viev
+		float FOV; //field of viev
 		float Width; //Aspect ratio width
 		float Height; //Aspect ratio height
 		float zNear; //near clipping distance

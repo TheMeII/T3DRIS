@@ -211,6 +211,16 @@ void Camera::OnRender()
 	}
 }
 
+void Camera::setAngleH(float angle)
+{
+	m_AngleH = angle;
+}
+
+void Camera::setAngleV(float angle)
+{
+	m_AngleV = angle;
+}
+
 void Camera::Update()
 {
 	const Vector3f Vaxis(0.0f, 1.0f, 0.0f);

@@ -2,6 +2,9 @@
 
 Object::Object()
 {
+	translation = Vector3f(0.0f, 0.0f, 0.0f);
+	rotation = Vector3f(0.0f, 0.0f, 0.0f);
+	scale = Vector3f(1.0f, 1.0f, 1.0f);
 	objectEntry entry;
 	entry.pObjTexture = NULL;
 	entry.NumIndices = NULL; //this is needed for render
@@ -12,12 +15,20 @@ Object::Object()
 
 Object::Object(std::vector<Vertex> vertices, std::vector<unsigned int> indices, std::string texture)
 {
+	translation = Vector3f(0.0f, 0.0f, 0.0f);
+	rotation = Vector3f(0.0f, 0.0f, 0.0f);
+	scale = Vector3f(1.0f, 1.0f, 1.0f);
 	objectEntry entry;
 	entry.pObjTexture = NULL;
 	entry.NumIndices = indices.size(); //this is needed for render
 	entry.textureFile = texture;
 	entry.vbo = 0;
 	entry.ibo = 0;
+
+	objectCopy copy;
+	copy.copyVertices = vertices;
+	copy.copyIndices = indices;
+	copy.copyTexture = texture;
 
 	glGenBuffers(1, &entry.vbo); //generate buffer, 1param, number of generated buffers, 2param, adress to array of GLuints that will store handles that GPU allocates 
 	glBindBuffer(GL_ARRAY_BUFFER, entry.vbo); //bind handle to target name, so we can execute comands to that target
@@ -39,6 +50,7 @@ Object::Object(std::vector<Vertex> vertices, std::vector<unsigned int> indices, 
 	}
 
 	entries.push_back(entry);
+	copyData.push_back(copy);
 	
 }
 
@@ -49,6 +61,11 @@ void Object::addEntry(std::vector<Vertex> vertices, std::vector<unsigned int> in
 	entry.NumIndices = indices.size(); //this is needed for render
 	entry.textureFile = texture;
 
+	objectCopy copy;
+	copy.copyVertices = vertices;
+	copy.copyIndices = indices;
+	copy.copyTexture = texture;
+
 	glGenBuffers(1, &entry.vbo); //generate buffer, 1param, number of generated buffers, 2param, adress to array of GLuints that will store handles that GPU allocates 
 	glBindBuffer(GL_ARRAY_BUFFER, entry.vbo); //bind handle to target name, so we can execute comands to that target
 											//1Param, tells what buffer contains (array of vertices), and the second is the generated buffer handle
@@ -69,6 +86,7 @@ void Object::addEntry(std::vector<Vertex> vertices, std::vector<unsigned int> in
 	}
 
 	entries.push_back(entry);
+	copyData.push_back(copy);
 }
 
 
@@ -76,6 +94,7 @@ void Object::Render()
 {
 	glEnableVertexAttribArray(0); //position data
 	glEnableVertexAttribArray(1); //texture
+
 	for(unsigned int i = 0; i < entries.size(); i++)
 	{
 		
@@ -94,26 +113,47 @@ void Object::Render()
 	
 }
 
+void Object::combineObjectEntries(Object combinedObject)
+{
+	for(int i = 0; i < combinedObject.entries.size(); i++)
+	{
+		entries.push_back(combinedObject.entries[i]);
+	}
+
+}
+
+std::vector<Object::objectEntry> Object::getEntries()
+{
+	return entries;
+}
+
+
 void Object::Translate(Vector3f trans)
 {
-	objectTransforms.WorldPos(trans.x, trans.y, trans.z);
+	translation.x = trans.x;
+	translation.y = trans.y;
+	translation.z = trans.z;
 }
 
 void Object::Scale(Vector3f scale)
 {
-	objectTransforms.Scale(scale.x, scale.y, scale.z);
+	this->scale.x = scale.x;
+	this->scale.y = scale.y;
+	this->scale.z = scale.z;
 }
 
 void Object::Rotate(Vector3f rot)
 {
-	objectTransforms.Rotate(rot.x, rot.y, rot.z);
+	rotation.x = rot.x;
+	rotation.y = rot.y;
+	rotation.z = rot.z;
 }
 
 void Object::getTransforms(std::vector<Vector3f> &reference)
 {
-	reference.push_back(objectTransforms.getWorldPos());
-	reference.push_back(objectTransforms.getRotation());
-	reference.push_back(objectTransforms.getScale());
+	reference.push_back(translation);
+	reference.push_back(rotation);
+	reference.push_back(scale);
 }
 
 
