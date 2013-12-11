@@ -1,7 +1,963 @@
+<<<<<<< HEAD
 ﻿Build started 10.12.2013 13:54:54.
      1>Project "H:\Projektityö\KinectIntegrated\T3DRIS\Project1\Project1.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"G:\ImageMagick\ImageMagick-6.8.7-Q16\include" /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /showIncludes /analyze- /errorReport:prompt EngineFile.cpp
+=======
+﻿Build started 21.11.2013 15:24:15.
+     1>Project "F:\T3DRIS\Project1\Project1.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"F:\ImageMagick\ImageMagick-6.8.7-Q16\include" /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /showIncludes /analyze- /errorReport:prompt EngineFile.cpp Game.cpp
+         Game.cpp
+         Note: including file: f:\t3dris\project1\Game.h
+         Note: including file:  D:\Program Files (x86)\Windows Kits\8.0\Include\um\Windows.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\winapifamily.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\sdkddkver.h
+         Note: including file:   D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\excpt.h
+         Note: including file:    D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
+         Note: including file:     D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\sal.h
+         Note: including file:      D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\ConcurrencySal.h
+         Note: including file:     D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\vadefs.h
+         Note: including file:   D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdarg.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\windef.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\minwindef.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\specstrings.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\specstrings_strict.h
+         Note: including file:       D:\Program Files (x86)\Windows Kits\8.0\Include\shared\specstrings_undef.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\driverspecs.h
+         Note: including file:       d:\program files (x86)\windows kits\8.0\include\shared\sdv_driverspecs.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\winnt.h
+         Note: including file:      D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\ctype.h
+         Note: including file:       D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\kernelspecs.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\basetsd.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\guiddef.h
+         Note: including file:       D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h
+         Note: including file:        D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
+         Note: including file:      d:\program files (x86)\windows kits\8.0\include\shared\pshpack4.h
+         Note: including file:      d:\program files (x86)\windows kits\8.0\include\shared\poppack.h
+         Note: including file:      d:\program files (x86)\windows kits\8.0\include\shared\pshpack4.h
+         Note: including file:      d:\program files (x86)\windows kits\8.0\include\shared\poppack.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack4.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:      d:\program files (x86)\windows kits\8.0\include\shared\pshpack4.h
+         Note: including file:      d:\program files (x86)\windows kits\8.0\include\shared\pshpack2.h
+         Note: including file:      d:\program files (x86)\windows kits\8.0\include\shared\poppack.h
+         Note: including file:      d:\program files (x86)\windows kits\8.0\include\shared\pshpack2.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack2.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:      d:\program files (x86)\windows kits\8.0\include\shared\poppack.h
+         Note: including file:      d:\program files (x86)\windows kits\8.0\include\shared\pshpack8.h
+         Note: including file:      d:\program files (x86)\windows kits\8.0\include\shared\poppack.h
+         Note: including file:      d:\program files (x86)\windows kits\8.0\include\shared\poppack.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\ktmtypes.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\winnt.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\winbase.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\minwinbase.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\processenv.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\fileapi.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\debugapi.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\utilapiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\handleapi.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\errhandlingapi.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\fibersapi.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\namedpipeapi.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\profileapi.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\heapapi.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\ioapiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\synchapi.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\interlockedapi.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\processthreadsapi.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\sysinfoapi.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\memoryapi.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\threadpoollegacyapiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\threadpoolapiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\bemapiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\jobapi.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\wow64apiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\libloaderapi.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\securitybaseapi.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\namespaceapi.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\systemtopologyapi.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\processtopologyapi.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\securityappcontainer.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\realtimeapiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\winerror.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\timezoneapi.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\wingdi.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack1.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack2.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack2.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack4.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack4.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\winuser.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack2.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\tvout.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\winnls.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\datetimeapi.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\stringapiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\winnls.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\wincon.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\consoleapi.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\winver.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\verrsrc.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\winreg.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\reason.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\winnetwk.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\wnnc.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\cderr.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\dde.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\ddeml.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\dlgs.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\lzexpand.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\mmsystem.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\mmsyscom.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack1.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack1.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\mciapi.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\mmsyscom.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\mmiscapi.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\mmsyscom.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\mmiscapi2.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\mmsyscom.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\playsoundapi.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\mmsyscom.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\mmeapi.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\mmsyscom.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\timeapi.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\mmsyscom.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\joystickapi.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\mmsyscom.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\nb30.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\rpc.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\rpcdce.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\rpcdcep.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\rpcnsi.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\rpcnterr.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\rpcasync.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\shellapi.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack1.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\winperf.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack8.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\winsock.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\inaddr.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\wincrypt.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\bcrypt.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\ncrypt.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\bcrypt.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\dpapi.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\winefs.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\winscard.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\wtypes.h
+         Note: including file:     d:\program files (x86)\windows kits\8.0\include\shared\rpcndr.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack8.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\um\rpcnsip.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\rpcsal.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:     d:\program files (x86)\windows kits\8.0\include\shared\wtypesbase.h
+         Note: including file:      d:\program files (x86)\windows kits\8.0\include\shared\guiddef.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\winioctl.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack1.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack1.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack1.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack1.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack1.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack1.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack1.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\winsmcrd.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\winspool.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\prsht.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack4.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\ole2.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack8.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\objbase.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack8.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\combaseapi.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack8.h
+         Note: including file:      D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdlib.h
+         Note: including file:       D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
+         Note: including file:       D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\limits.h
+         Note: including file:        D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\um\unknwnbase.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\um\objidlbase.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\guiddef.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\um\cguid.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\objidl.h
+         Note: including file:      d:\program files (x86)\windows kits\8.0\include\um\unknwn.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\urlmon.h
+         Note: including file:      d:\program files (x86)\windows kits\8.0\include\um\oleidl.h
+         Note: including file:      d:\program files (x86)\windows kits\8.0\include\um\servprov.h
+         Note: including file:      d:\program files (x86)\windows kits\8.0\include\um\msxml.h
+         Note: including file:       d:\program files (x86)\windows kits\8.0\include\um\oaidl.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\propidl.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\oleauto.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack8.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\commdlg.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\prsht.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack1.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\shared\stralign.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\winsvc.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\mcx.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\imm.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\ime_cmodes.h
+         Note: including file:  D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\thread
+         Note: including file:   D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\exception
+         Note: including file:    D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xstddef
+         Note: including file:     D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\yvals.h
+         Note: including file:      D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xkeycheck.h
+         Note: including file:      D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
+         Note: including file:      D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\use_ansi.h
+         Note: including file:     D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xtr1common
+         Note: including file:     D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\cstddef
+         Note: including file:      D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stddef.h
+         Note: including file:       D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
+         Note: including file:    D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\eh.h
+         Note: including file:     D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
+         Note: including file:    D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\malloc.h
+         Note: including file:     D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
+         Note: including file:   D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\iosfwd
+         Note: including file:    D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\cstdio
+         Note: including file:     D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h
+         Note: including file:      D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
+         Note: including file:      D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\swprintf.inl
+         Note: including file:    D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\cstring
+         Note: including file:    D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\cwchar
+         Note: including file:     D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\wchar.h
+         Note: including file:      D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
+         Note: including file:      D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\wtime.inl
+         Note: including file:    D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdbg.h
+         Note: including file:     D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
+         Note: including file:   D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\functional
+         Note: including file:    D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xfunctional
+         Note: including file:     D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\cstdlib
+         Note: including file:     D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xstring
+         Note: including file:      D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xmemory0
+         Note: including file:       D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\limits
+         Note: including file:        D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\ymath.h
+         Note: including file:        D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\cfloat
+         Note: including file:         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\float.h
+         Note: including file:          D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
+         Note: including file:          D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtwrn.h
+         Note: including file:           D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
+         Note: including file:        D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\climits
+         Note: including file:        D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\cmath
+         Note: including file:         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\math.h
+         Note: including file:          D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
+         Note: including file:         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xtgmath.h
+         Note: including file:       D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\new
+         Note: including file:       D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xutility
+         Note: including file:        D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\utility
+         Note: including file:         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\type_traits
+         Note: including file:          D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xrefwrap
+         Note: including file:       D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xatomic0.h
+         Note: including file:       D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\intrin.h
+         Note: including file:        D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
+         Note: including file:        D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\setjmp.h
+         Note: including file:         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
+         Note: including file:        D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\immintrin.h
+         Note: including file:         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\wmmintrin.h
+         Note: including file:          D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\nmmintrin.h
+         Note: including file:           D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\smmintrin.h
+         Note: including file:            D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\tmmintrin.h
+         Note: including file:             D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\pmmintrin.h
+         Note: including file:              D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\emmintrin.h
+         Note: including file:               D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xmmintrin.h
+         Note: including file:                D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\mmintrin.h
+         Note: including file:                 D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
+         Note: including file:        D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\ammintrin.h
+         Note: including file:        D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\mm3dnow.h
+         Note: including file:         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
+         Note: including file:         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\mmintrin.h
+         Note: including file:    D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\typeinfo
+         Note: including file:    D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\tuple
+         Note: including file:   D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\chrono
+         Note: including file:    D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\ratio
+         Note: including file:     D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdint.h
+         Note: including file:      D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
+         Note: including file:    D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\time.h
+         Note: including file:     D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
+         Note: including file:     D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\time.inl
+         Note: including file:    D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\thr/xtimec.h
+         Note: including file:     D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\thr/xthrcommon.h
+         Note: including file:   D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\concrt.h
+         Note: including file:    D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\guiddef.h
+         Note: including file:   D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\thr/xthread
+         Note: including file:    D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\thr/xtime
+         Note: including file:    D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\thr/xthreads.h
+         Note: including file:  D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\vector
+         Note: including file:   D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xmemory
+         Note: including file:   D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdexcept
+         Note: including file:  D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\iostream
+         Note: including file:   D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\istream
+         Note: including file:    D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\ostream
+         Note: including file:     D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\ios
+         Note: including file:      D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xlocnum
+         Note: including file:       D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\streambuf
+         Note: including file:        D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xiosbase
+         Note: including file:         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xlocale
+         Note: including file:          D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xlocinfo
+         Note: including file:           D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xlocinfo.h
+         Note: including file:            D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\locale.h
+         Note: including file:             D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
+         Note: including file:          D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xdebug
+         Note: including file:          D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xfacet
+         Note: including file:         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\system_error
+         Note: including file:          D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\cerrno
+         Note: including file:           D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\errno.h
+         Note: including file:            D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
+         Note: including file:         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\share.h
+         Note: including file:  f:\t3dris\project1\Shapes.h
+         Note: including file:   f:\t3dris\project1\Object.h
+         Note: including file:    F:\T3DRIS\include\GL\glew.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\GL/glu.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\um\GL/gl.h
+         Note: including file:    F:\T3DRIS\include\GL\freeglut.h
+         Note: including file:     f:\t3dris\include\gl\freeglut_std.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\um\GL/gl.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\um\GL/glu.h
+         Note: including file:     f:\t3dris\include\gl\freeglut_ext.h
+         Note: including file:    f:\t3dris\project1\math3d.h
+         Note: including file:     D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\math.h
+         Note: including file:    f:\t3dris\project1\Camera.h
+         Note: including file:    f:\t3dris\project1\texture.h
+         Note: including file:     D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string
+         Note: including file:      D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\iterator
+         Note: including file:     F:\T3DRIS\include\GL\glew.h
+         Note: including file:     F:\T3DRIS\include\magick\Magick++.h
+         Note: including file:      F:\ImageMagick\ImageMagick-6.8.7-Q16\include\Magick++/Include.h
+         Note: including file:       f:\t3dris\include\magick\magick/magick-config.h
+         Note: including file:        f:\t3dris\include\magick\magick/magick-baseconfig.h
+         Note: including file:       D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\math.h
+         Note: including file:       D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\sys/types.h
+         Note: including file:       F:\ImageMagick\ImageMagick-6.8.7-Q16\include\magick/MagickCore.h
+         Note: including file:        f:\t3dris\include\magick\magick/magick-config.h
+         Note: including file:        f:\t3dris\include\magick\magick/method-attribute.h
+         Note: including file:        f:\t3dris\include\magick\magick/magick-type.h
+         Note: including file:         f:\t3dris\include\magick\magick/magick-config.h
+         Note: including file:        f:\t3dris\include\magick\magick/accelerate.h
+         Note: including file:         f:\t3dris\include\magick\magick/morphology.h
+         Note: including file:          f:\t3dris\include\magick\magick/geometry.h
+         Note: including file:         f:\t3dris\include\magick\magick/resample.h
+         Note: including file:          f:\t3dris\include\magick\magick/cache-view.h
+         Note: including file:           f:\t3dris\include\magick\magick/pixel.h
+         Note: including file:            f:\t3dris\include\magick\magick/colorspace.h
+         Note: including file:            f:\t3dris\include\magick\magick/constitute.h
+         Note: including file:         f:\t3dris\include\magick\magick/resize.h
+         Note: including file:         f:\t3dris\include\magick\magick/statistic.h
+         Note: including file:        f:\t3dris\include\magick\magick/animate.h
+         Note: including file:        f:\t3dris\include\magick\magick/annotate.h
+         Note: including file:         f:\t3dris\include\magick\magick/draw.h
+         Note: including file:          f:\t3dris\include\magick\magick/geometry.h
+         Note: including file:          f:\t3dris\include\magick\magick/image.h
+         Note: including file:           f:\t3dris\include\magick\magick/color.h
+         Note: including file:            f:\t3dris\include\magick\magick/pixel.h
+         Note: including file:            f:\t3dris\include\magick\magick/exception.h
+         Note: including file:             f:\t3dris\include\magick\magick/semaphore.h
+         Note: including file:           f:\t3dris\include\magick\magick/blob.h
+         Note: including file:            f:\t3dris\include\magick\magick/image.h
+         Note: including file:            f:\t3dris\include\magick\magick/stream.h
+         Note: including file:           f:\t3dris\include\magick\magick/colorspace.h
+         Note: including file:           f:\t3dris\include\magick\magick/cache-view.h
+         Note: including file:           f:\t3dris\include\magick\magick/color.h
+         Note: including file:           f:\t3dris\include\magick\magick/composite.h
+         Note: including file:           f:\t3dris\include\magick\magick/compress.h
+         Note: including file:           f:\t3dris\include\magick\magick/effect.h
+         Note: including file:            f:\t3dris\include\magick\magick/morphology.h
+         Note: including file:           f:\t3dris\include\magick\magick/geometry.h
+         Note: including file:           f:\t3dris\include\magick\magick/layer.h
+         Note: including file:           f:\t3dris\include\magick\magick/locale_.h
+         Note: including file:            f:\t3dris\include\magick\magick/hashmap.h
+         Note: including file:           f:\t3dris\include\magick\magick/monitor.h
+         Note: including file:           f:\t3dris\include\magick\magick/pixel.h
+         Note: including file:           f:\t3dris\include\magick\magick/profile.h
+         Note: including file:            f:\t3dris\include\magick\magick/string_.h
+         Note: including file:             f:\t3dris\include\magick\magick/exception.h
+         Note: including file:           f:\t3dris\include\magick\magick/quantum.h
+         Note: including file:            f:\t3dris\include\magick\magick/image.h
+         Note: including file:            f:\t3dris\include\magick\magick/semaphore.h
+         Note: including file:           f:\t3dris\include\magick\magick/resample.h
+         Note: including file:           f:\t3dris\include\magick\magick/resize.h
+         Note: including file:           f:\t3dris\include\magick\magick/semaphore.h
+         Note: including file:           f:\t3dris\include\magick\magick/stream.h
+         Note: including file:           f:\t3dris\include\magick\magick/timer.h
+         Note: including file:          f:\t3dris\include\magick\magick/pixel.h
+         Note: including file:          f:\t3dris\include\magick\magick/type.h
+         Note: including file:        f:\t3dris\include\magick\magick/artifact.h
+         Note: including file:        f:\t3dris\include\magick\magick/attribute.h
+         Note: including file:         f:\t3dris\include\magick\magick/image.h
+         Note: including file:         f:\t3dris\include\magick\magick/exception.h
+         Note: including file:        f:\t3dris\include\magick\magick/blob.h
+         Note: including file:        f:\t3dris\include\magick\magick/cache.h
+         Note: including file:         f:\t3dris\include\magick\magick/blob.h
+         Note: including file:        f:\t3dris\include\magick\magick/cache-view.h
+         Note: including file:        f:\t3dris\include\magick\magick/channel.h
+         Note: including file:         f:\t3dris\include\magick\magick/image.h
+         Note: including file:        f:\t3dris\include\magick\magick/cipher.h
+         Note: including file:        f:\t3dris\include\magick\magick/client.h
+         Note: including file:        f:\t3dris\include\magick\magick/coder.h
+         Note: including file:        f:\t3dris\include\magick\magick/color.h
+         Note: including file:        f:\t3dris\include\magick\magick/colorspace.h
+         Note: including file:        f:\t3dris\include\magick\magick/colormap.h
+         Note: including file:        f:\t3dris\include\magick\magick/compare.h
+         Note: including file:         f:\t3dris\include\magick\magick/image.h
+         Note: including file:        f:\t3dris\include\magick\magick/composite.h
+         Note: including file:        f:\t3dris\include\magick\magick/compress.h
+         Note: including file:        f:\t3dris\include\magick\magick/configure.h
+         Note: including file:         f:\t3dris\include\magick\magick/hashmap.h
+         Note: including file:        f:\t3dris\include\magick\magick/constitute.h
+         Note: including file:        f:\t3dris\include\magick\magick/decorate.h
+         Note: including file:        f:\t3dris\include\magick\magick/delegate.h
+         Note: including file:        f:\t3dris\include\magick\magick/deprecate.h
+         Note: including file:         f:\t3dris\include\magick\magick/blob.h
+         Note: including file:         f:\t3dris\include\magick\magick/cache-view.h
+         Note: including file:         f:\t3dris\include\magick\magick/draw.h
+         Note: including file:         f:\t3dris\include\magick\magick/constitute.h
+         Note: including file:         f:\t3dris\include\magick\magick/magick-config.h
+         Note: including file:         f:\t3dris\include\magick\magick/pixel.h
+         Note: including file:         f:\t3dris\include\magick\magick/quantize.h
+         Note: including file:          f:\t3dris\include\magick\magick/colorspace.h
+         Note: including file:         f:\t3dris\include\magick\magick/quantum.h
+         Note: including file:         f:\t3dris\include\magick\magick/registry.h
+         Note: including file:         f:\t3dris\include\magick\magick/semaphore.h
+         Note: including file:        f:\t3dris\include\magick\magick/display.h
+         Note: including file:        f:\t3dris\include\magick\magick/distort.h
+         Note: including file:        f:\t3dris\include\magick\magick/distribute-cache.h
+         Note: including file:         f:\t3dris\include\magick\magick/exception.h
+         Note: including file:        f:\t3dris\include\magick\magick/draw.h
+         Note: including file:        f:\t3dris\include\magick\magick/effect.h
+         Note: including file:        f:\t3dris\include\magick\magick/enhance.h
+         Note: including file:         f:\t3dris\include\magick\magick/pixel.h
+         Note: including file:        f:\t3dris\include\magick\magick/exception.h
+         Note: including file:        f:\t3dris\include\magick\magick/feature.h
+         Note: including file:        f:\t3dris\include\magick\magick/fourier.h
+         Note: including file:        f:\t3dris\include\magick\magick/fx.h
+         Note: including file:         f:\t3dris\include\magick\magick/draw.h
+         Note: including file:        f:\t3dris\include\magick\magick/gem.h
+         Note: including file:         f:\t3dris\include\magick\magick/fx.h
+         Note: including file:         f:\t3dris\include\magick\magick/random_.h
+         Note: including file:          f:\t3dris\include\magick\magick/string_.h
+         Note: including file:        f:\t3dris\include\magick\magick/geometry.h
+         Note: including file:        f:\t3dris\include\magick\magick/hashmap.h
+         Note: including file:        f:\t3dris\include\magick\magick/histogram.h
+         Note: including file:        f:\t3dris\include\magick\magick/identify.h
+         Note: including file:        f:\t3dris\include\magick\magick/image.h
+         Note: including file:        f:\t3dris\include\magick\magick/image-view.h
+         Note: including file:        f:\t3dris\include\magick\magick/layer.h
+         Note: including file:        f:\t3dris\include\magick\magick/list.h
+         Note: including file:        f:\t3dris\include\magick\magick/locale_.h
+         Note: including file:        f:\t3dris\include\magick\magick/log.h
+         Note: including file:         f:\t3dris\include\magick\magick/exception.h
+         Note: including file:        f:\t3dris\include\magick\magick/magic.h
+         Note: including file:        f:\t3dris\include\magick\magick/magick.h
+         Note: including file:        f:\t3dris\include\magick\magick/matrix.h
+         Note: including file:        f:\t3dris\include\magick\magick/memory_.h
+         Note: including file:        f:\t3dris\include\magick\magick/module.h
+         Note: including file:         f:\t3dris\include\magick\magick/version.h
+         Note: including file:        f:\t3dris\include\magick\magick/mime.h
+         Note: including file:        f:\t3dris\include\magick\magick/monitor.h
+         Note: including file:        f:\t3dris\include\magick\magick/montage.h
+         Note: including file:        f:\t3dris\include\magick\magick/morphology.h
+         Note: including file:        f:\t3dris\include\magick\magick/option.h
+         Note: including file:        f:\t3dris\include\magick\magick/paint.h
+         Note: including file:         f:\t3dris\include\magick\magick/color.h
+         Note: including file:         f:\t3dris\include\magick\magick/draw.h
+         Note: including file:        f:\t3dris\include\magick\magick/pixel.h
+         Note: including file:        f:\t3dris\include\magick\magick/pixel-accessor.h
+         Note: including file:         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\math.h
+         Note: including file:         f:\t3dris\include\magick\magick/gem.h
+         Note: including file:         f:\t3dris\include\magick\magick/pixel.h
+     1>f:\t3dris\include\magick\magick\pixel-accessor.h(176): warning C4244: '=' : conversion from 'double' to 'MagickCore::MagickRealType', possible loss of data
+         Note: including file:        f:\t3dris\include\magick\magick/policy.h
+         Note: including file:         f:\t3dris\include\magick\magick/pixel.h
+         Note: including file:         f:\t3dris\include\magick\magick/exception.h
+         Note: including file:        f:\t3dris\include\magick\magick/prepress.h
+         Note: including file:        f:\t3dris\include\magick\magick/profile.h
+         Note: including file:        f:\t3dris\include\magick\magick/property.h
+         Note: including file:        f:\t3dris\include\magick\magick/quantize.h
+         Note: including file:        f:\t3dris\include\magick\magick/quantum.h
+         Note: including file:        f:\t3dris\include\magick\magick/registry.h
+         Note: including file:        f:\t3dris\include\magick\magick/random_.h
+         Note: including file:        f:\t3dris\include\magick\magick/resample.h
+         Note: including file:        f:\t3dris\include\magick\magick/resize.h
+         Note: including file:        f:\t3dris\include\magick\magick/resource_.h
+         Note: including file:        f:\t3dris\include\magick\magick/segment.h
+         Note: including file:        f:\t3dris\include\magick\magick/shear.h
+         Note: including file:        f:\t3dris\include\magick\magick/signature.h
+         Note: including file:        f:\t3dris\include\magick\magick/splay-tree.h
+         Note: including file:        f:\t3dris\include\magick\magick/stream.h
+         Note: including file:        f:\t3dris\include\magick\magick/statistic.h
+         Note: including file:        f:\t3dris\include\magick\magick/string_.h
+         Note: including file:        f:\t3dris\include\magick\magick/timer.h
+         Note: including file:        f:\t3dris\include\magick\magick/token.h
+         Note: including file:        f:\t3dris\include\magick\magick/transform.h
+         Note: including file:        f:\t3dris\include\magick\magick/threshold.h
+         Note: including file:        f:\t3dris\include\magick\magick/type.h
+         Note: including file:        f:\t3dris\include\magick\magick/utility.h
+         Note: including file:        f:\t3dris\include\magick\magick/version.h
+         Note: including file:        f:\t3dris\include\magick\magick/xml-tree.h
+         Note: including file:         f:\t3dris\include\magick\magick/exception.h
+         Note: including file:         f:\t3dris\include\magick\magick/splay-tree.h
+         Note: including file:        f:\t3dris\include\magick\magick/xwindow.h
+         Note: including file:       F:\ImageMagick\ImageMagick-6.8.7-Q16\include\wand/MagickWand.h
+         Note: including file:        f:\t3dris\include\magick\magick/magick-config.h
+         Note: including file:        f:\t3dris\include\magick\wand/method-attribute.h
+         Note: including file:        f:\t3dris\include\magick\magick/MagickCore.h
+         Note: including file:        f:\t3dris\include\magick\wand/animate.h
+         Note: including file:        f:\t3dris\include\magick\wand/compare.h
+         Note: including file:        f:\t3dris\include\magick\wand/composite.h
+         Note: including file:        f:\t3dris\include\magick\wand/conjure.h
+         Note: including file:        f:\t3dris\include\magick\wand/convert.h
+         Note: including file:        f:\t3dris\include\magick\wand/deprecate.h
+         Note: including file:         f:\t3dris\include\magick\wand/drawing-wand.h
+         Note: including file:          f:\t3dris\include\magick\wand/pixel-wand.h
+         Note: including file:         f:\t3dris\include\magick\wand/magick-wand.h
+         Note: including file:          f:\t3dris\include\magick\wand/MagickWand.h
+         Note: including file:         f:\t3dris\include\magick\wand/pixel-iterator.h
+         Note: including file:          f:\t3dris\include\magick\wand/magick-wand.h
+         Note: including file:          f:\t3dris\include\magick\wand/pixel-wand.h
+         Note: including file:         f:\t3dris\include\magick\wand/pixel-wand.h
+         Note: including file:        f:\t3dris\include\magick\wand/display.h
+         Note: including file:        f:\t3dris\include\magick\wand/drawing-wand.h
+         Note: including file:        f:\t3dris\include\magick\wand/identify.h
+         Note: including file:        f:\t3dris\include\magick\wand/import.h
+         Note: including file:        f:\t3dris\include\magick\wand/magick-property.h
+         Note: including file:        f:\t3dris\include\magick\wand/magick-image.h
+         Note: including file:        f:\t3dris\include\magick\wand/mogrify.h
+         Note: including file:        f:\t3dris\include\magick\wand/montage.h
+         Note: including file:        f:\t3dris\include\magick\wand/pixel-iterator.h
+         Note: including file:        f:\t3dris\include\magick\wand/pixel-wand.h
+         Note: including file:        f:\t3dris\include\magick\wand/stream.h
+         Note: including file:        f:\t3dris\include\magick\wand/wand-view.h
+         Note: including file:      F:\ImageMagick\ImageMagick-6.8.7-Q16\include\Magick++/Image.h
+         Note: including file:       f:\t3dris\include\magick\Magick++/Include.h
+         Note: including file:       D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\list
+         Note: including file:       f:\t3dris\include\magick\Magick++/Blob.h
+         Note: including file:        f:\t3dris\include\magick\Magick++/Include.h
+         Note: including file:       f:\t3dris\include\magick\Magick++/Color.h
+         Note: including file:        f:\t3dris\include\magick\Magick++/Include.h
+         Note: including file:       f:\t3dris\include\magick\Magick++/Drawable.h
+         Note: including file:        f:\t3dris\include\magick\Magick++/Include.h
+         Note: including file:        f:\t3dris\include\magick\Magick++/Color.h
+         Note: including file:        f:\t3dris\include\magick\Magick++/Geometry.h
+         Note: including file:         f:\t3dris\include\magick\Magick++/Include.h
+     1>f:\t3dris\include\magick\magick++\drawable.h(456): warning C4251: 'Magick::DrawableBezier::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::DrawableBezier'
+                 with
+                 [
+                     _Ty=Magick::Coordinate
+                 ]
+     1>f:\t3dris\include\magick\magick++\drawable.h(498): warning C4251: 'Magick::DrawablePushClipPath::_id' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::DrawablePushClipPath'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+     1>f:\t3dris\include\magick\magick++\drawable.h(526): warning C4251: 'Magick::DrawableClipPath::_id' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::DrawableClipPath'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+     1>f:\t3dris\include\magick\magick++\drawable.h(959): warning C4251: 'Magick::DrawableFont::_font' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::DrawableFont'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+     1>f:\t3dris\include\magick\magick++\drawable.h(960): warning C4251: 'Magick::DrawableFont::_family' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::DrawableFont'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+     1>f:\t3dris\include\magick\magick++\drawable.h(1128): warning C4251: 'Magick::DrawablePath::_path' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::DrawablePath'
+                 with
+                 [
+                     _Ty=Magick::VPath
+                 ]
+     1>f:\t3dris\include\magick\magick++\drawable.h(1217): warning C4251: 'Magick::DrawablePolygon::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::DrawablePolygon'
+                 with
+                 [
+                     _Ty=Magick::Coordinate
+                 ]
+     1>f:\t3dris\include\magick\magick++\drawable.h(1237): warning C4251: 'Magick::DrawablePolyline::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::DrawablePolyline'
+                 with
+                 [
+                     _Ty=Magick::Coordinate
+                 ]
+     1>f:\t3dris\include\magick\magick++\drawable.h(1321): warning C4251: 'Magick::DrawablePushPattern::_id' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::DrawablePushPattern'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+     1>f:\t3dris\include\magick\magick++\drawable.h(1923): warning C4251: 'Magick::DrawableText::_text' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::DrawableText'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+     1>f:\t3dris\include\magick\magick++\drawable.h(1924): warning C4251: 'Magick::DrawableText::_encoding' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::DrawableText'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+     1>f:\t3dris\include\magick\magick++\drawable.h(2255): warning C4251: 'Magick::PathArcAbs::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathArcAbs'
+                 with
+                 [
+                     _Ty=Magick::PathArcArgs
+                 ]
+     1>f:\t3dris\include\magick\magick++\drawable.h(2277): warning C4251: 'Magick::PathArcRel::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathArcRel'
+                 with
+                 [
+                     _Ty=Magick::PathArcArgs
+                 ]
+     1>f:\t3dris\include\magick\magick++\drawable.h(2428): warning C4251: 'Magick::PathCurvetoAbs::_args' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathCurvetoAbs'
+                 with
+                 [
+                     _Ty=Magick::PathCurvetoArgs
+                 ]
+     1>f:\t3dris\include\magick\magick++\drawable.h(2451): warning C4251: 'Magick::PathCurvetoRel::_args' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathCurvetoRel'
+                 with
+                 [
+                     _Ty=Magick::PathCurvetoArgs
+                 ]
+     1>f:\t3dris\include\magick\magick++\drawable.h(2475): warning C4251: 'Magick::PathSmoothCurvetoAbs::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathSmoothCurvetoAbs'
+                 with
+                 [
+                     _Ty=Magick::Coordinate
+                 ]
+     1>f:\t3dris\include\magick\magick++\drawable.h(2500): warning C4251: 'Magick::PathSmoothCurvetoRel::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathSmoothCurvetoRel'
+                 with
+                 [
+                     _Ty=Magick::Coordinate
+                 ]
+     1>f:\t3dris\include\magick\magick++\drawable.h(2609): warning C4251: 'Magick::PathQuadraticCurvetoAbs::_args' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathQuadraticCurvetoAbs'
+                 with
+                 [
+                     _Ty=Magick::PathQuadraticCurvetoArgs
+                 ]
+     1>f:\t3dris\include\magick\magick++\drawable.h(2633): warning C4251: 'Magick::PathQuadraticCurvetoRel::_args' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathQuadraticCurvetoRel'
+                 with
+                 [
+                     _Ty=Magick::PathQuadraticCurvetoArgs
+                 ]
+     1>f:\t3dris\include\magick\magick++\drawable.h(2657): warning C4251: 'Magick::PathSmoothQuadraticCurvetoAbs::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathSmoothQuadraticCurvetoAbs'
+                 with
+                 [
+                     _Ty=Magick::Coordinate
+                 ]
+     1>f:\t3dris\include\magick\magick++\drawable.h(2681): warning C4251: 'Magick::PathSmoothQuadraticCurvetoRel::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathSmoothQuadraticCurvetoRel'
+                 with
+                 [
+                     _Ty=Magick::Coordinate
+                 ]
+     1>f:\t3dris\include\magick\magick++\drawable.h(2709): warning C4251: 'Magick::PathLinetoAbs::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathLinetoAbs'
+                 with
+                 [
+                     _Ty=Magick::Coordinate
+                 ]
+     1>f:\t3dris\include\magick\magick++\drawable.h(2733): warning C4251: 'Magick::PathLinetoRel::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathLinetoRel'
+                 with
+                 [
+                     _Ty=Magick::Coordinate
+                 ]
+     1>f:\t3dris\include\magick\magick++\drawable.h(2875): warning C4251: 'Magick::PathMovetoAbs::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathMovetoAbs'
+                 with
+                 [
+                     _Ty=Magick::Coordinate
+                 ]
+     1>f:\t3dris\include\magick\magick++\drawable.h(2899): warning C4251: 'Magick::PathMovetoRel::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathMovetoRel'
+                 with
+                 [
+                     _Ty=Magick::Coordinate
+                 ]
+         Note: including file:       f:\t3dris\include\magick\Magick++/Exception.h
+         Note: including file:        f:\t3dris\include\magick\Magick++/Include.h
+     1>f:\t3dris\include\magick\magick++\exception.h(31): warning C4251: 'Magick::Exception::_what' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::Exception'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+         Note: including file:       f:\t3dris\include\magick\Magick++/Geometry.h
+         Note: including file:       f:\t3dris\include\magick\Magick++/TypeMetric.h
+         Note: including file:        f:\t3dris\include\magick\Magick++/Include.h
+         Note: including file:      F:\ImageMagick\ImageMagick-6.8.7-Q16\include\Magick++/Pixels.h
+         Note: including file:       f:\t3dris\include\magick\Magick++/Include.h
+         Note: including file:       f:\t3dris\include\magick\Magick++/Color.h
+         Note: including file:       f:\t3dris\include\magick\Magick++/Image.h
+         Note: including file:      F:\ImageMagick\ImageMagick-6.8.7-Q16\include\Magick++/STL.h
+         Note: including file:       f:\t3dris\include\magick\Magick++/Include.h
+         Note: including file:       D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\algorithm
+         Note: including file:       D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\map
+         Note: including file:        D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xtree
+         Note: including file:       f:\t3dris\include\magick\Magick++/CoderInfo.h
+         Note: including file:        f:\t3dris\include\magick\Magick++/Include.h
+     1>f:\t3dris\include\magick\magick++\coderinfo.h(68): warning C4251: 'Magick::CoderInfo::_name' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::CoderInfo'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+     1>f:\t3dris\include\magick\magick++\coderinfo.h(69): warning C4251: 'Magick::CoderInfo::_description' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::CoderInfo'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+     1>f:\t3dris\include\magick\magick++\coderinfo.h(70): warning C4251: 'Magick::CoderInfo::_mimeType' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::CoderInfo'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+         Note: including file:       f:\t3dris\include\magick\Magick++/Drawable.h
+         Note: including file:       f:\t3dris\include\magick\Magick++/Exception.h
+         Note: including file:       f:\t3dris\include\magick\Magick++/Montage.h
+         Note: including file:        f:\t3dris\include\magick\Magick++/Include.h
+         Note: including file:        f:\t3dris\include\magick\Magick++/Color.h
+         Note: including file:        f:\t3dris\include\magick\Magick++/Geometry.h
+     1>f:\t3dris\include\magick\magick++\montage.h(90): warning C4251: 'Magick::Montage::_fileName' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::Montage'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+     1>f:\t3dris\include\magick\magick++\montage.h(92): warning C4251: 'Magick::Montage::_font' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::Montage'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+     1>f:\t3dris\include\magick\magick++\montage.h(95): warning C4251: 'Magick::Montage::_label' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::Montage'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+     1>f:\t3dris\include\magick\magick++\montage.h(99): warning C4251: 'Magick::Montage::_texture' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::Montage'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+     1>f:\t3dris\include\magick\magick++\montage.h(101): warning C4251: 'Magick::Montage::_title' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::Montage'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+     1>f:\imagemagick\imagemagick-6.8.7-q16\include\magick++\stl.h(134): warning C4251: 'Magick::annotateImage::_text' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::annotateImage'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+     1>f:\imagemagick\imagemagick-6.8.7-q16\include\magick++\stl.h(213): warning C4251: 'Magick::cdlImage::_cdl' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::cdlImage'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+     1>f:\imagemagick\imagemagick-6.8.7-q16\include\magick++\stl.h(273): warning C4251: 'Magick::commentImage::_comment' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::commentImage'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+     1>f:\imagemagick\imagemagick-6.8.7-q16\include\magick++\stl.h(385): warning C4251: 'Magick::drawImage::_drawableList' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::drawImage'
+                 with
+                 [
+                     _Ty=Magick::Drawable
+                 ]
+     1>f:\imagemagick\imagemagick-6.8.7-q16\include\magick++\stl.h(651): warning C4251: 'Magick::labelImage::_label' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::labelImage'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+     1>f:\imagemagick\imagemagick-6.8.7-q16\include\magick++\stl.h(1299): warning C4251: 'Magick::backgroundTextureImage::_backgroundTexture' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::backgroundTextureImage'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+     1>f:\imagemagick\imagemagick-6.8.7-q16\include\magick++\stl.h(1474): warning C4251: 'Magick::fileNameImage::_fileName' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::fileNameImage'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+     1>f:\imagemagick\imagemagick-6.8.7-q16\include\magick++\stl.h(1498): warning C4251: 'Magick::fontImage::_font' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::fontImage'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+     1>f:\imagemagick\imagemagick-6.8.7-q16\include\magick++\stl.h(1558): warning C4251: 'Magick::magickImage::_magick' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::magickImage'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+     1>f:\imagemagick\imagemagick-6.8.7-q16\include\magick++\stl.h(1817): warning C4251: 'Magick::tileNameImage::_tileName' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::tileNameImage'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+     1>f:\imagemagick\imagemagick-6.8.7-q16\include\magick++\stl.h(1854): warning C4251: 'Magick::viewImage::_view' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::viewImage'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+     1>f:\imagemagick\imagemagick-6.8.7-q16\include\magick++\stl.h(1867): warning C4251: 'Magick::x11DisplayImage::_display' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::x11DisplayImage'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Alloc=std::allocator<char>
+                 ]
+         Note: including file:    f:\t3dris\project1\pipeline.h
+         Note: including file:    f:\t3dris\project1\InitResources.h
+         Note: including file:  f:\t3dris\project1\RenderObject.h
+>>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
          EngineFile.cpp
          Note: including file: D:\Program Files (x86)\Windows Kits\8.0\Include\um\Windows.h
          Note: including file:  D:\Program Files (x86)\Windows Kits\8.0\Include\shared\winapifamily.h
@@ -412,10 +1368,15 @@
          Note: including file:  D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\thr/xthread
          Note: including file:   D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\thr/xtime
          Note: including file:   D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\thr/xthreads.h
+<<<<<<< HEAD
          Note: including file: D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\ctime
          Note: including file: H:\Projektityö\KinectIntegrated\T3DRIS\include\GL/glew.h
+=======
+         Note: including file: F:\T3DRIS\include\GL/glew.h
+>>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
          Note: including file:  D:\Program Files (x86)\Windows Kits\8.0\Include\um\GL/glu.h
          Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\GL/gl.h
+<<<<<<< HEAD
          Note: including file: H:\Projektityö\KinectIntegrated\T3DRIS\include\GL\freeglut.h
          Note: including file:  h:\projektityö\kinectintegrated\t3dris\include\gl\freeglut_std.h
          Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\GL/gl.h
@@ -648,153 +1609,656 @@
          Note: including file:      h:\projektityö\kinectintegrated\t3dris\include\magick\Magick++/Geometry.h
          Note: including file:       h:\projektityö\kinectintegrated\t3dris\include\magick\Magick++/Include.h
      1>h:\projektityö\kinectintegrated\t3dris\include\magick\magick++\drawable.h(456): warning C4251: 'Magick::DrawableBezier::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::DrawableBezier'
+=======
+         Note: including file: F:\T3DRIS\include\GL\freeglut.h
+         Note: including file:  f:\t3dris\include\gl\freeglut_std.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\windows.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\sdkddkver.h
+         Note: including file:    D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\excpt.h
+         Note: including file:     D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
+         Note: including file:    D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdarg.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\windef.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\minwindef.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\specstrings.h
+         Note: including file:       D:\Program Files (x86)\Windows Kits\8.0\Include\shared\specstrings_strict.h
+         Note: including file:        D:\Program Files (x86)\Windows Kits\8.0\Include\shared\specstrings_undef.h
+         Note: including file:       D:\Program Files (x86)\Windows Kits\8.0\Include\shared\driverspecs.h
+         Note: including file:        d:\program files (x86)\windows kits\8.0\include\shared\sdv_driverspecs.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\um\winnt.h
+         Note: including file:       D:\Program Files (x86)\Windows Kits\8.0\Include\shared\kernelspecs.h
+         Note: including file:       D:\Program Files (x86)\Windows Kits\8.0\Include\shared\basetsd.h
+         Note: including file:       D:\Program Files (x86)\Windows Kits\8.0\Include\shared\guiddef.h
+         Note: including file:       d:\program files (x86)\windows kits\8.0\include\shared\pshpack4.h
+         Note: including file:       d:\program files (x86)\windows kits\8.0\include\shared\poppack.h
+         Note: including file:       d:\program files (x86)\windows kits\8.0\include\shared\pshpack4.h
+         Note: including file:       d:\program files (x86)\windows kits\8.0\include\shared\poppack.h
+         Note: including file:       D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack4.h
+         Note: including file:       D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:       d:\program files (x86)\windows kits\8.0\include\shared\pshpack4.h
+         Note: including file:       d:\program files (x86)\windows kits\8.0\include\shared\pshpack2.h
+         Note: including file:       d:\program files (x86)\windows kits\8.0\include\shared\poppack.h
+         Note: including file:       d:\program files (x86)\windows kits\8.0\include\shared\pshpack2.h
+         Note: including file:       D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack2.h
+         Note: including file:       D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:       d:\program files (x86)\windows kits\8.0\include\shared\poppack.h
+         Note: including file:       d:\program files (x86)\windows kits\8.0\include\shared\pshpack8.h
+         Note: including file:       d:\program files (x86)\windows kits\8.0\include\shared\poppack.h
+         Note: including file:       d:\program files (x86)\windows kits\8.0\include\shared\poppack.h
+         Note: including file:       D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:       D:\Program Files (x86)\Windows Kits\8.0\Include\shared\ktmtypes.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\winnt.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\winbase.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\minwinbase.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\processenv.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\fileapi.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\debugapi.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\utilapiset.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\handleapi.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\errhandlingapi.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\fibersapi.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\namedpipeapi.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\profileapi.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\heapapi.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\ioapiset.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\synchapi.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\interlockedapi.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\processthreadsapi.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\sysinfoapi.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\memoryapi.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\threadpoollegacyapiset.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\threadpoolapiset.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\bemapiset.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\jobapi.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\wow64apiset.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\libloaderapi.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\securitybaseapi.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\namespaceapi.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\systemtopologyapi.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\processtopologyapi.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\securityappcontainer.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\realtimeapiset.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\winerror.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\timezoneapi.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\wingdi.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack1.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack2.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack2.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack4.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack4.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\winuser.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\pshpack2.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\poppack.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\tvout.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\winnls.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\datetimeapi.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\stringapiset.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\um\winnls.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\wincon.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\consoleapi.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:      D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\winver.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\verrsrc.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\winreg.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apiset.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\apisetcconv.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\reason.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\winnetwk.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\shared\wnnc.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\shared\stralign.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\winsvc.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\mcx.h
+         Note: including file:    D:\Program Files (x86)\Windows Kits\8.0\Include\um\imm.h
+         Note: including file:     D:\Program Files (x86)\Windows Kits\8.0\Include\um\ime_cmodes.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\GL/gl.h
+         Note: including file:   D:\Program Files (x86)\Windows Kits\8.0\Include\um\GL/glu.h
+         Note: including file:  f:\t3dris\include\gl\freeglut_ext.h
+         Note: including file: f:\t3dris\project1\math3d.h
+         Note: including file:  D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\math.h
+         Note: including file: f:\t3dris\project1\pipeline.h
+         Note: including file: f:\t3dris\project1\Camera.h
+         Note: including file: f:\t3dris\project1\Object.h
+         Note: including file:  F:\T3DRIS\include\GL\glew.h
+         Note: including file:  F:\T3DRIS\include\GL\freeglut.h
+         Note: including file:  f:\t3dris\project1\texture.h
+         Note: including file:   F:\T3DRIS\include\GL\glew.h
+         Note: including file:   F:\T3DRIS\include\magick\Magick++.h
+         Note: including file:    F:\ImageMagick\ImageMagick-6.8.7-Q16\include\Magick++/Include.h
+         Note: including file:     f:\t3dris\include\magick\magick/magick-config.h
+         Note: including file:      f:\t3dris\include\magick\magick/magick-baseconfig.h
+         Note: including file:     D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\math.h
+         Note: including file:     D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\sys/types.h
+         Note: including file:     F:\ImageMagick\ImageMagick-6.8.7-Q16\include\magick/MagickCore.h
+         Note: including file:      f:\t3dris\include\magick\magick/magick-config.h
+         Note: including file:      f:\t3dris\include\magick\magick/method-attribute.h
+         Note: including file:      f:\t3dris\include\magick\magick/magick-type.h
+         Note: including file:       f:\t3dris\include\magick\magick/magick-config.h
+         Note: including file:      f:\t3dris\include\magick\magick/accelerate.h
+         Note: including file:       f:\t3dris\include\magick\magick/morphology.h
+         Note: including file:        f:\t3dris\include\magick\magick/geometry.h
+         Note: including file:       f:\t3dris\include\magick\magick/resample.h
+         Note: including file:        f:\t3dris\include\magick\magick/cache-view.h
+         Note: including file:         f:\t3dris\include\magick\magick/pixel.h
+         Note: including file:          f:\t3dris\include\magick\magick/colorspace.h
+         Note: including file:          f:\t3dris\include\magick\magick/constitute.h
+         Note: including file:       f:\t3dris\include\magick\magick/resize.h
+         Note: including file:       f:\t3dris\include\magick\magick/statistic.h
+         Note: including file:      f:\t3dris\include\magick\magick/animate.h
+         Note: including file:      f:\t3dris\include\magick\magick/annotate.h
+         Note: including file:       f:\t3dris\include\magick\magick/draw.h
+         Note: including file:        f:\t3dris\include\magick\magick/geometry.h
+         Note: including file:        f:\t3dris\include\magick\magick/image.h
+         Note: including file:         f:\t3dris\include\magick\magick/color.h
+         Note: including file:          f:\t3dris\include\magick\magick/pixel.h
+         Note: including file:          f:\t3dris\include\magick\magick/exception.h
+         Note: including file:           f:\t3dris\include\magick\magick/semaphore.h
+         Note: including file:         f:\t3dris\include\magick\magick/blob.h
+         Note: including file:          f:\t3dris\include\magick\magick/image.h
+         Note: including file:          f:\t3dris\include\magick\magick/stream.h
+         Note: including file:         f:\t3dris\include\magick\magick/colorspace.h
+         Note: including file:         f:\t3dris\include\magick\magick/cache-view.h
+         Note: including file:         f:\t3dris\include\magick\magick/color.h
+         Note: including file:         f:\t3dris\include\magick\magick/composite.h
+         Note: including file:         f:\t3dris\include\magick\magick/compress.h
+         Note: including file:         f:\t3dris\include\magick\magick/effect.h
+         Note: including file:          f:\t3dris\include\magick\magick/morphology.h
+         Note: including file:         f:\t3dris\include\magick\magick/geometry.h
+         Note: including file:         f:\t3dris\include\magick\magick/layer.h
+         Note: including file:         f:\t3dris\include\magick\magick/locale_.h
+         Note: including file:          f:\t3dris\include\magick\magick/hashmap.h
+         Note: including file:         f:\t3dris\include\magick\magick/monitor.h
+         Note: including file:         f:\t3dris\include\magick\magick/pixel.h
+         Note: including file:         f:\t3dris\include\magick\magick/profile.h
+         Note: including file:          f:\t3dris\include\magick\magick/string_.h
+         Note: including file:           f:\t3dris\include\magick\magick/exception.h
+         Note: including file:         f:\t3dris\include\magick\magick/quantum.h
+         Note: including file:          f:\t3dris\include\magick\magick/image.h
+         Note: including file:          f:\t3dris\include\magick\magick/semaphore.h
+         Note: including file:         f:\t3dris\include\magick\magick/resample.h
+         Note: including file:         f:\t3dris\include\magick\magick/resize.h
+         Note: including file:         f:\t3dris\include\magick\magick/semaphore.h
+         Note: including file:         f:\t3dris\include\magick\magick/stream.h
+         Note: including file:         f:\t3dris\include\magick\magick/timer.h
+         Note: including file:        f:\t3dris\include\magick\magick/pixel.h
+         Note: including file:        f:\t3dris\include\magick\magick/type.h
+         Note: including file:      f:\t3dris\include\magick\magick/artifact.h
+         Note: including file:      f:\t3dris\include\magick\magick/attribute.h
+         Note: including file:       f:\t3dris\include\magick\magick/image.h
+         Note: including file:       f:\t3dris\include\magick\magick/exception.h
+         Note: including file:      f:\t3dris\include\magick\magick/blob.h
+         Note: including file:      f:\t3dris\include\magick\magick/cache.h
+         Note: including file:       f:\t3dris\include\magick\magick/blob.h
+         Note: including file:      f:\t3dris\include\magick\magick/cache-view.h
+         Note: including file:      f:\t3dris\include\magick\magick/channel.h
+         Note: including file:       f:\t3dris\include\magick\magick/image.h
+         Note: including file:      f:\t3dris\include\magick\magick/cipher.h
+         Note: including file:      f:\t3dris\include\magick\magick/client.h
+         Note: including file:      f:\t3dris\include\magick\magick/coder.h
+         Note: including file:      f:\t3dris\include\magick\magick/color.h
+         Note: including file:      f:\t3dris\include\magick\magick/colorspace.h
+         Note: including file:      f:\t3dris\include\magick\magick/colormap.h
+         Note: including file:      f:\t3dris\include\magick\magick/compare.h
+         Note: including file:       f:\t3dris\include\magick\magick/image.h
+         Note: including file:      f:\t3dris\include\magick\magick/composite.h
+         Note: including file:      f:\t3dris\include\magick\magick/compress.h
+         Note: including file:      f:\t3dris\include\magick\magick/configure.h
+         Note: including file:       f:\t3dris\include\magick\magick/hashmap.h
+         Note: including file:      f:\t3dris\include\magick\magick/constitute.h
+         Note: including file:      f:\t3dris\include\magick\magick/decorate.h
+         Note: including file:      f:\t3dris\include\magick\magick/delegate.h
+         Note: including file:      f:\t3dris\include\magick\magick/deprecate.h
+         Note: including file:       f:\t3dris\include\magick\magick/blob.h
+         Note: including file:       f:\t3dris\include\magick\magick/cache-view.h
+         Note: including file:       f:\t3dris\include\magick\magick/draw.h
+         Note: including file:       f:\t3dris\include\magick\magick/constitute.h
+         Note: including file:       f:\t3dris\include\magick\magick/magick-config.h
+         Note: including file:       f:\t3dris\include\magick\magick/pixel.h
+         Note: including file:       f:\t3dris\include\magick\magick/quantize.h
+         Note: including file:        f:\t3dris\include\magick\magick/colorspace.h
+         Note: including file:       f:\t3dris\include\magick\magick/quantum.h
+         Note: including file:       f:\t3dris\include\magick\magick/registry.h
+         Note: including file:       f:\t3dris\include\magick\magick/semaphore.h
+         Note: including file:      f:\t3dris\include\magick\magick/display.h
+         Note: including file:      f:\t3dris\include\magick\magick/distort.h
+         Note: including file:      f:\t3dris\include\magick\magick/distribute-cache.h
+         Note: including file:       f:\t3dris\include\magick\magick/exception.h
+         Note: including file:      f:\t3dris\include\magick\magick/draw.h
+         Note: including file:      f:\t3dris\include\magick\magick/effect.h
+         Note: including file:      f:\t3dris\include\magick\magick/enhance.h
+         Note: including file:       f:\t3dris\include\magick\magick/pixel.h
+         Note: including file:      f:\t3dris\include\magick\magick/exception.h
+         Note: including file:      f:\t3dris\include\magick\magick/feature.h
+         Note: including file:      f:\t3dris\include\magick\magick/fourier.h
+         Note: including file:      f:\t3dris\include\magick\magick/fx.h
+         Note: including file:       f:\t3dris\include\magick\magick/draw.h
+         Note: including file:      f:\t3dris\include\magick\magick/gem.h
+         Note: including file:       f:\t3dris\include\magick\magick/fx.h
+         Note: including file:       f:\t3dris\include\magick\magick/random_.h
+         Note: including file:        f:\t3dris\include\magick\magick/string_.h
+         Note: including file:      f:\t3dris\include\magick\magick/geometry.h
+         Note: including file:      f:\t3dris\include\magick\magick/hashmap.h
+         Note: including file:      f:\t3dris\include\magick\magick/histogram.h
+         Note: including file:      f:\t3dris\include\magick\magick/identify.h
+         Note: including file:      f:\t3dris\include\magick\magick/image.h
+         Note: including file:      f:\t3dris\include\magick\magick/image-view.h
+         Note: including file:      f:\t3dris\include\magick\magick/layer.h
+         Note: including file:      f:\t3dris\include\magick\magick/list.h
+         Note: including file:      f:\t3dris\include\magick\magick/locale_.h
+         Note: including file:      f:\t3dris\include\magick\magick/log.h
+         Note: including file:       f:\t3dris\include\magick\magick/exception.h
+         Note: including file:      f:\t3dris\include\magick\magick/magic.h
+         Note: including file:      f:\t3dris\include\magick\magick/magick.h
+         Note: including file:      f:\t3dris\include\magick\magick/matrix.h
+         Note: including file:      f:\t3dris\include\magick\magick/memory_.h
+         Note: including file:      f:\t3dris\include\magick\magick/module.h
+         Note: including file:       f:\t3dris\include\magick\magick/version.h
+         Note: including file:      f:\t3dris\include\magick\magick/mime.h
+         Note: including file:      f:\t3dris\include\magick\magick/monitor.h
+         Note: including file:      f:\t3dris\include\magick\magick/montage.h
+         Note: including file:      f:\t3dris\include\magick\magick/morphology.h
+         Note: including file:      f:\t3dris\include\magick\magick/option.h
+         Note: including file:      f:\t3dris\include\magick\magick/paint.h
+         Note: including file:       f:\t3dris\include\magick\magick/color.h
+         Note: including file:       f:\t3dris\include\magick\magick/draw.h
+         Note: including file:      f:\t3dris\include\magick\magick/pixel.h
+         Note: including file:      f:\t3dris\include\magick\magick/pixel-accessor.h
+         Note: including file:       D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\math.h
+         Note: including file:       f:\t3dris\include\magick\magick/gem.h
+         Note: including file:       f:\t3dris\include\magick\magick/pixel.h
+     1>f:\t3dris\include\magick\magick\pixel-accessor.h(176): warning C4244: '=' : conversion from 'double' to 'MagickCore::MagickRealType', possible loss of data
+         Note: including file:      f:\t3dris\include\magick\magick/policy.h
+         Note: including file:       f:\t3dris\include\magick\magick/pixel.h
+         Note: including file:       f:\t3dris\include\magick\magick/exception.h
+         Note: including file:      f:\t3dris\include\magick\magick/prepress.h
+         Note: including file:      f:\t3dris\include\magick\magick/profile.h
+         Note: including file:      f:\t3dris\include\magick\magick/property.h
+         Note: including file:      f:\t3dris\include\magick\magick/quantize.h
+         Note: including file:      f:\t3dris\include\magick\magick/quantum.h
+         Note: including file:      f:\t3dris\include\magick\magick/registry.h
+         Note: including file:      f:\t3dris\include\magick\magick/random_.h
+         Note: including file:      f:\t3dris\include\magick\magick/resample.h
+         Note: including file:      f:\t3dris\include\magick\magick/resize.h
+         Note: including file:      f:\t3dris\include\magick\magick/resource_.h
+         Note: including file:      f:\t3dris\include\magick\magick/segment.h
+         Note: including file:      f:\t3dris\include\magick\magick/shear.h
+         Note: including file:      f:\t3dris\include\magick\magick/signature.h
+         Note: including file:      f:\t3dris\include\magick\magick/splay-tree.h
+         Note: including file:      f:\t3dris\include\magick\magick/stream.h
+         Note: including file:      f:\t3dris\include\magick\magick/statistic.h
+         Note: including file:      f:\t3dris\include\magick\magick/string_.h
+         Note: including file:      f:\t3dris\include\magick\magick/timer.h
+         Note: including file:      f:\t3dris\include\magick\magick/token.h
+         Note: including file:      f:\t3dris\include\magick\magick/transform.h
+         Note: including file:      f:\t3dris\include\magick\magick/threshold.h
+         Note: including file:      f:\t3dris\include\magick\magick/type.h
+         Note: including file:      f:\t3dris\include\magick\magick/utility.h
+         Note: including file:      f:\t3dris\include\magick\magick/version.h
+         Note: including file:      f:\t3dris\include\magick\magick/xml-tree.h
+         Note: including file:       f:\t3dris\include\magick\magick/exception.h
+         Note: including file:       f:\t3dris\include\magick\magick/splay-tree.h
+         Note: including file:      f:\t3dris\include\magick\magick/xwindow.h
+         Note: including file:     F:\ImageMagick\ImageMagick-6.8.7-Q16\include\wand/MagickWand.h
+         Note: including file:      f:\t3dris\include\magick\magick/magick-config.h
+         Note: including file:      f:\t3dris\include\magick\wand/method-attribute.h
+         Note: including file:      f:\t3dris\include\magick\magick/MagickCore.h
+         Note: including file:      f:\t3dris\include\magick\wand/animate.h
+         Note: including file:      f:\t3dris\include\magick\wand/compare.h
+         Note: including file:      f:\t3dris\include\magick\wand/composite.h
+         Note: including file:      f:\t3dris\include\magick\wand/conjure.h
+         Note: including file:      f:\t3dris\include\magick\wand/convert.h
+         Note: including file:      f:\t3dris\include\magick\wand/deprecate.h
+         Note: including file:       f:\t3dris\include\magick\wand/drawing-wand.h
+         Note: including file:        f:\t3dris\include\magick\wand/pixel-wand.h
+         Note: including file:       f:\t3dris\include\magick\wand/magick-wand.h
+         Note: including file:        f:\t3dris\include\magick\wand/MagickWand.h
+         Note: including file:       f:\t3dris\include\magick\wand/pixel-iterator.h
+         Note: including file:        f:\t3dris\include\magick\wand/magick-wand.h
+         Note: including file:        f:\t3dris\include\magick\wand/pixel-wand.h
+         Note: including file:       f:\t3dris\include\magick\wand/pixel-wand.h
+         Note: including file:      f:\t3dris\include\magick\wand/display.h
+         Note: including file:      f:\t3dris\include\magick\wand/drawing-wand.h
+         Note: including file:      f:\t3dris\include\magick\wand/identify.h
+         Note: including file:      f:\t3dris\include\magick\wand/import.h
+         Note: including file:      f:\t3dris\include\magick\wand/magick-property.h
+         Note: including file:      f:\t3dris\include\magick\wand/magick-image.h
+         Note: including file:      f:\t3dris\include\magick\wand/mogrify.h
+         Note: including file:      f:\t3dris\include\magick\wand/montage.h
+         Note: including file:      f:\t3dris\include\magick\wand/pixel-iterator.h
+         Note: including file:      f:\t3dris\include\magick\wand/pixel-wand.h
+         Note: including file:      f:\t3dris\include\magick\wand/stream.h
+         Note: including file:      f:\t3dris\include\magick\wand/wand-view.h
+         Note: including file:    F:\ImageMagick\ImageMagick-6.8.7-Q16\include\Magick++/Image.h
+         Note: including file:     f:\t3dris\include\magick\Magick++/Include.h
+         Note: including file:     D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\list
+         Note: including file:     f:\t3dris\include\magick\Magick++/Blob.h
+         Note: including file:      f:\t3dris\include\magick\Magick++/Include.h
+         Note: including file:     f:\t3dris\include\magick\Magick++/Color.h
+         Note: including file:      f:\t3dris\include\magick\Magick++/Include.h
+         Note: including file:     f:\t3dris\include\magick\Magick++/Drawable.h
+         Note: including file:      f:\t3dris\include\magick\Magick++/Include.h
+         Note: including file:      f:\t3dris\include\magick\Magick++/Color.h
+         Note: including file:      f:\t3dris\include\magick\Magick++/Geometry.h
+         Note: including file:       f:\t3dris\include\magick\Magick++/Include.h
+     1>f:\t3dris\include\magick\magick++\drawable.h(456): warning C4251: 'Magick::DrawableBezier::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::DrawableBezier'
+>>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
                  with
                  [
                      _Ty=Magick::Coordinate
                  ]
+<<<<<<< HEAD
      1>h:\projektityö\kinectintegrated\t3dris\include\magick\magick++\drawable.h(498): warning C4251: 'Magick::DrawablePushClipPath::_id' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::DrawablePushClipPath'
+=======
+     1>f:\t3dris\include\magick\magick++\drawable.h(498): warning C4251: 'Magick::DrawablePushClipPath::_id' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::DrawablePushClipPath'
+>>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
                  with
                  [
                      _Elem=char,
                      _Traits=std::char_traits<char>,
                      _Alloc=std::allocator<char>
                  ]
+<<<<<<< HEAD
      1>h:\projektityö\kinectintegrated\t3dris\include\magick\magick++\drawable.h(526): warning C4251: 'Magick::DrawableClipPath::_id' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::DrawableClipPath'
+=======
+     1>f:\t3dris\include\magick\magick++\drawable.h(526): warning C4251: 'Magick::DrawableClipPath::_id' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::DrawableClipPath'
+>>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
                  with
                  [
                      _Elem=char,
                      _Traits=std::char_traits<char>,
                      _Alloc=std::allocator<char>
                  ]
+<<<<<<< HEAD
      1>h:\projektityö\kinectintegrated\t3dris\include\magick\magick++\drawable.h(959): warning C4251: 'Magick::DrawableFont::_font' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::DrawableFont'
+=======
+     1>f:\t3dris\include\magick\magick++\drawable.h(959): warning C4251: 'Magick::DrawableFont::_font' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::DrawableFont'
+>>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
                  with
                  [
                      _Elem=char,
                      _Traits=std::char_traits<char>,
                      _Alloc=std::allocator<char>
                  ]
+<<<<<<< HEAD
      1>h:\projektityö\kinectintegrated\t3dris\include\magick\magick++\drawable.h(960): warning C4251: 'Magick::DrawableFont::_family' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::DrawableFont'
+=======
+     1>f:\t3dris\include\magick\magick++\drawable.h(960): warning C4251: 'Magick::DrawableFont::_family' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::DrawableFont'
+>>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
                  with
                  [
                      _Elem=char,
                      _Traits=std::char_traits<char>,
                      _Alloc=std::allocator<char>
                  ]
+<<<<<<< HEAD
      1>h:\projektityö\kinectintegrated\t3dris\include\magick\magick++\drawable.h(1128): warning C4251: 'Magick::DrawablePath::_path' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::DrawablePath'
+=======
+     1>f:\t3dris\include\magick\magick++\drawable.h(1128): warning C4251: 'Magick::DrawablePath::_path' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::DrawablePath'
+>>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
                  with
                  [
                      _Ty=Magick::VPath
                  ]
+<<<<<<< HEAD
      1>h:\projektityö\kinectintegrated\t3dris\include\magick\magick++\drawable.h(1217): warning C4251: 'Magick::DrawablePolygon::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::DrawablePolygon'
+=======
+     1>f:\t3dris\include\magick\magick++\drawable.h(1217): warning C4251: 'Magick::DrawablePolygon::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::DrawablePolygon'
+>>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
                  with
                  [
                      _Ty=Magick::Coordinate
                  ]
+<<<<<<< HEAD
      1>h:\projektityö\kinectintegrated\t3dris\include\magick\magick++\drawable.h(1237): warning C4251: 'Magick::DrawablePolyline::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::DrawablePolyline'
+=======
+     1>f:\t3dris\include\magick\magick++\drawable.h(1237): warning C4251: 'Magick::DrawablePolyline::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::DrawablePolyline'
+>>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
                  with
                  [
                      _Ty=Magick::Coordinate
                  ]
+<<<<<<< HEAD
      1>h:\projektityö\kinectintegrated\t3dris\include\magick\magick++\drawable.h(1321): warning C4251: 'Magick::DrawablePushPattern::_id' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::DrawablePushPattern'
+=======
+     1>f:\t3dris\include\magick\magick++\drawable.h(1321): warning C4251: 'Magick::DrawablePushPattern::_id' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::DrawablePushPattern'
+>>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
                  with
                  [
                      _Elem=char,
                      _Traits=std::char_traits<char>,
                      _Alloc=std::allocator<char>
                  ]
+<<<<<<< HEAD
      1>h:\projektityö\kinectintegrated\t3dris\include\magick\magick++\drawable.h(1923): warning C4251: 'Magick::DrawableText::_text' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::DrawableText'
+=======
+     1>f:\t3dris\include\magick\magick++\drawable.h(1923): warning C4251: 'Magick::DrawableText::_text' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::DrawableText'
+>>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
                  with
                  [
                      _Elem=char,
                      _Traits=std::char_traits<char>,
                      _Alloc=std::allocator<char>
                  ]
+<<<<<<< HEAD
      1>h:\projektityö\kinectintegrated\t3dris\include\magick\magick++\drawable.h(1924): warning C4251: 'Magick::DrawableText::_encoding' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::DrawableText'
+=======
+     1>f:\t3dris\include\magick\magick++\drawable.h(1924): warning C4251: 'Magick::DrawableText::_encoding' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::DrawableText'
+>>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
                  with
                  [
                      _Elem=char,
                      _Traits=std::char_traits<char>,
                      _Alloc=std::allocator<char>
                  ]
+<<<<<<< HEAD
      1>h:\projektityö\kinectintegrated\t3dris\include\magick\magick++\drawable.h(2255): warning C4251: 'Magick::PathArcAbs::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathArcAbs'
+=======
+     1>f:\t3dris\include\magick\magick++\drawable.h(2255): warning C4251: 'Magick::PathArcAbs::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathArcAbs'
+>>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
                  with
                  [
                      _Ty=Magick::PathArcArgs
                  ]
+<<<<<<< HEAD
      1>h:\projektityö\kinectintegrated\t3dris\include\magick\magick++\drawable.h(2277): warning C4251: 'Magick::PathArcRel::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathArcRel'
+=======
+     1>f:\t3dris\include\magick\magick++\drawable.h(2277): warning C4251: 'Magick::PathArcRel::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathArcRel'
+>>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
                  with
                  [
                      _Ty=Magick::PathArcArgs
                  ]
+<<<<<<< HEAD
      1>h:\projektityö\kinectintegrated\t3dris\include\magick\magick++\drawable.h(2428): warning C4251: 'Magick::PathCurvetoAbs::_args' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathCurvetoAbs'
+=======
+     1>f:\t3dris\include\magick\magick++\drawable.h(2428): warning C4251: 'Magick::PathCurvetoAbs::_args' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathCurvetoAbs'
+>>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
                  with
                  [
                      _Ty=Magick::PathCurvetoArgs
                  ]
+<<<<<<< HEAD
      1>h:\projektityö\kinectintegrated\t3dris\include\magick\magick++\drawable.h(2451): warning C4251: 'Magick::PathCurvetoRel::_args' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathCurvetoRel'
+=======
+     1>f:\t3dris\include\magick\magick++\drawable.h(2451): warning C4251: 'Magick::PathCurvetoRel::_args' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathCurvetoRel'
+>>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
                  with
                  [
                      _Ty=Magick::PathCurvetoArgs
                  ]
+<<<<<<< HEAD
      1>h:\projektityö\kinectintegrated\t3dris\include\magick\magick++\drawable.h(2475): warning C4251: 'Magick::PathSmoothCurvetoAbs::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathSmoothCurvetoAbs'
+=======
+     1>f:\t3dris\include\magick\magick++\drawable.h(2475): warning C4251: 'Magick::PathSmoothCurvetoAbs::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathSmoothCurvetoAbs'
+>>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
                  with
                  [
                      _Ty=Magick::Coordinate
                  ]
+<<<<<<< HEAD
      1>h:\projektityö\kinectintegrated\t3dris\include\magick\magick++\drawable.h(2500): warning C4251: 'Magick::PathSmoothCurvetoRel::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathSmoothCurvetoRel'
+=======
+     1>f:\t3dris\include\magick\magick++\drawable.h(2500): warning C4251: 'Magick::PathSmoothCurvetoRel::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathSmoothCurvetoRel'
+>>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
                  with
                  [
                      _Ty=Magick::Coordinate
                  ]
+<<<<<<< HEAD
      1>h:\projektityö\kinectintegrated\t3dris\include\magick\magick++\drawable.h(2609): warning C4251: 'Magick::PathQuadraticCurvetoAbs::_args' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathQuadraticCurvetoAbs'
+=======
+     1>f:\t3dris\include\magick\magick++\drawable.h(2609): warning C4251: 'Magick::PathQuadraticCurvetoAbs::_args' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathQuadraticCurvetoAbs'
+>>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
                  with
                  [
                      _Ty=Magick::PathQuadraticCurvetoArgs
                  ]
+<<<<<<< HEAD
      1>h:\projektityö\kinectintegrated\t3dris\include\magick\magick++\drawable.h(2633): warning C4251: 'Magick::PathQuadraticCurvetoRel::_args' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathQuadraticCurvetoRel'
+=======
+     1>f:\t3dris\include\magick\magick++\drawable.h(2633): warning C4251: 'Magick::PathQuadraticCurvetoRel::_args' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathQuadraticCurvetoRel'
+>>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
                  with
                  [
                      _Ty=Magick::PathQuadraticCurvetoArgs
                  ]
+<<<<<<< HEAD
      1>h:\projektityö\kinectintegrated\t3dris\include\magick\magick++\drawable.h(2657): warning C4251: 'Magick::PathSmoothQuadraticCurvetoAbs::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathSmoothQuadraticCurvetoAbs'
+=======
+     1>f:\t3dris\include\magick\magick++\drawable.h(2657): warning C4251: 'Magick::PathSmoothQuadraticCurvetoAbs::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathSmoothQuadraticCurvetoAbs'
+>>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
                  with
                  [
                      _Ty=Magick::Coordinate
                  ]
+<<<<<<< HEAD
      1>h:\projektityö\kinectintegrated\t3dris\include\magick\magick++\drawable.h(2681): warning C4251: 'Magick::PathSmoothQuadraticCurvetoRel::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathSmoothQuadraticCurvetoRel'
+=======
+     1>f:\t3dris\include\magick\magick++\drawable.h(2681): warning C4251: 'Magick::PathSmoothQuadraticCurvetoRel::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathSmoothQuadraticCurvetoRel'
+>>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
                  with
                  [
                      _Ty=Magick::Coordinate
                  ]
+<<<<<<< HEAD
      1>h:\projektityö\kinectintegrated\t3dris\include\magick\magick++\drawable.h(2709): warning C4251: 'Magick::PathLinetoAbs::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathLinetoAbs'
+=======
+     1>f:\t3dris\include\magick\magick++\drawable.h(2709): warning C4251: 'Magick::PathLinetoAbs::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathLinetoAbs'
+>>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
                  with
                  [
                      _Ty=Magick::Coordinate
                  ]
+<<<<<<< HEAD
      1>h:\projektityö\kinectintegrated\t3dris\include\magick\magick++\drawable.h(2733): warning C4251: 'Magick::PathLinetoRel::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathLinetoRel'
+=======
+     1>f:\t3dris\include\magick\magick++\drawable.h(2733): warning C4251: 'Magick::PathLinetoRel::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathLinetoRel'
+>>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
                  with
                  [
                      _Ty=Magick::Coordinate
                  ]
+<<<<<<< HEAD
      1>h:\projektityö\kinectintegrated\t3dris\include\magick\magick++\drawable.h(2875): warning C4251: 'Magick::PathMovetoAbs::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathMovetoAbs'
+=======
+     1>f:\t3dris\include\magick\magick++\drawable.h(2875): warning C4251: 'Magick::PathMovetoAbs::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathMovetoAbs'
+>>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
                  with
                  [
                      _Ty=Magick::Coordinate
                  ]
+<<<<<<< HEAD
      1>h:\projektityö\kinectintegrated\t3dris\include\magick\magick++\drawable.h(2899): warning C4251: 'Magick::PathMovetoRel::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathMovetoRel'
+=======
+     1>f:\t3dris\include\magick\magick++\drawable.h(2899): warning C4251: 'Magick::PathMovetoRel::_coordinates' : class 'std::list<_Ty>' needs to have dll-interface to be used by clients of class 'Magick::PathMovetoRel'
+>>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
                  with
                  [
                      _Ty=Magick::Coordinate
                  ]
+<<<<<<< HEAD
          Note: including file:     h:\projektityö\kinectintegrated\t3dris\include\magick\Magick++/Exception.h
          Note: including file:      h:\projektityö\kinectintegrated\t3dris\include\magick\Magick++/Include.h
      1>h:\projektityö\kinectintegrated\t3dris\include\magick\magick++\exception.h(31): warning C4251: 'Magick::Exception::_what' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::Exception'
+=======
+         Note: including file:     f:\t3dris\include\magick\Magick++/Exception.h
+         Note: including file:      f:\t3dris\include\magick\Magick++/Include.h
+     1>f:\t3dris\include\magick\magick++\exception.h(31): warning C4251: 'Magick::Exception::_what' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::Exception'
+>>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
                  with
                  [
                      _Elem=char,
                      _Traits=std::char_traits<char>,
                      _Alloc=std::allocator<char>
                  ]
+<<<<<<< HEAD
          Note: including file:     h:\projektityö\kinectintegrated\t3dris\include\magick\Magick++/Geometry.h
          Note: including file:     h:\projektityö\kinectintegrated\t3dris\include\magick\Magick++/TypeMetric.h
          Note: including file:      h:\projektityö\kinectintegrated\t3dris\include\magick\Magick++/Include.h
@@ -810,26 +2274,52 @@
          Note: including file:     h:\projektityö\kinectintegrated\t3dris\include\magick\Magick++/CoderInfo.h
          Note: including file:      h:\projektityö\kinectintegrated\t3dris\include\magick\Magick++/Include.h
      1>h:\projektityö\kinectintegrated\t3dris\include\magick\magick++\coderinfo.h(68): warning C4251: 'Magick::CoderInfo::_name' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::CoderInfo'
+=======
+         Note: including file:     f:\t3dris\include\magick\Magick++/Geometry.h
+         Note: including file:     f:\t3dris\include\magick\Magick++/TypeMetric.h
+         Note: including file:      f:\t3dris\include\magick\Magick++/Include.h
+         Note: including file:    F:\ImageMagick\ImageMagick-6.8.7-Q16\include\Magick++/Pixels.h
+         Note: including file:     f:\t3dris\include\magick\Magick++/Include.h
+         Note: including file:     f:\t3dris\include\magick\Magick++/Color.h
+         Note: including file:     f:\t3dris\include\magick\Magick++/Image.h
+         Note: including file:    F:\ImageMagick\ImageMagick-6.8.7-Q16\include\Magick++/STL.h
+         Note: including file:     f:\t3dris\include\magick\Magick++/Include.h
+         Note: including file:     D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\algorithm
+         Note: including file:     D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\map
+         Note: including file:      D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\xtree
+         Note: including file:     f:\t3dris\include\magick\Magick++/CoderInfo.h
+         Note: including file:      f:\t3dris\include\magick\Magick++/Include.h
+     1>f:\t3dris\include\magick\magick++\coderinfo.h(68): warning C4251: 'Magick::CoderInfo::_name' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::CoderInfo'
+>>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
                  with
                  [
                      _Elem=char,
                      _Traits=std::char_traits<char>,
                      _Alloc=std::allocator<char>
                  ]
+<<<<<<< HEAD
      1>h:\projektityö\kinectintegrated\t3dris\include\magick\magick++\coderinfo.h(69): warning C4251: 'Magick::CoderInfo::_description' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::CoderInfo'
+=======
+     1>f:\t3dris\include\magick\magick++\coderinfo.h(69): warning C4251: 'Magick::CoderInfo::_description' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::CoderInfo'
+>>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
                  with
                  [
                      _Elem=char,
                      _Traits=std::char_traits<char>,
                      _Alloc=std::allocator<char>
                  ]
+<<<<<<< HEAD
      1>h:\projektityö\kinectintegrated\t3dris\include\magick\magick++\coderinfo.h(70): warning C4251: 'Magick::CoderInfo::_mimeType' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::CoderInfo'
+=======
+     1>f:\t3dris\include\magick\magick++\coderinfo.h(70): warning C4251: 'Magick::CoderInfo::_mimeType' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::CoderInfo'
+>>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
                  with
                  [
                      _Elem=char,
                      _Traits=std::char_traits<char>,
                      _Alloc=std::allocator<char>
                  ]
+<<<<<<< HEAD
          Note: including file:     h:\projektityö\kinectintegrated\t3dris\include\magick\Magick++/Drawable.h
          Note: including file:     h:\projektityö\kinectintegrated\t3dris\include\magick\Magick++/Exception.h
          Note: including file:     h:\projektityö\kinectintegrated\t3dris\include\magick\Magick++/Montage.h
@@ -837,34 +2327,59 @@
          Note: including file:      h:\projektityö\kinectintegrated\t3dris\include\magick\Magick++/Color.h
          Note: including file:      h:\projektityö\kinectintegrated\t3dris\include\magick\Magick++/Geometry.h
      1>h:\projektityö\kinectintegrated\t3dris\include\magick\magick++\montage.h(90): warning C4251: 'Magick::Montage::_fileName' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::Montage'
+=======
+         Note: including file:     f:\t3dris\include\magick\Magick++/Drawable.h
+         Note: including file:     f:\t3dris\include\magick\Magick++/Exception.h
+         Note: including file:     f:\t3dris\include\magick\Magick++/Montage.h
+         Note: including file:      f:\t3dris\include\magick\Magick++/Include.h
+         Note: including file:      f:\t3dris\include\magick\Magick++/Color.h
+         Note: including file:      f:\t3dris\include\magick\Magick++/Geometry.h
+     1>f:\t3dris\include\magick\magick++\montage.h(90): warning C4251: 'Magick::Montage::_fileName' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::Montage'
+>>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
                  with
                  [
                      _Elem=char,
                      _Traits=std::char_traits<char>,
                      _Alloc=std::allocator<char>
                  ]
+<<<<<<< HEAD
      1>h:\projektityö\kinectintegrated\t3dris\include\magick\magick++\montage.h(92): warning C4251: 'Magick::Montage::_font' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::Montage'
+=======
+     1>f:\t3dris\include\magick\magick++\montage.h(92): warning C4251: 'Magick::Montage::_font' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::Montage'
+>>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
                  with
                  [
                      _Elem=char,
                      _Traits=std::char_traits<char>,
                      _Alloc=std::allocator<char>
                  ]
+<<<<<<< HEAD
      1>h:\projektityö\kinectintegrated\t3dris\include\magick\magick++\montage.h(95): warning C4251: 'Magick::Montage::_label' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::Montage'
+=======
+     1>f:\t3dris\include\magick\magick++\montage.h(95): warning C4251: 'Magick::Montage::_label' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::Montage'
+>>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
                  with
                  [
                      _Elem=char,
                      _Traits=std::char_traits<char>,
                      _Alloc=std::allocator<char>
                  ]
+<<<<<<< HEAD
      1>h:\projektityö\kinectintegrated\t3dris\include\magick\magick++\montage.h(99): warning C4251: 'Magick::Montage::_texture' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::Montage'
+=======
+     1>f:\t3dris\include\magick\magick++\montage.h(99): warning C4251: 'Magick::Montage::_texture' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::Montage'
+>>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
                  with
                  [
                      _Elem=char,
                      _Traits=std::char_traits<char>,
                      _Alloc=std::allocator<char>
                  ]
+<<<<<<< HEAD
      1>h:\projektityö\kinectintegrated\t3dris\include\magick\magick++\montage.h(101): warning C4251: 'Magick::Montage::_title' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::Montage'
+=======
+     1>f:\t3dris\include\magick\magick++\montage.h(101): warning C4251: 'Magick::Montage::_title' : class 'std::basic_string<_Elem,_Traits,_Alloc>' needs to have dll-interface to be used by clients of class 'Magick::Montage'
+>>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
                  with
                  [
                      _Elem=char,
@@ -953,6 +2468,7 @@
                      _Traits=std::char_traits<char>,
                      _Alloc=std::allocator<char>
                  ]
+<<<<<<< HEAD
          Note: including file:  h:\projektityö\kinectintegrated\t3dris\project1\InitResources.h
          Note: including file: h:\projektityö\kinectintegrated\t3dris\project1\Shapes.h
          Note: including file: h:\projektityö\kinectintegrated\t3dris\project1\Game.h
@@ -974,6 +2490,26 @@
          Debug\EngineFile.obj
          Debug\Game.obj
          Debug\KinectControl.obj
+=======
+         Note: including file:  f:\t3dris\project1\InitResources.h
+         Note: including file: f:\t3dris\project1\Shapes.h
+         Note: including file: f:\t3dris\project1\Game.h
+         Note: including file:  f:\t3dris\project1\RenderObject.h
+     1>f:\t3dris\project1\enginefile.cpp(117): warning C4018: '<' : signed/unsigned mismatch
+     1>f:\t3dris\project1\enginefile.cpp(412): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>f:\t3dris\project1\enginefile.cpp(413): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>f:\t3dris\project1\enginefile.cpp(414): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>f:\t3dris\project1\enginefile.cpp(415): warning C4172: returning address of local variable or temporary
+     1>f:\t3dris\project1\enginefile.cpp(449): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>f:\t3dris\project1\enginefile.cpp(450): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>f:\t3dris\project1\enginefile.cpp(451): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>f:\t3dris\project1\enginefile.cpp(452): warning C4172: returning address of local variable or temporary
+         Generating Code...
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\T3DRIS\Debug\TETEngine.exe" /INCREMENTAL /NOLOGO /LIBPATH:"F:\ImageMagick\ImageMagick-6.8.7-Q16\lib" CORE_RL_magick_.lib CORE_RL_Magick++_.lib X11.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\T3DRIS\Debug\TETEngine.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\T3DRIS\Debug\TETEngine.lib" /MACHINE:X86 Debug\Camera.obj
+         Debug\EngineFile.obj
+         Debug\Game.obj
+>>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
          Debug\math3d.obj
          Debug\Object.obj
          Debug\pipeline.obj
@@ -981,9 +2517,18 @@
          Debug\Shapes.obj
          Debug\SkeletonBasics.obj
          Debug\texture.obj
+<<<<<<< HEAD
          Project1.vcxproj -> H:\Projektityö\KinectIntegrated\T3DRIS\Debug\TETEngine.exe
      1>Done Building Project "H:\Projektityö\KinectIntegrated\T3DRIS\Project1\Project1.vcxproj" (Build target(s)).
 
 Build succeeded.
 
 Time Elapsed 00:00:24.54
+=======
+         Project1.vcxproj -> F:\T3DRIS\Debug\TETEngine.exe
+     1>Done Building Project "F:\T3DRIS\Project1\Project1.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:03:06.58
+>>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd

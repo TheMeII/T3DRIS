@@ -42,12 +42,15 @@
     <ClCompile Include="RenderObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="KinectControl.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SkeletonBasics.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+=======
+>>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="math3d.h">
@@ -77,11 +80,14 @@
     <ClInclude Include="RenderObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="KinectControl.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SkeletonBasics.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+=======
+>>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
   </ItemGroup>
 </Project>

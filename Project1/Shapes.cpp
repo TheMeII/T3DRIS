@@ -63,6 +63,7 @@ using namespace std;
 	//vertices.push_back(Vertex(Vector3f(-1.0f, 1.0f, 1.0f), Vector2f(0.0f, 0.0f)));
 
 	void Shapes::selectShape(int rand,Shapes* shape){
+<<<<<<< HEAD
 		std::cout << "Muoto:" << rand << std::endl;
 		switch (rand) // kokonaisluku tai char
 		{
@@ -154,6 +155,99 @@ using namespace std;
 			// Arvo on joku muu
 			break;
 		}
+=======
+		switch (rand) // kokonaisluku tai char
+{
+  case 0:
+	//kuutio
+		  x_factor=0;y_factor+=1;z_factor=0;
+		   shape->AddToShape();	 
+	  x_factor=0;y_factor=0;z_factor=1;
+	  shape->AddToShape();
+	   x_factor=0;y_factor+=1;z_factor+=0;
+		shape->AddToShape();
+		 x_factor=1;y_factor+=0;z_factor=0;
+		   shape->AddToShape();
+		 x_factor+=0;y_factor+=0;z_factor+=1;
+		   shape->AddToShape();
+		    x_factor-=0;y_factor-=1;z_factor-=0;
+		   shape->AddToShape();
+		    x_factor-=0;y_factor-=0;z_factor-=1;
+		   shape->AddToShape();
+	 
+ break;
+
+
+  case 1: 
+	  //pitkä palikka
+		x_factor=0;y_factor-=1;z_factor=0;
+		shape->AddToShape();
+		x_factor=0;y_factor-=1;z_factor=0;
+		shape->AddToShape();
+		x_factor=0;y_factor+=3;z_factor=0;
+		shape->AddToShape();
+ break;
+  case 2:
+	  //L palikka
+    x_factor=0;y_factor-=1;z_factor=0;
+		shape->AddToShape();
+		x_factor=0;y_factor-=1;z_factor=0;
+		shape->AddToShape();
+		x_factor=1;y_factor+=0;z_factor=0;
+		shape->AddToShape();
+    break;
+  case 3:
+  
+	  //risti
+    x_factor=0;y_factor=1;z_factor=0;
+		   shape->AddToShape();	 
+	  x_factor=0;y_factor=0;z_factor=1;
+	  shape->AddToShape();
+	   x_factor=0;y_factor=-1;z_factor=0;
+		shape->AddToShape();
+		 x_factor=0;y_factor=0;z_factor=-1;
+		shape->AddToShape();
+		 x_factor=1;y_factor=0;z_factor=0;
+		shape->AddToShape();
+		 x_factor=-1;y_factor=0;z_factor=0;
+		shape->AddToShape();
+    break;
+  
+  case 4:
+	  //z palikka
+	  x_factor=-1;y_factor=0;z_factor=0;
+		   shape->AddToShape();	 
+	  x_factor=0;y_factor=1;z_factor=0;
+	  shape->AddToShape();
+	   x_factor=1;y_factor+=0;z_factor=0;
+		shape->AddToShape();	 
+		 		 
+		 
+		 break;
+  case 5:
+	  //toinen L palikka
+		  x_factor=0;y_factor-=1;z_factor=0;
+		shape->AddToShape();
+		x_factor=0;y_factor-=1;z_factor=0;
+		shape->AddToShape();
+		x_factor=-1;y_factor+=0;z_factor=0;
+		shape->AddToShape();
+		 break;
+		 
+  case 6:
+		   //toinen z palikka
+	  x_factor=1;y_factor=0;z_factor=0;
+		   shape->AddToShape();	 
+	  x_factor=0;y_factor=1;z_factor=0;
+	  shape->AddToShape();
+	   x_factor=-1;y_factor+=0;z_factor=0;
+		shape->AddToShape();	 
+		 break;
+  default:
+    // Arvo on joku muu
+    break;
+}
+>>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
 	}
 
 

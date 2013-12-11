@@ -30,6 +30,7 @@ int RenderObject::getSize()
 	return (int)renderObjects.size();
 }
 
+<<<<<<< HEAD
 void RenderObject::doTransforms()
 {
 	for(int i = 0; i < renderObjects.size()-1; i++)
@@ -57,5 +58,7 @@ void RenderObject::sendTransforms(float pX, float pY, float pZ, float rX, float 
 }
 
 
+=======
+>>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
 
 

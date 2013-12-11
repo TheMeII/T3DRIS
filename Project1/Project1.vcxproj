@@ -81,7 +81,10 @@
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="EngineFile.cpp" />
     <ClCompile Include="Game.cpp" />
+<<<<<<< HEAD
     <ClCompile Include="KinectControl.cpp" />
+=======
+>>>>>>> 0009d5ff6d2a855db6f9e3ad25d4a9ab3c285cbd
     <ClCompile Include="math3d.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="pipeline.cpp" />
